@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Relatórios de Clientes — Pulse Social Media</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0F1117;--surface:#1A1D27;--border:#2E3345;--text:#E5E7EB;--text2:#9CA3AF;--text3:#6B7280}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+  .topbar{position:sticky;top:0;z-index:100;background:rgba(15,17,23,.92);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);padding:14px 32px;display:flex;justify-content:space-between;align-items:center}
+  .logo{font-size:15px;font-weight:700;background:linear-gradient(135deg,#E8612D,#C2410C);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .topbar-sub{font-size:12px;color:var(--text3)}
+  .hero{padding:80px 32px 56px;max-width:900px;margin:0 auto;text-align:center}
+  .hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+    color:#E8612D;margin-bottom:16px}
+  .hero-title{font-size:48px;font-weight:800;line-height:1.1;margin-bottom:16px}
+  .hero-title span{background:linear-gradient(135deg,#E8612D,#F97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .hero-sub{font-size:16px;color:var(--text2);line-height:1.6}
+  .grid{max-width:900px;margin:0 auto;padding:0 32px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;
+    text-decoration:none;color:inherit;transition:transform .2s,border-color .2s;display:block;position:relative;overflow:hidden}
+  .card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .card-accent{position:absolute;top:0;left:0;right:0;height:3px}
+  .card-handle{font-size:12px;color:var(--text3);margin-bottom:6px}
+  .card-name{font-size:17px;font-weight:700;color:var(--text);margin-bottom:16px;line-height:1.3}
+  .card-metrics{display:flex;flex-direction:column;gap:8px}
+  .metric-row{display:flex;justify-content:space-between;align-items:center}
+  .metric-label{font-size:11px;color:var(--text3)}
+  .metric-value{font-size:13px;font-weight:600;color:var(--text2)}
+  .card-cta{margin-top:20px;font-size:12px;font-weight:600;letter-spacing:.5px;color:var(--accent);
+    display:flex;align-items:center;gap:6px}
+  footer{text-align:center;padding:32px;color:var(--text3);font-size:12px;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="logo">Pulse Social Media</span>
+  <span class="topbar-sub">Relatórios mensais · Instagram Analytics</span>
+</div>
+
+<div class="hero">
+  <div class="hero-eyebrow">Dashboard de Clientes</div>
+  <h1 class="hero-title">Relatórios de<br><span>Performance Instagram</span></h1>
+  <p class="hero-sub">Métricas mensais extraídas via Meta Graph API · Período: março–abril 2026</p>
+</div>
+
+<div class="grid">
+
+  <a class="card" href="flaviachicarelli/" style="--accent:#C084FC">
+    <div class="card-accent" style="background:linear-gradient(90deg,#C084FC,#7C3AED)"></div>
+    <div class="card-handle">@flaviachicarelli</div>
+    <div class="card-name">Flavia Chicareli</div>
+    <div class="card-metrics">
+      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#C084FC">88.783</span></div>
+      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">1.384</span></div>
+      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">1.263</span></div>
+    </div>
+    <div class="card-cta" style="color:#C084FC">Ver relatório →</div>
+  </a>
+
+  <a class="card" href="drastephanielolo/" style="--accent:#34D399">
+    <div class="card-accent" style="background:linear-gradient(90deg,#34D399,#059669)"></div>
+    <div class="card-handle">@drastephanielolo</div>
+    <div class="card-name">Dra. Stephanie Lolo</div>
+    <div class="card-metrics">
+      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#34D399">158.466</span></div>
+      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">1.450</span></div>
+      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">1.326</span></div>
+    </div>
+    <div class="card-cta" style="color:#34D399">Ver relatório →</div>
+  </a>
+
+  <a class="card" href="jezerlopesfotografia/" style="--accent:#60A5FA">
+    <div class="card-accent" style="background:linear-gradient(90deg,#60A5FA,#2563EB)"></div>
+    <div class="card-handle">@jezerlopesfotografia</div>
+    <div class="card-name">Jézer Lopes</div>
+    <div class="card-metrics">
+      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#60A5FA">128.665</span></div>
+      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">804</span></div>
+      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">1.045</span></div>
+    </div>
+    <div class="card-cta" style="color:#60A5FA">Ver relatório →</div>
+  </a>
+
+  <a class="card" href="maria_pietroforte_decor/" style="--accent:#F472B6">
+    <div class="card-accent" style="background:linear-gradient(90deg,#F472B6,#DB2777)"></div>
+    <div class="card-handle">@maria_pietroforte_decor</div>
+    <div class="card-name">Maria Pietroforte</div>
+    <div class="card-metrics">
+      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#F472B6">135.277</span></div>
+      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">1.798</span></div>
+      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">1.058</span></div>
+    </div>
+    <div class="card-cta" style="color:#F472B6">Ver relatório →</div>
+  </a>
+
+  <a class="card" href="brunaperissinotto_/" style="--accent:#FB923C">
+    <div class="card-accent" style="background:linear-gradient(90deg,#FB923C,#EA580C)"></div>
+    <div class="card-handle">@brunaperissinotto_</div>
+    <div class="card-name">Bruna Perissinotto</div>
+    <div class="card-metrics">
+      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#FB923C">479.410</span></div>
+      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">6.627</span></div>
+      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">6.934</span></div>
+    </div>
+    <div class="card-cta" style="color:#FB923C">Ver relatório →</div>
+  </a>
+
+  <a class="card" href="carolcrespotricologista/" style="--accent:#A3E635">
+    <div class="card-accent" style="background:linear-gradient(90deg,#A3E635,#65A30D)"></div>
+    <div class="card-handle">@carolcrespotricologista</div>
+    <div class="card-name">Carol Crespo</div>
+    <div class="card-metrics">
+      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#A3E635">211.794</span></div>
+      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">1.267</span></div>
+      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">1.882</span></div>
+    </div>
+    <div class="card-cta" style="color:#A3E635">Ver relatório →</div>
+  </a>
+
+  <a class="card" href="fernandoreame/" style="--accent:#38BDF8">
+    <div class="card-accent" style="background:linear-gradient(90deg,#38BDF8,#0284C7)"></div>
+    <div class="card-handle">@fernandoreame</div>
+    <div class="card-name">Fernando Reame</div>
+    <div class="card-metrics">
+      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#38BDF8">252.418</span></div>
+      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">3.476</span></div>
+      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">2.595</span></div>
+    </div>
+    <div class="card-cta" style="color:#38BDF8">Ver relatório →</div>
+  </a>
+
+</div>
+
+<footer>Pulse Social Media · Relatórios gerados via Meta Graph API v25.0</footer>
+
+</body>
+</html>
