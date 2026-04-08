@@ -1,143 +1,153 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Relatórios de Clientes — Pulse Social Media</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0F1117;--surface:#1A1D27;--border:#2E3345;--text:#E5E7EB;--text2:#9CA3AF;--text3:#6B7280}
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
-  .topbar{position:sticky;top:0;z-index:100;background:rgba(15,17,23,.92);backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--border);padding:14px 32px;display:flex;justify-content:space-between;align-items:center}
-  .logo{font-size:15px;font-weight:700;background:linear-gradient(135deg,#E8612D,#C2410C);
-    -webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  .topbar-sub{font-size:12px;color:var(--text3)}
-  .hero{padding:80px 32px 56px;max-width:900px;margin:0 auto;text-align:center}
-  .hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
-    color:#E8612D;margin-bottom:16px}
-  .hero-title{font-size:48px;font-weight:800;line-height:1.1;margin-bottom:16px}
-  .hero-title span{background:linear-gradient(135deg,#E8612D,#F97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  .hero-sub{font-size:16px;color:var(--text2);line-height:1.6}
-  .grid{max-width:900px;margin:0 auto;padding:0 32px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;
-    text-decoration:none;color:inherit;transition:transform .2s,border-color .2s;display:block;position:relative;overflow:hidden}
-  .card:hover{transform:translateY(-4px);border-color:var(--accent)}
-  .card-accent{position:absolute;top:0;left:0;right:0;height:3px}
-  .card-handle{font-size:12px;color:var(--text3);margin-bottom:6px}
-  .card-name{font-size:17px;font-weight:700;color:var(--text);margin-bottom:16px;line-height:1.3}
-  .card-metrics{display:flex;flex-direction:column;gap:8px}
-  .metric-row{display:flex;justify-content:space-between;align-items:center}
-  .metric-label{font-size:11px;color:var(--text3)}
-  .metric-value{font-size:13px;font-weight:600;color:var(--text2)}
-  .card-cta{margin-top:20px;font-size:12px;font-weight:600;letter-spacing:.5px;color:var(--accent);
-    display:flex;align-items:center;gap:6px}
-  footer{text-align:center;padding:32px;color:var(--text3);font-size:12px;border-top:1px solid var(--border)}
-</style>
-</head>
-<body>
-
-<div class="topbar">
-  <span class="logo">Pulse Social Media</span>
-  <span class="topbar-sub">Relatórios mensais · Instagram Analytics</span>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#FAF3EB;color:#2C1810;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.header{background:#7B5531;padding:48px 24px;text-align:center;color:#FAF3EB}
+.header h1{font-size:32px;font-weight:700;margin-bottom:8px}
+.header p{font-size:15px;opacity:.8}
+.header .period{display:inline-block;background:#B5A591;color:#2C1810;padding:5px 16px;border-radius:20px;font-size:13px;font-weight:600;margin-top:16px}
+.content{max-width:1100px;margin:0 auto;padding:40px 24px}
+.section-title{font-size:14px;font-weight:600;color:#9A7A6A;text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.client-card{background:#fff;border-radius:14px;border:1px solid #E8D5C4;overflow:hidden}
+.client-head{background:#404730;color:#FAF3EB;padding:16px 20px}
+.client-name{font-size:16px;font-weight:600;margin-bottom:2px}
+.client-handle{font-size:12px;opacity:.75}
+.client-stats{display:grid;grid-template-columns:repeat(4,1fr);padding:16px 20px;gap:8px;border-bottom:1px solid #F0E4D4}
+.cs{text-align:center}
+.cs strong{display:block;font-size:18px;font-weight:700;color:#7B5531;margin-bottom:2px}
+.cs span{font-size:10px;color:#9A7A6A;text-transform:uppercase;letter-spacing:.05em}
+.client-links{padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.btn-primary{background:#7B5531;color:#FAF3EB;padding:8px 18px;border-radius:20px;font-size:13px;font-weight:600;transition:.2s}
+.btn-primary:hover{background:#404730}
+.history-links{display:flex;gap:8px}
+.history-links a{background:#FAF3EB;border:1px solid #E0CFC0;color:#7B5531;padding:5px 12px;border-radius:14px;font-size:12px;font-weight:500;transition:.2s}
+.history-links a:hover{background:#F0E4D4}
+footer{text-align:center;padding:32px 24px;font-size:12px;color:#9A7A6A;background:#F0E4D4;border-top:1px solid #E0CFC0;margin-top:40px}
+</style></head><body>
+<div class="header">
+  <h1>Pulse Social Media</h1>
+  <p>Dashboard de Clientes — Instagram Analytics</p>
+  <span class="period">Relatórios gerados via Meta Graph API v25.0</span>
 </div>
-
-<div class="hero">
-  <div class="hero-eyebrow">Dashboard de Clientes</div>
-  <h1 class="hero-title">Relatórios de<br><span>Performance Instagram</span></h1>
-  <p class="hero-sub">Métricas mensais extraídas via Meta Graph API · Período: março–abril 2026</p>
+<div class="content">
+  <div class="section-title">Clientes — Março 2026</div>
+  <div class="grid"><div class="client-card">
+      <div class="client-head"><div class="client-name">Flavia Chicarelli</div><div class="client-handle">@flaviachicarelli</div></div>
+      <div class="client-stats">
+        <div class="cs"><strong>17.2K</strong><span>Alcance</span></div>
+        <div class="cs"><strong>74.3K</strong><span>Views</span></div>
+        <div class="cs"><strong>1.3K</strong><span>Interações</span></div>
+        <div class="cs"><strong>7.590</strong><span>Seguidores</span></div>
+      </div>
+      <div class="client-links">
+        <a href="./flaviachicarelli/" class="btn-primary">Ver Março 2026 →</a>
+        <div class="history-links">
+          <a href="./flaviachicarelli/2026-01/">Jan</a>
+          <a href="./flaviachicarelli/2026-02/">Fev</a>
+          <a href="./flaviachicarelli/2026-03/">Mar</a>
+        </div>
+      </div>
+    </div><div class="client-card">
+      <div class="client-head"><div class="client-name">Dra. Stephanie Lolo</div><div class="client-handle">@drastephanielolo</div></div>
+      <div class="client-stats">
+        <div class="cs"><strong>34.7K</strong><span>Alcance</span></div>
+        <div class="cs"><strong>168.7K</strong><span>Views</span></div>
+        <div class="cs"><strong>1.7K</strong><span>Interações</span></div>
+        <div class="cs"><strong>9.611</strong><span>Seguidores</span></div>
+      </div>
+      <div class="client-links">
+        <a href="./drastephanielolo/" class="btn-primary">Ver Março 2026 →</a>
+        <div class="history-links">
+          <a href="./drastephanielolo/2026-01/">Jan</a>
+          <a href="./drastephanielolo/2026-02/">Fev</a>
+          <a href="./drastephanielolo/2026-03/">Mar</a>
+        </div>
+      </div>
+    </div><div class="client-card">
+      <div class="client-head"><div class="client-name">Jézer Lopes - Fotógrafo de Casamentos</div><div class="client-handle">@jezerlopesfotografia</div></div>
+      <div class="client-stats">
+        <div class="cs"><strong>22.9K</strong><span>Alcance</span></div>
+        <div class="cs"><strong>134.3K</strong><span>Views</span></div>
+        <div class="cs"><strong>625</strong><span>Interações</span></div>
+        <div class="cs"><strong>10.466</strong><span>Seguidores</span></div>
+      </div>
+      <div class="client-links">
+        <a href="./jezerlopesfotografia/" class="btn-primary">Ver Março 2026 →</a>
+        <div class="history-links">
+          <a href="./jezerlopesfotografia/2026-01/">Jan</a>
+          <a href="./jezerlopesfotografia/2026-02/">Fev</a>
+          <a href="./jezerlopesfotografia/2026-03/">Mar</a>
+        </div>
+      </div>
+    </div><div class="client-card">
+      <div class="client-head"><div class="client-name">Maria Pietroforte | Decoração de eventos</div><div class="client-handle">@maria_pietroforte_decor</div></div>
+      <div class="client-stats">
+        <div class="cs"><strong>24.7K</strong><span>Alcance</span></div>
+        <div class="cs"><strong>126.3K</strong><span>Views</span></div>
+        <div class="cs"><strong>1.7K</strong><span>Interações</span></div>
+        <div class="cs"><strong>12.567</strong><span>Seguidores</span></div>
+      </div>
+      <div class="client-links">
+        <a href="./maria_pietroforte_decor/" class="btn-primary">Ver Março 2026 →</a>
+        <div class="history-links">
+          <a href="./maria_pietroforte_decor/2026-01/">Jan</a>
+          <a href="./maria_pietroforte_decor/2026-02/">Fev</a>
+          <a href="./maria_pietroforte_decor/2026-03/">Mar</a>
+        </div>
+      </div>
+    </div><div class="client-card">
+      <div class="client-head"><div class="client-name">Bruna Perissinotto</div><div class="client-handle">@brunaperissinotto_</div></div>
+      <div class="client-stats">
+        <div class="cs"><strong>127.2K</strong><span>Alcance</span></div>
+        <div class="cs"><strong>424.3K</strong><span>Views</span></div>
+        <div class="cs"><strong>5.6K</strong><span>Interações</span></div>
+        <div class="cs"><strong>65.410</strong><span>Seguidores</span></div>
+      </div>
+      <div class="client-links">
+        <a href="./brunaperissinotto_/" class="btn-primary">Ver Março 2026 →</a>
+        <div class="history-links">
+          <a href="./brunaperissinotto_/2026-01/">Jan</a>
+          <a href="./brunaperissinotto_/2026-02/">Fev</a>
+          <a href="./brunaperissinotto_/2026-03/">Mar</a>
+        </div>
+      </div>
+    </div><div class="client-card">
+      <div class="client-head"><div class="client-name">Carol Crespo | Saúde Capilar</div><div class="client-handle">@carolcrespotricologista</div></div>
+      <div class="client-stats">
+        <div class="cs"><strong>69.5K</strong><span>Alcance</span></div>
+        <div class="cs"><strong>199.4K</strong><span>Views</span></div>
+        <div class="cs"><strong>1.4K</strong><span>Interações</span></div>
+        <div class="cs"><strong>6.834</strong><span>Seguidores</span></div>
+      </div>
+      <div class="client-links">
+        <a href="./carolcrespotricologista/" class="btn-primary">Ver Março 2026 →</a>
+        <div class="history-links">
+          <a href="./carolcrespotricologista/2026-01/">Jan</a>
+          <a href="./carolcrespotricologista/2026-02/">Fev</a>
+          <a href="./carolcrespotricologista/2026-03/">Mar</a>
+        </div>
+      </div>
+    </div><div class="client-card">
+      <div class="client-head"><div class="client-name">Fernando Reame | Decorações de Eventos</div><div class="client-handle">@fernandoreame</div></div>
+      <div class="client-stats">
+        <div class="cs"><strong>49.1K</strong><span>Alcance</span></div>
+        <div class="cs"><strong>239.3K</strong><span>Views</span></div>
+        <div class="cs"><strong>3.1K</strong><span>Interações</span></div>
+        <div class="cs"><strong>25.308</strong><span>Seguidores</span></div>
+      </div>
+      <div class="client-links">
+        <a href="./fernandoreame/" class="btn-primary">Ver Março 2026 →</a>
+        <div class="history-links">
+          <a href="./fernandoreame/2026-01/">Jan</a>
+          <a href="./fernandoreame/2026-02/">Fev</a>
+          <a href="./fernandoreame/2026-03/">Mar</a>
+        </div>
+      </div>
+    </div></div>
 </div>
-
-<div class="grid">
-
-  <a class="card" href="flaviachicarelli/" style="--accent:#C084FC">
-    <div class="card-accent" style="background:linear-gradient(90deg,#C084FC,#7C3AED)"></div>
-    <div class="card-handle">@flaviachicarelli</div>
-    <div class="card-name">Flavia Chicareli</div>
-    <div class="card-metrics">
-      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#C084FC">88.783</span></div>
-      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">1.384</span></div>
-      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">1.263</span></div>
-    </div>
-    <div class="card-cta" style="color:#C084FC">Ver relatório →</div>
-  </a>
-
-  <a class="card" href="drastephanielolo/" style="--accent:#34D399">
-    <div class="card-accent" style="background:linear-gradient(90deg,#34D399,#059669)"></div>
-    <div class="card-handle">@drastephanielolo</div>
-    <div class="card-name">Dra. Stephanie Lolo</div>
-    <div class="card-metrics">
-      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#34D399">158.466</span></div>
-      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">1.450</span></div>
-      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">1.326</span></div>
-    </div>
-    <div class="card-cta" style="color:#34D399">Ver relatório →</div>
-  </a>
-
-  <a class="card" href="jezerlopesfotografia/" style="--accent:#60A5FA">
-    <div class="card-accent" style="background:linear-gradient(90deg,#60A5FA,#2563EB)"></div>
-    <div class="card-handle">@jezerlopesfotografia</div>
-    <div class="card-name">Jézer Lopes</div>
-    <div class="card-metrics">
-      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#60A5FA">128.665</span></div>
-      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">804</span></div>
-      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">1.045</span></div>
-    </div>
-    <div class="card-cta" style="color:#60A5FA">Ver relatório →</div>
-  </a>
-
-  <a class="card" href="maria_pietroforte_decor/" style="--accent:#F472B6">
-    <div class="card-accent" style="background:linear-gradient(90deg,#F472B6,#DB2777)"></div>
-    <div class="card-handle">@maria_pietroforte_decor</div>
-    <div class="card-name">Maria Pietroforte</div>
-    <div class="card-metrics">
-      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#F472B6">135.277</span></div>
-      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">1.798</span></div>
-      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">1.058</span></div>
-    </div>
-    <div class="card-cta" style="color:#F472B6">Ver relatório →</div>
-  </a>
-
-  <a class="card" href="brunaperissinotto_/" style="--accent:#FB923C">
-    <div class="card-accent" style="background:linear-gradient(90deg,#FB923C,#EA580C)"></div>
-    <div class="card-handle">@brunaperissinotto_</div>
-    <div class="card-name">Bruna Perissinotto</div>
-    <div class="card-metrics">
-      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#FB923C">479.410</span></div>
-      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">6.627</span></div>
-      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">6.934</span></div>
-    </div>
-    <div class="card-cta" style="color:#FB923C">Ver relatório →</div>
-  </a>
-
-  <a class="card" href="carolcrespotricologista/" style="--accent:#A3E635">
-    <div class="card-accent" style="background:linear-gradient(90deg,#A3E635,#65A30D)"></div>
-    <div class="card-handle">@carolcrespotricologista</div>
-    <div class="card-name">Carol Crespo</div>
-    <div class="card-metrics">
-      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#A3E635">211.794</span></div>
-      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">1.267</span></div>
-      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">1.882</span></div>
-    </div>
-    <div class="card-cta" style="color:#A3E635">Ver relatório →</div>
-  </a>
-
-  <a class="card" href="fernandoreame/" style="--accent:#38BDF8">
-    <div class="card-accent" style="background:linear-gradient(90deg,#38BDF8,#0284C7)"></div>
-    <div class="card-handle">@fernandoreame</div>
-    <div class="card-name">Fernando Reame</div>
-    <div class="card-metrics">
-      <div class="metric-row"><span class="metric-label">Views</span><span class="metric-value" style="color:#38BDF8">252.418</span></div>
-      <div class="metric-row"><span class="metric-label">Interações</span><span class="metric-value">3.476</span></div>
-      <div class="metric-row"><span class="metric-label">Visitas ao perfil</span><span class="metric-value">2.595</span></div>
-    </div>
-    <div class="card-cta" style="color:#38BDF8">Ver relatório →</div>
-  </a>
-
-</div>
-
 <footer>Pulse Social Media · Relatórios gerados via Meta Graph API v25.0</footer>
-
-</body>
-</html>
+</body></html>
