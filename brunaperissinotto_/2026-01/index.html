@@ -1,236 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bruna Perissinotto — Janeiro 2026 | Pulse Social Media</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#FAF3EB;color:#2C1810;min-height:100vh}
-a{color:inherit;text-decoration:none}
-.topbar{background:#7B5531;color:#FAF3EB;padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.05em;position:sticky;top:0;z-index:100}
-.topbar strong{font-weight:600}
-.topbar span{opacity:.75}
-.header{background:#7B5531;padding:40px 24px 32px;color:#FAF3EB}
-.header-inner{max-width:960px;margin:0 auto}
-.header h1{font-size:28px;font-weight:700;margin-bottom:4px}
-.header .handle{font-size:15px;opacity:.8;margin-bottom:20px}
-.month-nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.nav-btn{background:rgba(255,255,255,.15);color:#FAF3EB;border:1px solid rgba(255,255,255,.3);padding:7px 16px;border-radius:20px;font-size:13px;font-weight:500;transition:.2s}
-.nav-btn:hover{background:rgba(255,255,255,.25)}
-.nav-btn.disabled{opacity:.35;pointer-events:none}
-.current-month{background:#B5A591;color:#2C1810;padding:7px 18px;border-radius:20px;font-size:13px;font-weight:600}
-.content{max-width:960px;margin:0 auto;padding:32px 24px}
-section{margin-bottom:40px}
-h2{font-size:18px;font-weight:600;color:#404730;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #E0CFC0}
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px}
-.kpi-card{background:#fff;border-radius:12px;padding:20px 16px;border:1px solid #E8D5C4;text-align:center}
-.kpi-card .kv{font-size:26px;font-weight:700;color:#7B5531;display:block;margin-bottom:4px}
-.kpi-card .kl{font-size:12px;color:#9A7A6A;text-transform:uppercase;letter-spacing:.06em}
-.chart-wrap{background:#fff;border-radius:12px;padding:24px;border:1px solid #E8D5C4}
-.chart-wrap canvas{max-height:260px}
-.peak-label{font-size:12px;color:#9A7A6A;margin-top:8px;text-align:right}
-.post-card{background:#fff;border-radius:12px;border:1px solid #E8D5C4;display:flex;gap:0;overflow:hidden;margin-bottom:16px}
-.post-thumb{width:140px;min-width:140px;background:#F5EDE3;position:relative}
-.post-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.no-thumb{width:100%;height:100%;min-height:120px;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700;color:#B5A591}
-.post-rank{position:absolute;top:8px;left:8px;background:#7B5531;color:#FAF3EB;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px}
-.post-type-badge{position:absolute;bottom:8px;left:8px;background:#404730;color:#FAF3EB;font-size:10px;padding:2px 7px;border-radius:10px}
-.post-info{padding:16px;flex:1;min-width:0}
-.post-date{font-size:11px;color:#9A7A6A;margin-bottom:4px}
-.post-caption{font-size:13px;color:#4A3020;margin-bottom:12px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.post-metrics{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
-.pm{display:flex;flex-direction:column;align-items:center;background:#FAF3EB;border-radius:8px;padding:6px 10px;min-width:60px}
-.pm strong{font-size:15px;font-weight:700;color:#7B5531}
-.pm small{font-size:10px;color:#9A7A6A;margin-top:2px}
-.pm.er strong{color:#404730}
-.post-analysis{background:#F5EDE3;border-left:3px solid #B5A591;padding:10px 12px;border-radius:0 8px 8px 0;font-size:12px;color:#4A3020;line-height:1.5;margin-bottom:10px}
-.analysis-icon{margin-right:6px}
-.post-link{font-size:12px;color:#7B5531;font-weight:600;border-bottom:1px solid #B5A591}
-.insight-item{background:#fff;border-radius:10px;border:1px solid #E8D5C4;margin-bottom:10px;overflow:hidden}
-.insight-header{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;user-select:none}
-.insight-title{flex:1;font-weight:500;font-size:14px}
-.chevron{font-size:11px;color:#9A7A6A;transition:.2s}
-.insight-item.open .chevron{transform:rotate(180deg)}
-.insight-body{display:none;padding:0 16px 14px;font-size:13px;color:#4A3020;line-height:1.6}
-.insight-item.open .insight-body{display:block}
-.badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.05em}
-.badge-positivo{background:#D4EDDA;color:#2D6A3F}
-.badge-atenção,.badge-atencao{background:#FFE5E5;color:#C0392B}
-.badge-oportunidade{background:#FFF3CD;color:#856404}
-.badge-padrão,.badge-padrao{background:#D5E8FF;color:#1A4D8F}
-.rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.rec-card{background:#fff;border-radius:10px;border:1px solid #E8D5C4;padding:18px;display:flex;gap:12px;align-items:flex-start}
-.rec-num{font-size:22px;font-weight:800;color:#E0CFC0;min-width:32px}
-.rec-card p{font-size:13px;color:#4A3020;line-height:1.6}
-footer{text-align:center;padding:32px 24px;font-size:12px;color:#9A7A6A;background:#F0E4D4;border-top:1px solid #E0CFC0}
-@media(max-width:600px){.post-card{flex-direction:column}.post-thumb{width:100%;height:180px}}
-</style>
-</head>
-<body>
-<div class="topbar"><strong>Instagram Analytics — @brunaperissinotto_</strong><span>Gerado por Pulse Social Media</span></div>
-<div class="header"><div class="header-inner">
-  <div class="handle">@brunaperissinotto_</div>
-  <h1>Bruna Perissinotto</h1>
-  <div class="month-nav"><span class="nav-btn disabled">← </span><span class="current-month">Janeiro 2026</span><a href="../2026-02/" class="nav-btn">Fev →</a><span style="margin-left:8px;font-size:13px;opacity:.7">65.410 seguidores</span></div>
-</div></div>
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bruna Perissinotto — Janeiro 2026 | Pulse</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script><style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',sans-serif;background:#FAF3EB;color:#2C1810;min-height:100vh}a{color:inherit;text-decoration:none}.topbar{background:#7B5531;color:#FAF3EB;padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.05em;position:sticky;top:0;z-index:100}.topbar strong{font-weight:600}.topbar span{opacity:.75}.header{background:#7B5531;padding:40px 24px 32px;color:#FAF3EB}.header-inner{max-width:960px;margin:0 auto}.header h1{font-size:28px;font-weight:700;margin-bottom:4px}.header .handle{font-size:15px;opacity:.8;margin-bottom:20px}.month-nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.nav-btn{background:rgba(255,255,255,.15);color:#FAF3EB;border:1px solid rgba(255,255,255,.3);padding:7px 16px;border-radius:20px;font-size:13px;font-weight:500;transition:.2s}.nav-btn:hover{background:rgba(255,255,255,.25)}.nav-btn.disabled{opacity:.35;pointer-events:none}.current-month{background:#B5A591;color:#2C1810;padding:7px 18px;border-radius:20px;font-size:13px;font-weight:600}.content{max-width:960px;margin:0 auto;padding:32px 24px}section{margin-bottom:40px}h2{font-size:18px;font-weight:600;color:#404730;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #E0CFC0}.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px}.kpi-card{background:#fff;border-radius:12px;padding:20px 16px;border:1px solid #E8D5C4;text-align:center}.kpi-card .kv{font-size:26px;font-weight:700;color:#7B5531;display:block;margin-bottom:4px}.kpi-card .kl{font-size:12px;color:#9A7A6A;text-transform:uppercase;letter-spacing:.06em}.chart-wrap{background:#fff;border-radius:12px;padding:24px;border:1px solid #E8D5C4}.chart-wrap canvas{max-height:260px}.peak-label{font-size:12px;color:#9A7A6A;margin-top:8px;text-align:right}.post-card{background:#fff;border-radius:12px;border:1px solid #E8D5C4;display:flex;gap:0;overflow:hidden;margin-bottom:16px}.post-thumb{width:140px;min-width:140px;background:#F5EDE3;position:relative}.post-thumb img{width:100%;height:100%;object-fit:cover;display:block}.no-thumb{width:100%;height:100%;min-height:140px;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700;color:#B5A591}.post-rank{position:absolute;top:8px;left:8px;background:#7B5531;color:#FAF3EB;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px}.post-type-badge{position:absolute;bottom:8px;left:8px;background:#404730;color:#FAF3EB;font-size:10px;padding:2px 7px;border-radius:10px}.post-info{padding:16px;flex:1;min-width:0}.post-date{font-size:11px;color:#9A7A6A;margin-bottom:4px}.post-caption{font-size:13px;color:#4A3020;margin-bottom:12px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.post-metrics{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}.pm{display:flex;flex-direction:column;align-items:center;background:#FAF3EB;border-radius:8px;padding:6px 10px;min-width:60px}.pm strong{font-size:15px;font-weight:700;color:#7B5531}.pm small{font-size:10px;color:#9A7A6A;margin-top:2px}.pm.er strong{color:#404730}.post-analysis{background:#F5EDE3;border-left:3px solid #B5A591;padding:10px 12px;border-radius:0 8px 8px 0;font-size:12px;color:#4A3020;line-height:1.5;margin-bottom:10px}.analysis-icon{margin-right:6px}.post-link{font-size:12px;color:#7B5531;font-weight:600;border-bottom:1px solid #B5A591}.insight-item{background:#fff;border-radius:10px;border:1px solid #E8D5C4;margin-bottom:10px;overflow:hidden}.insight-header{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;user-select:none}.insight-title{flex:1;font-weight:500;font-size:14px}.chevron{font-size:11px;color:#9A7A6A;transition:.2s}.insight-item.open .chevron{transform:rotate(180deg)}.insight-body{display:none;padding:0 16px 14px;font-size:13px;color:#4A3020;line-height:1.6}.insight-item.open .insight-body{display:block}.badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.05em}.badge-positivo{background:#D4EDDA;color:#2D6A3F}.badge-atencao,.badge-atenção{background:#FFE5E5;color:#C0392B}.badge-oportunidade{background:#FFF3CD;color:#856404}.badge-padrao,.badge-padrão{background:#D5E8FF;color:#1A4D8F}.rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.rec-card{background:#fff;border-radius:10px;border:1px solid #E8D5C4;padding:18px;display:flex;gap:12px;align-items:flex-start}.rec-num{font-size:22px;font-weight:800;color:#E0CFC0;min-width:32px}.rec-card p{font-size:13px;color:#4A3020;line-height:1.6}footer{text-align:center;padding:32px 24px;font-size:12px;color:#9A7A6A;background:#F0E4D4;border-top:1px solid #E0CFC0}@media(max-width:600px){.post-card{flex-direction:column}.post-thumb{width:100%;height:180px}}</style></head><body>
+<div class="topbar"><strong>Instagram Analytics — @brunaperissinotto_</strong><span>Pulse Social Media</span></div>
+<div class="header"><div class="header-inner"><div class="handle">@brunaperissinotto_</div><h1>Bruna Perissinotto</h1>
+<div class="month-nav"><span class="nav-btn disabled">←</span><span class="current-month">Janeiro 2026</span><a href="../2026-02/" class="nav-btn">Fev →</a><span style="margin-left:8px;font-size:13px;opacity:.7">65.409 seguidores</span></div></div></div>
 <div class="content">
-  <section>
-    <h2>Visão Geral do Período</h2>
-    <div class="kpi-grid">
-      <div class="kpi-card"><span class="kv">135.9K</span><span class="kl">Alcance</span></div>
-      <div class="kpi-card"><span class="kv">510.5K</span><span class="kl">Visualizações</span></div>
-      <div class="kpi-card"><span class="kv">4.1K</span><span class="kl">Visitas ao Perfil</span></div>
-      <div class="kpi-card"><span class="kv">7.0K</span><span class="kl">Interações</span></div>
-      <div class="kpi-card"><span class="kv">4.2K</span><span class="kl">Contas Engajadas</span></div>
-      <div class="kpi-card"><span class="kv">15</span><span class="kl">Posts Publicados</span></div>
-    </div>
-  </section>
-  <section>
-    <h2>Alcance Diário</h2>
-    <div class="chart-wrap">
-      <canvas id="reachChart"></canvas>
-      <div class="peak-label">Pico: 17.818 em 2026-01-26</div>
-    </div>
-  </section>
-  <section>
-    <h2>Top 5 Posts do Mês</h2>
-    <div class="post-card">
-      <div class="post-thumb"><a href="https://www.instagram.com/reel/DUJcMO9jya3/" target="_blank"><img src="https://scontent.cdninstagram.com/v/t51.82787-15/624080265_18301719892273829_539472662013798926_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeE7bHyw14auQnJBjnnHETyWTD7OkGGVTEtMPs6QYZVMS9OX2j9W2eGOgU5MZ-3bRGVveiPe4S559X7M-zJNdMI6&_nc_ohc=F1xyEAd1zkcQ7kNvwFes42K&_nc_oc=Adplo3n3Ya5eTWDmEZnDq_p4TFy6kgHU3WyboEENdd3yl0WKsdYcnDwF7Vmi-EzFu7Q&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=BCX8uyxV2kPL24UebPpGXQ&_nc_tpa=Q5bMBQGm1xniyHI1uOFy7NdQa0XfW84Y8JnxhvKQ03JtFmCikp1woPdklROaS0YguFAu8qAhmcvrEJALdQ&oh=00_Af0Og_F00Cj4nlSlHPhSDPry_6UBbdNTZFPXn4TGu9AwoQ&oe=69DB5F6E" alt="post" onerror="this.style.display='none'"><div class="post-rank">#1</div><div class="post-type-badge">REELS</div></a></div>
-      <div class="post-info">
-        <div class="post-date">2026-01-30</div>
-        <div class="post-caption">A Sala Lilás não é só um espaço físico, ela nasceu como um lugar de acolhimento, escuta e proteção para mulheres que precisam de apoio para romper o c</div>
-        <div class="post-metrics">
-          <span class="pm"><strong>0</strong><small>Alcance</small></span>
-          <span class="pm"><strong>0</strong><small>Views</small></span>
-          <span class="pm"><strong>105</strong><small>Curtidas</small></span>
-          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
-          <span class="pm"><strong>6</strong><small>Comentários</small></span>
-          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
-          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
-        </div>
-        <div class="post-analysis"><span class="analysis-icon">💡</span>Melhor post do mês — REELS com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
-        <a href="https://www.instagram.com/reel/DUJcMO9jya3/" target="_blank" class="post-link">Ver post no Instagram →</a>
-      </div>
-    </div><div class="post-card">
-      <div class="post-thumb"><a href="https://www.instagram.com/p/DUG7SGFEdqo/" target="_blank"><div class="no-thumb">#2</div><div class="post-rank">#2</div><div class="post-type-badge">Feed</div></a></div>
-      <div class="post-info">
-        <div class="post-date">2026-01-29</div>
-        <div class="post-caption">Grande parte do que faço acontece longe das câmeras. No silêncio, no cuidado diário, na dedicação a quem precisa.
+<section><h2>Visão Geral do Período</h2><div class="kpi-grid">
+<div class="kpi-card"><span class="kv">135.9K</span><span class="kl">Alcance</span></div>
+<div class="kpi-card"><span class="kv">510.5K</span><span class="kl">Visualizações</span></div>
+<div class="kpi-card"><span class="kv">4.1K</span><span class="kl">Visitas ao Perfil</span></div>
+<div class="kpi-card"><span class="kv">7.0K</span><span class="kl">Interações</span></div>
+<div class="kpi-card"><span class="kv">4.2K</span><span class="kl">Contas Engajadas</span></div>
+<div class="kpi-card"><span class="kv">15</span><span class="kl">Posts Publicados</span></div>
+</div></section>
+<section><h2>Alcance Diário</h2><div class="chart-wrap"><canvas id="rc"></canvas><div class="peak-label">Pico: 17.818 em 2026-01-26</div></div></section>
+<section><h2>Top 5 Posts do Mês</h2><div class="post-card"><div class="post-thumb"><a href="https://www.instagram.com/reel/DT-KP5kEWw5/" target="_blank"><img src="https://scontent.cdninstagram.com/v/t51.82787-15/623219271_18300914068273829_5986060818478293737_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFf0rB68cc-EWU8mvZbdz93VN0CcreX1aJU3QJyt5fVovRNlsvNVewth_9jUllVi7k3N4uOpE4yD_B9NavMCU1H&_nc_ohc=IIXjjSKCpmgQ7kNvwFWKBQp&_nc_oc=AdrjPxpOscBd4xISJHLi-RVYlLK7YiAUfJPi134PCnwdr_7e5X3sYa9Iu2XUvTADfD0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=iq_1SFJzOhXskxSTHQnv5g&_nc_tpa=Q5bMBQHC5fA1UyAmhbFj5u0_5KK72KmrGw7CRjNJKFut6Fkcsl10ZKWLBp32aNsVxhYcMA53wbDWsXXMnw&oh=00_Af19U3Y-uuaqf286_F3HMI9xBcI7n0ua0AscENMX1vnJfg&oe=69DB6A64" alt="" onerror="this.style.display='none'"><div class="post-rank">#1</div><div class="post-type-badge">Reel</div></a></div><div class="post-info"><div class="post-date">2026-01-26</div><div class="post-caption">Eu sei que ele ouve cada oração feita em silêncio, e mesmo quando o caminho parece confuso, eu sigo acreditando: a promessa não falha!
 
-Mas chega um momento em que o traba</div>
-        <div class="post-metrics">
-          <span class="pm"><strong>0</strong><small>Alcance</small></span>
-          <span class="pm"><strong>0</strong><small>Views</small></span>
-          <span class="pm"><strong>123</strong><small>Curtidas</small></span>
-          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
-          <span class="pm"><strong>3</strong><small>Comentários</small></span>
-          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
-          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
-        </div>
-        <div class="post-analysis"><span class="analysis-icon">💡</span>Feed com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
-        <a href="https://www.instagram.com/p/DUG7SGFEdqo/" target="_blank" class="post-link">Ver post no Instagram →</a>
-      </div>
-    </div><div class="post-card">
-      <div class="post-thumb"><a href="https://www.instagram.com/p/DUEVmfTEZ7p/" target="_blank"><div class="no-thumb">#3</div><div class="post-rank">#3</div><div class="post-type-badge">Feed</div></a></div>
-      <div class="post-info">
-        <div class="post-date">2026-01-28</div>
-        <div class="post-caption">Cuidar é olhar pra outra pessoa com verdade. Transformar amor em gesto — no prato, no abraço, na conversa, no olhar. E foi assim que eu entendi que se</div>
-        <div class="post-metrics">
-          <span class="pm"><strong>0</strong><small>Alcance</small></span>
-          <span class="pm"><strong>0</strong><small>Views</small></span>
-          <span class="pm"><strong>62</strong><small>Curtidas</small></span>
-          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
-          <span class="pm"><strong>6</strong><small>Comentários</small></span>
-          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
-          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
-        </div>
-        <div class="post-analysis"><span class="analysis-icon">💡</span>Feed com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
-        <a href="https://www.instagram.com/p/DUEVmfTEZ7p/" target="_blank" class="post-link">Ver post no Instagram →</a>
-      </div>
-    </div><div class="post-card">
-      <div class="post-thumb"><a href="https://www.instagram.com/reel/DUBzAypkRD8/" target="_blank"><img src="https://scontent.cdninstagram.com/v/t51.82787-15/622111854_18301211911273829_2198340799894712828_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHuCKIvZOgNfGas1fde61lktAhMhWEoasW0CEyFYShqxQT_fk2PiPDhIpq8Jpy1dIJxfAktPYQBp83Oi3LuKiXg&_nc_ohc=md0gwuvl3CYQ7kNvwE3_ovE&_nc_oc=AdqBu0migbLVPY8h0Ce-a1s0vnKFIF44PdvDz6Ah875NGQQwUZMXguzFRd4TCT0AQL0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=BCX8uyxV2kPL24UebPpGXQ&_nc_tpa=Q5bMBQFNdT906cNEGoD6NKzndwUj39_l7s1KBeVhsFFAIIDOHRgry9q6MV4bd5cdmq3-bP2tASuYuL_XqA&oh=00_Af0f7MdNifd8VqvZmMnig9-gAfq1uVaAGx7DdsMjUhPhfg&oe=69DB619E" alt="post" onerror="this.style.display='none'"><div class="post-rank">#4</div><div class="post-type-badge">REELS</div></a></div>
-      <div class="post-info">
-        <div class="post-date">2026-01-27</div>
-        <div class="post-caption">Isso definitivamente, não tem preço 💙</div>
-        <div class="post-metrics">
-          <span class="pm"><strong>0</strong><small>Alcance</small></span>
-          <span class="pm"><strong>0</strong><small>Views</small></span>
-          <span class="pm"><strong>146</strong><small>Curtidas</small></span>
-          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
-          <span class="pm"><strong>11</strong><small>Comentários</small></span>
-          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
-          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
-        </div>
-        <div class="post-analysis"><span class="analysis-icon">💡</span>REELS com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
-        <a href="https://www.instagram.com/reel/DUBzAypkRD8/" target="_blank" class="post-link">Ver post no Instagram →</a>
-      </div>
-    </div><div class="post-card">
-      <div class="post-thumb"><a href="https://www.instagram.com/reel/DT-KP5kEWw5/" target="_blank"><img src="https://scontent.cdninstagram.com/v/t51.82787-15/623219271_18300914068273829_5986060818478293737_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFf0rB68cc-EWU8mvZbdz93VN0CcreX1aJU3QJyt5fVovRNlsvNVewth_9jUllVi7k3N4uOpE4yD_B9NavMCU1H&_nc_ohc=IIXjjSKCpmgQ7kNvwFWKBQp&_nc_oc=AdrjPxpOscBd4xISJHLi-RVYlLK7YiAUfJPi134PCnwdr_7e5X3sYa9Iu2XUvTADfD0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=BCX8uyxV2kPL24UebPpGXQ&_nc_tpa=Q5bMBQHrcewHJUrsMqkmYV4IHITTeazW-k_h4WVeEIL30Yq0PEoXZqOCA9x1Mt2WY0bJhg1LRbdqNlWm1g&oh=00_Af1HAWgmtpBUrQGlLG2FWVkKd33lrGrF38cw24FUgVu7Lg&oe=69DB6A64" alt="post" onerror="this.style.display='none'"><div class="post-rank">#5</div><div class="post-type-badge">REELS</div></a></div>
-      <div class="post-info">
-        <div class="post-date">2026-01-26</div>
-        <div class="post-caption">Eu sei que ele ouve cada oração feita em silêncio, e mesmo quando o caminho parece confuso, eu sigo acreditando: a promessa não falha!
+Ela se cumpre </div><div class="post-metrics"><span class="pm"><strong>39.2K</strong><small>Alcance</small></span><span class="pm"><strong>2.1K</strong><small>Curtidas</small></span><span class="pm"><strong>114</strong><small>Salvamentos</small></span><span class="pm"><strong>9</strong><small>Comentários</small></span><span class="pm"><strong>167</strong><small>Compart.</small></span><span class="pm er"><strong>6.2%</strong><small>Eng./Alcance</small></span></div><div class="post-analysis"><span class="analysis-icon">💡</span>Melhor post do mês — Reel com alcance de 39.225. forte viralização orgânica por compartilhamentos; formato Reel amplia alcance via Explorar e Reels Feed.</div><a href="https://www.instagram.com/reel/DT-KP5kEWw5/" target="_blank" class="post-link">Ver post no Instagram →</a></div></div><div class="post-card"><div class="post-thumb"><a href="https://www.instagram.com/p/DTqzvYZEWog/" target="_blank"><div class="no-thumb">#2</div><div class="post-rank">#2</div><div class="post-type-badge">Feed</div></a></div><div class="post-info"><div class="post-date">2026-01-18</div><div class="post-caption">2016 ➡️ 2026
 
-Ela se cumpre </div>
-        <div class="post-metrics">
-          <span class="pm"><strong>0</strong><small>Alcance</small></span>
-          <span class="pm"><strong>0</strong><small>Views</small></span>
-          <span class="pm"><strong>2.1K</strong><small>Curtidas</small></span>
-          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
-          <span class="pm"><strong>9</strong><small>Comentários</small></span>
-          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
-          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
-        </div>
-        <div class="post-analysis"><span class="analysis-icon">💡</span>REELS com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
-        <a href="https://www.instagram.com/reel/DT-KP5kEWw5/" target="_blank" class="post-link">Ver post no Instagram →</a>
-      </div>
-    </div>
-  </section>
-  <section>
-    <h2>Insights Estratégicos</h2>
-    <div class="insight-item">
-    <div class="insight-header" onclick="this.parentElement.classList.toggle('open')">
-      <span class="badge badge-positivo">positivo</span>
-      <span class="insight-title">Alcance Total</span>
-      <span class="chevron">▼</span>
-    </div>
-    <div class="insight-body">O perfil alcançou 135.897 contas únicas em Janeiro 2026, com pico de 17.818 em 2026-01-26. Resultado expressivo indicando boa distribuição pelo algoritmo.</div>
-  </div><div class="insight-item">
-    <div class="insight-header" onclick="this.parentElement.classList.toggle('open')">
-      <span class="badge badge-padrão">padrão</span>
-      <span class="insight-title">Visualizações vs Alcance</span>
-      <span class="chevron">▼</span>
-    </div>
-    <div class="insight-body">Com 510.517 visualizações para 135.897 contas alcançadas, o índice de visualizações por pessoa foi de 3.8x — acima de 3x indica que o público consumiu múltiplos conteúdos do perfil.</div>
-  </div><div class="insight-item">
-    <div class="insight-header" onclick="this.parentElement.classList.toggle('open')">
-      <span class="badge badge-oportunidade">oportunidade</span>
-      <span class="insight-title">Visitas ao Perfil</span>
-      <span class="chevron">▼</span>
-    </div>
-    <div class="insight-body">4.063 visitas ao perfil com taxa de conversão de visita para seguidor estimada. Abaixo de 5% do alcance — CTAs mais diretos nos conteúdos podem aumentar essa conversão.</div>
-  </div><div class="insight-item">
-    <div class="insight-header" onclick="this.parentElement.classList.toggle('open')">
-      <span class="badge badge-positivo">positivo</span>
-      <span class="insight-title">Engajamento</span>
-      <span class="chevron">▼</span>
-    </div>
-    <div class="insight-body">7.009 interações totais e 4.157 contas engajadas. Taxa de engajamento por alcance: 5.2%. O post com melhor desempenho foi do tipo REELS com alcance de 0.</div>
-  </div>
-  </section>
-  <section>
-    <h2>Recomendações</h2>
-    <div class="rec-grid"><div class="rec-card"><span class="rec-num">01</span><p>Manter frequência mínima de 15 posts/mês — consistência é fator-chave no algoritmo do Instagram.</p></div><div class="rec-card"><span class="rec-num">02</span><p>Priorizar o formato REELS — apresentou melhor alcance no período com 0 pessoas alcançadas.</p></div><div class="rec-card"><span class="rec-num">03</span><p>Publicar nos horários de pico identificados pelo Instagram Insights — verificar na seção de público do app.</p></div><div class="rec-card"><span class="rec-num">04</span><p>Adicionar CTAs explícitos de "salve este post" — aumenta o sinal de valor para o algoritmo.</p></div><div class="rec-card"><span class="rec-num">05</span><p>Explorar temas de maior engajamento identificados nos Top 5 para criar séries de conteúdo.</p></div><div class="rec-card"><span class="rec-num">06</span><p>Monitorar a taxa de visitas ao perfil — meta: superar 4.876 visitas no próximo mês.</p></div></div>
-  </section>
+Ah se eu pudesse encontrar a Bruna de 10 anos atrás para um café… 🥹🦋✨
+
+Amei essa trend! 
+
+#trend #instamood</div><div class="post-metrics"><span class="pm"><strong>11.2K</strong><small>Alcance</small></span><span class="pm"><strong>448</strong><small>Curtidas</small></span><span class="pm"><strong>5</strong><small>Salvamentos</small></span><span class="pm"><strong>10</strong><small>Comentários</small></span><span class="pm"><strong>3</strong><small>Compart.</small></span><span class="pm er"><strong>4.2%</strong><small>Eng./Alcance</small></span></div><div class="post-analysis"><span class="analysis-icon">💡</span>Feed com alcance de 11.206. conteúdo alinhado ao interesse do público neste perfil.</div><a href="https://www.instagram.com/p/DTqzvYZEWog/" target="_blank" class="post-link">Ver post no Instagram →</a></div></div><div class="post-card"><div class="post-thumb"><a href="https://www.instagram.com/reel/DTlbrR2kcFu/" target="_blank"><img src="https://scontent.cdninstagram.com/v/t51.82787-15/618786056_18299664865273829_1198070003969794310_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHCQRWcp1bkpRH8pjYywCUJ3q1yVBJCAFjerXJUEkIAWCrP1c_2AEXb5xAunGdPAC89IVs75HGfsFLVoTPMSycQ&_nc_ohc=v_YaTQHAMaYQ7kNvwHfLcuH&_nc_oc=Adpnv5Ceo0ki5s2v6uDHW8_2iOlTBx0mI4c4BZsLRPqb_X7xwXzgEEz4TJgyQwlkIMc&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=iq_1SFJzOhXskxSTHQnv5g&_nc_tpa=Q5bMBQFZYWua1Bl9VacHzADigEAfmUluU3RJnBw-p0nFVYq-2x5Kku36BlVudhegLnMpZd2IRs5nncNcLQ&oh=00_Af3dVowZTavGFuK8fEb48Tc7p5LI1EJSELN931UD3HUv6g&oe=69DB9229" alt="" onerror="this.style.display='none'"><div class="post-rank">#3</div><div class="post-type-badge">Reel</div></a></div><div class="post-info"><div class="post-date">2026-01-16</div><div class="post-caption">O esporte foi um grande aliado em momentos muito difíceis da minha vida. Já enfrentei depressão pós-parto, crises de pânico e fases em que a dor emoci</div><div class="post-metrics"><span class="pm"><strong>10.7K</strong><small>Alcance</small></span><span class="pm"><strong>470</strong><small>Curtidas</small></span><span class="pm"><strong>14</strong><small>Salvamentos</small></span><span class="pm"><strong>13</strong><small>Comentários</small></span><span class="pm"><strong>63</strong><small>Compart.</small></span><span class="pm er"><strong>5.2%</strong><small>Eng./Alcance</small></span></div><div class="post-analysis"><span class="analysis-icon">💡</span>Reel com alcance de 10.714. forte viralização orgânica por compartilhamentos; formato Reel amplia alcance via Explorar e Reels Feed.</div><a href="https://www.instagram.com/reel/DTlbrR2kcFu/" target="_blank" class="post-link">Ver post no Instagram →</a></div></div><div class="post-card"><div class="post-thumb"><a href="https://www.instagram.com/reel/DT3cPNlEbdK/" target="_blank"><img src="https://scontent.cdninstagram.com/v/t51.71878-15/619632326_1543858136696549_8387992195781306165_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeEDrjSCWvSIJNEubc7GYVdmlvnfChTkmqaW-d8KFOSapuaX6pVvv_83kgReROuYgpczD2qkkjwvjCckrHK9mHkM&_nc_ohc=i2HFhxvkIVAQ7kNvwEBi0hZ&_nc_oc=AdpiA5k4xGFNrIsyay3XQMmZyBXHtXNtjvEsWRuOVWh2OXFV7pZL-woat5Zurf8Bt8I&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=iq_1SFJzOhXskxSTHQnv5g&_nc_tpa=Q5bMBQH_KOgF0pHda5AFu9rqNleH84JwuhJBSDdJoSN9IeeifGiUh7fcsytrBjT1iRmnY0LostnPSDuHQQ&oh=00_Af2J06oqdiCUgvLtY1FQsoUMBfeQboLbTfDY_8RGBLWhgA&oe=69DB7A8C" alt="" onerror="this.style.display='none'"><div class="post-rank">#4</div><div class="post-type-badge">Reel</div></a></div><div class="post-info"><div class="post-date">2026-01-23</div><div class="post-caption">Algumas respostas não precisam de discussão. Elas aparecem no trabalho diário, no olhar atento, na mão estendida e na presença onde mais precisa.
+
+A g</div><div class="post-metrics"><span class="pm"><strong>9.7K</strong><small>Alcance</small></span><span class="pm"><strong>232</strong><small>Curtidas</small></span><span class="pm"><strong>13</strong><small>Salvamentos</small></span><span class="pm"><strong>19</strong><small>Comentários</small></span><span class="pm"><strong>15</strong><small>Compart.</small></span><span class="pm er"><strong>2.9%</strong><small>Eng./Alcance</small></span></div><div class="post-analysis"><span class="analysis-icon">💡</span>Reel com alcance de 9.656. forte viralização orgânica por compartilhamentos; formato Reel amplia alcance via Explorar e Reels Feed.</div><a href="https://www.instagram.com/reel/DT3cPNlEbdK/" target="_blank" class="post-link">Ver post no Instagram →</a></div></div><div class="post-card"><div class="post-thumb"><a href="https://www.instagram.com/reel/DUBzAypkRD8/" target="_blank"><img src="https://scontent.cdninstagram.com/v/t51.82787-15/622111854_18301211911273829_2198340799894712828_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHuCKIvZOgNfGas1fde61lktAhMhWEoasW0CEyFYShqxQT_fk2PiPDhIpq8Jpy1dIJxfAktPYQBp83Oi3LuKiXg&_nc_ohc=md0gwuvl3CYQ7kNvwE3_ovE&_nc_oc=AdqBu0migbLVPY8h0Ce-a1s0vnKFIF44PdvDz6Ah875NGQQwUZMXguzFRd4TCT0AQL0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=iq_1SFJzOhXskxSTHQnv5g&_nc_tpa=Q5bMBQFacbIoDZQEWfNZ_44yiNKuyuQkzyRPiOJiyBQC2HluKkHfWY4epwvvyVOGVuKbyvdkIYqVvrIHLg&oh=00_Af20KYV2pZyZxH1Y3JtRIZtmTRoTVVxJJHBNzqh461Wh-g&oe=69DB619E" alt="" onerror="this.style.display='none'"><div class="post-rank">#5</div><div class="post-type-badge">Reel</div></a></div><div class="post-info"><div class="post-date">2026-01-27</div><div class="post-caption">Isso definitivamente, não tem preço 💙</div><div class="post-metrics"><span class="pm"><strong>8.8K</strong><small>Alcance</small></span><span class="pm"><strong>146</strong><small>Curtidas</small></span><span class="pm"><strong>6</strong><small>Salvamentos</small></span><span class="pm"><strong>11</strong><small>Comentários</small></span><span class="pm"><strong>42</strong><small>Compart.</small></span><span class="pm er"><strong>2.3%</strong><small>Eng./Alcance</small></span></div><div class="post-analysis"><span class="analysis-icon">💡</span>Reel com alcance de 8.822. forte viralização orgânica por compartilhamentos; formato Reel amplia alcance via Explorar e Reels Feed.</div><a href="https://www.instagram.com/reel/DUBzAypkRD8/" target="_blank" class="post-link">Ver post no Instagram →</a></div></div></section>
+<section><h2>Insights Estratégicos</h2><div class="insight-item"><div class="insight-header" onclick="this.parentElement.classList.toggle('open')"><span class="badge badge-positivo">positivo</span><span class="insight-title">Alcance Total</span><span class="chevron">▼</span></div><div class="insight-body">O perfil alcançou 135.897 contas únicas em Janeiro 2026, com pico de 17.818 em 2026-01-26. Resultado expressivo com boa distribuição pelo algoritmo.</div></div><div class="insight-item"><div class="insight-header" onclick="this.parentElement.classList.toggle('open')"><span class="badge badge-padrão">padrão</span><span class="insight-title">Visualizações vs Alcance</span><span class="chevron">▼</span></div><div class="insight-body">Com 510.517 visualizações para 135.897 contas alcançadas, o índice foi de 3.8x por pessoa. Acima de 3x — público consumiu múltiplos conteúdos do perfil.</div></div><div class="insight-item"><div class="insight-header" onclick="this.parentElement.classList.toggle('open')"><span class="badge badge-oportunidade">oportunidade</span><span class="insight-title">Visitas ao Perfil</span><span class="chevron">▼</span></div><div class="insight-body">4.063 visitas ao perfil. Abaixo de 5% do alcance — CTAs mais diretos podem aumentar essa conversão.</div></div><div class="insight-item"><div class="insight-header" onclick="this.parentElement.classList.toggle('open')"><span class="badge badge-positivo">positivo</span><span class="insight-title">Engajamento</span><span class="chevron">▼</span></div><div class="insight-body">7.009 interações totais e 4.157 contas engajadas. Taxa por alcance: 5.2%. Post de maior alcance: Reel (39.225 alcance, 114 salvamentos).</div></div></section>
+<section><h2>Recomendações</h2><div class="rec-grid"><div class="rec-card"><span class="rec-num">01</span><p>Manter frequência de 15 posts/mês — consistência é o fator mais impactante no alcance orgânico.</p></div><div class="rec-card"><span class="rec-num">02</span><p>Priorizar formato Reel — melhor alcance do mês (39.225 pessoas alcançadas).</p></div><div class="rec-card"><span class="rec-num">03</span><p>Publicar nos horários de maior engajamento do público — consultar Insights do app.</p></div><div class="rec-card"><span class="rec-num">04</span><p>Usar CTA "salve esse post" — salvamentos aumentam distribuição orgânica pelo algoritmo.</p></div><div class="rec-card"><span class="rec-num">05</span><p>Criar série de conteúdo baseada nos temas dos Top 5 posts do mês.</p></div><div class="rec-card"><span class="rec-num">06</span><p>Meta de visitas ao perfil para o próximo mês: 4.876 visitas.</p></div></div></section>
 </div>
-<footer>Relatório gerado por <strong>Pulse Social Media</strong> via Meta Graph API v25.0</footer>
-<script>
-new Chart(document.getElementById('reachChart'),{
-  type:'line',
-  data:{labels:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],datasets:[{label:'Alcance diário',data:[6365,843,1714,3624,2835,3482,1985,4227,2880,741,368,1095,2113,872,1148,7606,2670,6176,3954,3532,2535,2584,5629,3145,4003,17818,15606,15386,5522,5439],borderColor:'#7B5531',backgroundColor:'rgba(123,85,49,.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#7B5531',borderWidth:2}]},
-  options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>'Alcance: '+ctx.raw.toLocaleString('pt-BR')}}},scales:{y:{beginAtZero:true,grid:{color:'#F0E4D4'},ticks:{color:'#9A7A6A'}},x:{grid:{color:'#F0E4D4'},ticks:{color:'#9A7A6A'}}}}
-});
-document.querySelectorAll('.insight-header').forEach(h=>h.addEventListener('click',()=>{}));
-</script>
-</body></html>
+<footer>Relatório gerado por <strong>Pulse Social Media</strong> · Meta Graph API v25.0</footer>
+<script>new Chart(document.getElementById('rc'),{type:'line',data:{labels:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],datasets:[{label:'Alcance',data:[6365,843,1714,3624,2835,3482,1985,4227,2880,741,368,1095,2113,872,1148,7606,2670,6176,3954,3532,2535,2584,5629,3145,4003,17818,15606,15386,5522,5439],borderColor:'#7B5531',backgroundColor:'rgba(123,85,49,.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#7B5531',borderWidth:2}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'Alcance: '+c.raw.toLocaleString('pt-BR')}}},scales:{y:{beginAtZero:true,grid:{color:'#F0E4D4'},ticks:{color:'#9A7A6A'}},x:{grid:{color:'#F0E4D4'},ticks:{color:'#9A7A6A'}}}}});</script></body></html>
