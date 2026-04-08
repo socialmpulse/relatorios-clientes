@@ -10,31 +10,31 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:#FAF3EB;color:#2C1810;line-height:1.5}
 .topbar{background:#7B5531;color:#fff;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15);flex-wrap:wrap;gap:8px}
-.topbar a{color:#FAF3EB;text-decoration:none;font-size:13px;opacity:.85}
+.topbar a.back{color:#FAF3EB;text-decoration:none;font-size:13px;opacity:.85}
 .topbar .nav-months{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .header{background:#7B5531;color:#fff;padding:36px 24px 44px;text-align:center}
 .header h1{font-size:26px;font-weight:800;margin-bottom:4px}
-.header .sub{opacity:.8;font-size:14px;margin-bottom:14px}
-.header .period{background:rgba(255,255,255,.15);display:inline-block;padding:5px 18px;border-radius:20px;font-size:13px;font-weight:600}
+.header .sub{opacity:.8;font-size:14px;margin-bottom:12px}
+.header .period{background:rgba(13,51,59,.25);display:inline-block;padding:5px 18px;border-radius:20px;font-size:13px;font-weight:600}
 .container{max-width:940px;margin:0 auto;padding:0 16px}
 .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:-24px;padding-bottom:8px}
-.kpi-card{background:#fff;border-radius:12px;padding:18px 14px;box-shadow:0 2px 12px rgba(123,85,49,.1);border-top:3px solid #B5A591}
+.kpi-card{background:#fff;border-radius:12px;padding:18px 14px;box-shadow:0 2px 12px rgba(13,51,59,.1);border-top:3px solid #0d333b}
 .kpi-label{font-size:11px;color:#9A7A6A;text-transform:uppercase;letter-spacing:.5px;font-weight:600;margin-bottom:6px}
-.kpi-value{font-size:24px;font-weight:800;color:#7B5531}
-.section{background:#fff;border-radius:12px;padding:22px;margin:22px 0;box-shadow:0 2px 8px rgba(123,85,49,.06)}
+.kpi-value{font-size:24px;font-weight:800;color:#0d333b}
+.section{background:#fff;border-radius:12px;padding:22px;margin:22px 0;box-shadow:0 2px 8px rgba(13,51,59,.06)}
 .section-title{font-size:15px;font-weight:700;color:#7B5531;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid #E8D5C4}
 .chart-wrap{position:relative;height:210px}
 table{width:100%;border-collapse:collapse}
 th{text-align:left;font-size:11px;text-transform:uppercase;color:#9A7A6A;letter-spacing:.5px;padding:8px;border-bottom:2px solid #E8D5C4}
-tr:hover td{background:#FDF7F2}
+tr:hover td{background:#f8f0e8}
 .insight-item{border:1px solid #E8D5C4;border-radius:10px;margin-bottom:10px;overflow:hidden}
 .insight-head{padding:13px 16px;cursor:pointer;display:flex;align-items:center;gap:10px;font-weight:600;font-size:13px;background:#FDF7F2}
 .insight-body{padding:13px 16px;font-size:13px;color:#4A3728;border-top:1px solid #E8D5C4;line-height:1.7;display:none}
 .insight-item.open .insight-body{display:block}
 .badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase}
 .rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.rec-card{background:#FDF7F2;border-radius:10px;padding:16px;border-left:3px solid #7B5531}
-.rec-num{font-size:26px;font-weight:800;color:#B5A591;margin-bottom:6px}
+.rec-card{background:#FDF7F2;border-radius:10px;padding:16px;border-left:3px solid #0d333b}
+.rec-num{font-size:26px;font-weight:800;color:#0d333b;margin-bottom:6px;opacity:.6}
 .rec-title{font-weight:700;font-size:13px;color:#7B5531;margin-bottom:5px}
 .rec-body{font-size:12px;color:#9A7A6A;line-height:1.6}
 .footer{text-align:center;padding:28px 16px;color:#9A7A6A;font-size:12px}
@@ -44,9 +44,9 @@ tr:hover td{background:#FDF7F2}
 <body>
 
 <div class="topbar">
-  <a href="../../">← Todos os clientes</a>
+  <a class="back" href="../../">← Todos os clientes</a>
   <span style="font-size:12px;opacity:.7">@brunaperissinotto_ · Janeiro 2026 2026</span>
-  <div class="nav-months"><a href="../2026-02/" style="color:#FAF3EB;text-decoration:none;font-size:13px;padding:4px 12px;border:1px solid rgba(250,243,235,.5);border-radius:20px;opacity:.85">↗ Fevereiro 2026</a> <a href="../2026-03/" style="color:#FAF3EB;text-decoration:none;font-size:13px;padding:4px 12px;border:1px solid rgba(250,243,235,.5);border-radius:20px;opacity:.85">↗ Março 2026</a></div>
+  <div class="nav-months"><a href="../2026-02/" style="color:#FAF3EB;text-decoration:none;font-size:13px;padding:4px 12px;border:1px solid rgba(250,243,235,.4);border-radius:20px;opacity:.85">↗ Fevereiro 2026</a> <a href="../2026-03/" style="color:#FAF3EB;text-decoration:none;font-size:13px;padding:4px 12px;border:1px solid rgba(250,243,235,.4);border-radius:20px;opacity:.85">↗ Março 2026</a></div>
 </div>
 
 <div class="header">
@@ -66,8 +66,8 @@ tr:hover td{background:#FDF7F2}
     </div>
     <div class="kpi-card">
       <div class="kpi-label">Pico Diário</div>
-      <div class="kpi-value">[object Object]</div>
-      <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-01-26</div>
+      <div class="kpi-value">17.8K</div>
+      <div style="font-size:11px;color:#9A7A6A;margin-top:4px">2026-01-26</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-label">Visualizações</div>
@@ -110,58 +110,58 @@ tr:hover td{background:#FDF7F2}
         <th style="text-align:right">Saves</th>
         <th style="text-align:right">Shares</th>
       </tr></thead>
-      <tbody><tr style="border-bottom:1px solid #E8D5C4">
-      <td style="padding:10px 8px;font-weight:700;color:#7B5531;width:28px">1</td>
+      <tbody><tr>
+      <td style="padding:10px 8px;font-weight:700;color:#0d333b;width:28px">1</td>
       <td style="padding:10px 8px">
         <a href="https://www.instagram.com/reel/DT-KP5kEWw5/" target="_blank" style="color:#2C1810;font-weight:600;text-decoration:none;font-size:13px">Eu sei que ele ouve cada oração feita em silêncio, e mesmo q…</a>
-        <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-01-26 · <span style="background:#7B5531;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Reel</span></div>
-        <div style="font-size:11px;color:#404730;margin-top:4px">↳ alto salvamento (114 saves — conteúdo útil/referência); alto compartilhamento (167 — viral/identificação)</div>
+        <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-01-26 · <span style="background:#0d333b;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Reel</span></div>
+        <div style="font-size:11px;color:#0d333b;margin-top:4px">↳ alto salvamento (114 saves — conteúdo útil/referência); alto compartilhamento (167 — viral/identificação)</div>
       </td>
       <td style="padding:10px 8px;text-align:right;font-weight:700;color:#7B5531;white-space:nowrap">39.2K</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">❤ 2.1K</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">🔖 114</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">↗ 167</td>
-    </tr><tr style="border-bottom:1px solid #E8D5C4">
-      <td style="padding:10px 8px;font-weight:700;color:#7B5531;width:28px">2</td>
+    </tr><tr>
+      <td style="padding:10px 8px;font-weight:700;color:#0d333b;width:28px">2</td>
       <td style="padding:10px 8px">
         <a href="https://www.instagram.com/p/DTqzvYZEWog/" target="_blank" style="color:#2C1810;font-weight:600;text-decoration:none;font-size:13px">2016 ➡️ 2026
 
 Ah se eu pudesse encontrar a Bruna de 10 anos …</a>
         <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-01-18 · <span style="background:#7B5531;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Feed</span></div>
-        <div style="font-size:11px;color:#404730;margin-top:4px">↳ legenda elaborada com contexto e narrativa</div>
+        <div style="font-size:11px;color:#0d333b;margin-top:4px">↳ legenda elaborada com contexto e narrativa</div>
       </td>
       <td style="padding:10px 8px;text-align:right;font-weight:700;color:#7B5531;white-space:nowrap">11.2K</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">❤ 448</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">🔖 5</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">↗ 3</td>
-    </tr><tr style="border-bottom:1px solid #E8D5C4">
-      <td style="padding:10px 8px;font-weight:700;color:#7B5531;width:28px">3</td>
+    </tr><tr>
+      <td style="padding:10px 8px;font-weight:700;color:#0d333b;width:28px">3</td>
       <td style="padding:10px 8px">
         <a href="https://www.instagram.com/reel/DTlbrR2kcFu/" target="_blank" style="color:#2C1810;font-weight:600;text-decoration:none;font-size:13px">O esporte foi um grande aliado em momentos muito difíceis da…</a>
-        <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-01-16 · <span style="background:#7B5531;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Reel</span></div>
-        <div style="font-size:11px;color:#404730;margin-top:4px">↳ alto compartilhamento (63 — viral/identificação); taxa de engajamento acima da média (5.2%)</div>
+        <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-01-16 · <span style="background:#0d333b;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Reel</span></div>
+        <div style="font-size:11px;color:#0d333b;margin-top:4px">↳ alto compartilhamento (63 — viral/identificação); taxa de engajamento acima da média (5.2%)</div>
       </td>
       <td style="padding:10px 8px;text-align:right;font-weight:700;color:#7B5531;white-space:nowrap">10.7K</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">❤ 470</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">🔖 14</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">↗ 63</td>
-    </tr><tr style="border-bottom:1px solid #E8D5C4">
-      <td style="padding:10px 8px;font-weight:700;color:#7B5531;width:28px">4</td>
+    </tr><tr>
+      <td style="padding:10px 8px;font-weight:700;color:#0d333b;width:28px">4</td>
       <td style="padding:10px 8px">
         <a href="https://www.instagram.com/reel/DT3cPNlEbdK/" target="_blank" style="color:#2C1810;font-weight:600;text-decoration:none;font-size:13px">Algumas respostas não precisam de discussão. Elas aparecem n…</a>
-        <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-01-23 · <span style="background:#7B5531;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Reel</span></div>
-        <div style="font-size:11px;color:#404730;margin-top:4px">↳ muitos comentários (19 — gera conversa); legenda elaborada com contexto e narrativa</div>
+        <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-01-23 · <span style="background:#0d333b;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Reel</span></div>
+        <div style="font-size:11px;color:#0d333b;margin-top:4px">↳ muitos comentários (19 — gera conversa); legenda elaborada com contexto e narrativa</div>
       </td>
       <td style="padding:10px 8px;text-align:right;font-weight:700;color:#7B5531;white-space:nowrap">9.7K</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">❤ 232</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">🔖 13</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">↗ 15</td>
-    </tr><tr style="border-bottom:1px solid #E8D5C4">
-      <td style="padding:10px 8px;font-weight:700;color:#7B5531;width:28px">5</td>
+    </tr><tr>
+      <td style="padding:10px 8px;font-weight:700;color:#0d333b;width:28px">5</td>
       <td style="padding:10px 8px">
         <a href="https://www.instagram.com/reel/DUBzAypkRD8/" target="_blank" style="color:#2C1810;font-weight:600;text-decoration:none;font-size:13px">Isso definitivamente, não tem preço 💙</a>
-        <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-01-27 · <span style="background:#7B5531;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Reel</span></div>
-        <div style="font-size:11px;color:#404730;margin-top:4px">↳ alto compartilhamento (42 — viral/identificação); muitos comentários (11 — gera conversa)</div>
+        <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-01-27 · <span style="background:#0d333b;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Reel</span></div>
+        <div style="font-size:11px;color:#0d333b;margin-top:4px">↳ alto compartilhamento (42 — viral/identificação); muitos comentários (11 — gera conversa)</div>
       </td>
       <td style="padding:10px 8px;text-align:right;font-weight:700;color:#7B5531;white-space:nowrap">8.8K</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">❤ 146</td>
@@ -183,7 +183,7 @@ Ah se eu pudesse encontrar a Bruna de 10 anos …</a>
         <span class="badge" style="background:#D4EDDA;color:#2D6A4F">positivo</span> Alcance do mês
       </div>
       <div class="insight-body">
-        O perfil @brunaperissinotto_ alcançou <strong>135.9K contas únicas</strong> em Jan, com pico de <strong>[object Object] contas no dia 2026-01-26</strong>. Com 15 posts, a média foi de <strong>9.1K alcance por post</strong>.
+        O perfil @brunaperissinotto_ alcançou <strong>135.9K contas únicas</strong> em Jan, com pico de <strong>17.8K contas no dia 2026-01-26</strong>. Com 15 posts, a média foi de <strong>9.1K alcance por post</strong>.
       </div>
     </div>
     <div class="insight-item">
@@ -191,7 +191,7 @@ Ah se eu pudesse encontrar a Bruna de 10 anos …</a>
         <span class="badge" style="background:#FFF3CD;color:#7B5531">padrão</span> O que os melhores posts têm em comum
       </div>
       <div class="insight-body">
-        Entre os <strong>5 posts de maior alcance</strong>: Média de salvamentos alta (<strong>30 saves</strong>) — conteúdo de referência. Compartilhamentos expressivos (<strong>58 shares</strong>) indicam identificação com o tema. Post #1 gerou <strong>39.2K alcance</strong> com 114 saves.
+        Entre os <strong>5 posts de maior alcance</strong>: <strong>4 são Reels</strong>, confirmando a força do formato vídeo. Média de salvamentos alta (<strong>30 saves</strong>) — conteúdo de referência. Compartilhamentos expressivos (<strong>58 shares</strong>). Post #1 gerou <strong>39.2K alcance</strong> com 114 saves.
       </div>
     </div>
     <div class="insight-item">
@@ -199,7 +199,7 @@ Ah se eu pudesse encontrar a Bruna de 10 anos …</a>
         <span class="badge" style="background:#D4EDDA;color:#2D6A4F">oportunidade</span> Conversão para o site
       </div>
       <div class="insight-body">
-        <strong>29 cliques no link da bio</strong> a partir de <strong>4.1K visitas ao perfil</strong> — taxa de conversão: <strong>0.7%</strong>. Há espaço para melhorar o CTA na bio.
+        <strong>29 cliques no link da bio</strong> a partir de <strong>4.1K visitas ao perfil</strong> — taxa: <strong>0.7%</strong>. Há espaço para melhorar o CTA na bio.
       </div>
     </div>
     <div class="insight-item">
@@ -215,16 +215,15 @@ Ah se eu pudesse encontrar a Bruna de 10 anos …</a>
   <div class="section">
     <div class="section-title">🎯 Recomendações</div>
     <div class="rec-grid">
-      <div class="rec-card"><div class="rec-num">01</div><div class="rec-title">Experimente o formato Reel</div><div class="rec-body">O algoritmo prioriza vídeos curtos. Testar Reels pode ampliar significativamente o alcance orgânico.</div></div>
-      <div class="rec-card"><div class="rec-num">02</div><div class="rec-title">Replique os padrões vencedores</div><div class="rec-body">Analise tema, formato e horário dos 3 posts com maior alcance e crie variações. O que funcionou tende a funcionar de novo com o mesmo público.</div></div>
-      <div class="rec-card"><div class="rec-num">03</div><div class="rec-title">Fortaleça CTAs de salvamento</div><div class="rec-body">Inclua pedidos explícitos de save ("guarda esse post") para sinalizar qualidade ao algoritmo e aumentar o alcance futuro.</div></div>
-      <div class="rec-card"><div class="rec-num">04</div><div class="rec-title">Publique nos dias de pico</div><div class="rec-body">O pico de [object Object] contas em 2026-01-26 indica os melhores dias do mês. Alinhe lançamentos importantes com esses períodos.</div></div>
-      <div class="rec-card"><div class="rec-num">05</div><div class="rec-title">Otimize a bio para conversão</div><div class="rec-body">Com 4.1K visitas ao perfil e 29 cliques, uma bio mais clara e CTA direto podem melhorar a taxa.</div></div>
+      <div class="rec-card"><div class="rec-num">01</div><div class="rec-title">Reforce os Reels de alto salvamento</div><div class="rec-body">Seus top posts mostram que Reels com conteúdo de referência geram maior alcance. Crie continuações dos temas dos posts #1 e #2.</div></div>
+      <div class="rec-card"><div class="rec-num">02</div><div class="rec-title">Replique os padrões vencedores</div><div class="rec-body">Analise tema, formato e horário dos 3 posts com maior alcance e crie variações do que funcionou.</div></div>
+      <div class="rec-card"><div class="rec-num">03</div><div class="rec-title">Fortaleça CTAs de salvamento</div><div class="rec-body">Inclua pedidos explícitos de save para sinalizar qualidade ao algoritmo e aumentar o alcance futuro.</div></div>
+      <div class="rec-card"><div class="rec-num">04</div><div class="rec-title">Publique nos dias de pico</div><div class="rec-body">O pico de 17.8K contas em 2026-01-26 indica os melhores dias. Alinhe lançamentos importantes com esses períodos.</div></div>
+      <div class="rec-card"><div class="rec-num">05</div><div class="rec-title">Otimize a bio para conversão</div><div class="rec-body">Com 4.1K visitas ao perfil e 29 cliques, uma bio mais clara pode melhorar a taxa de conversão.</div></div>
     </div>
   </div>
 
 </div>
-
 <div class="footer">Relatório gerado por <strong>Pulse Social Media</strong> · @brunaperissinotto_ · Janeiro 2026 2026</div>
 
 <script>
@@ -243,15 +242,15 @@ animateCounter('kpi-web',29);
 
 new Chart(document.getElementById('chartReach'),{
   type:'line',
-  data:{labels:["01-01","01-02","01-03","01-04","01-05","01-06","01-07","01-08","01-09","01-10","01-11","01-12","01-13","01-14","01-15","01-16","01-17","01-18","01-19","01-20","01-21","01-22","01-23","01-24","01-25","01-26","01-27","01-28","01-29","01-30"],datasets:[{label:'Alcance',data:[6365,843,1714,3624,2835,3482,1985,4227,2880,741,368,1095,2113,872,1148,7606,2670,6176,3954,3532,2535,2584,5629,3145,4003,17818,15606,15386,5522,5439],borderColor:'#7B5531',backgroundColor:'rgba(181,165,145,0.2)',fill:true,tension:0.4,pointRadius:2,pointHoverRadius:5}]},
+  data:{labels:["01-01","01-02","01-03","01-04","01-05","01-06","01-07","01-08","01-09","01-10","01-11","01-12","01-13","01-14","01-15","01-16","01-17","01-18","01-19","01-20","01-21","01-22","01-23","01-24","01-25","01-26","01-27","01-28","01-29","01-30"],datasets:[{label:'Alcance',data:[6365,843,1714,3624,2835,3482,1985,4227,2880,741,368,1095,2113,872,1148,7606,2670,6176,3954,3532,2535,2584,5629,3145,4003,17818,15606,15386,5522,5439],borderColor:'#0d333b',backgroundColor:'rgba(13,51,59,0.1)',fill:true,tension:0.4,pointRadius:2,pointHoverRadius:5}]},
   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#E8D5C4'},ticks:{color:'#9A7A6A',font:{size:10},maxTicksLimit:10}},y:{grid:{color:'#E8D5C4'},ticks:{color:'#9A7A6A',font:{size:11}}}}}
 });
 
 new Chart(document.getElementById('chartEng'),{
   type:'bar',
-  data:{labels:["#1 Eu sei que ele ouve ","#2 2016 ➡️ 2026\n\nAh se ","#3 O esporte foi um gra","#4 Algumas respostas nã","#5 Isso definitivamente"],datasets:[
+  data:{labels:["#1 Eu sei que ele ouv","#2 2016 ➡️ 2026\n\nAh s","#3 O esporte foi um g","#4 Algumas respostas ","#5 Isso definitivamen"],datasets:[
     {label:'Curtidas',data:[2133,448,470,232,146],backgroundColor:'#7B5531'},
-    {label:'Saves',data:[114,5,14,13,6],backgroundColor:'#B5A591'},
+    {label:'Saves',data:[114,5,14,13,6],backgroundColor:'#0d333b'},
     {label:'Shares',data:[167,3,63,15,42],backgroundColor:'#404730'}
   ]},
   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}},scales:{x:{grid:{display:false},ticks:{color:'#9A7A6A',font:{size:10}}},y:{grid:{color:'#E8D5C4'},ticks:{color:'#9A7A6A',font:{size:11}}}}}
