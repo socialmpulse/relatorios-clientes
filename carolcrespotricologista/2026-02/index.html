@@ -10,31 +10,31 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:#FAF3EB;color:#2C1810;line-height:1.5}
 .topbar{background:#7B5531;color:#fff;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15);flex-wrap:wrap;gap:8px}
-.topbar a{color:#FAF3EB;text-decoration:none;font-size:13px;opacity:.85}
+.topbar a.back{color:#FAF3EB;text-decoration:none;font-size:13px;opacity:.85}
 .topbar .nav-months{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .header{background:#7B5531;color:#fff;padding:36px 24px 44px;text-align:center}
 .header h1{font-size:26px;font-weight:800;margin-bottom:4px}
-.header .sub{opacity:.8;font-size:14px;margin-bottom:14px}
-.header .period{background:rgba(255,255,255,.15);display:inline-block;padding:5px 18px;border-radius:20px;font-size:13px;font-weight:600}
+.header .sub{opacity:.8;font-size:14px;margin-bottom:12px}
+.header .period{background:rgba(13,51,59,.25);display:inline-block;padding:5px 18px;border-radius:20px;font-size:13px;font-weight:600}
 .container{max-width:940px;margin:0 auto;padding:0 16px}
 .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:-24px;padding-bottom:8px}
-.kpi-card{background:#fff;border-radius:12px;padding:18px 14px;box-shadow:0 2px 12px rgba(123,85,49,.1);border-top:3px solid #B5A591}
+.kpi-card{background:#fff;border-radius:12px;padding:18px 14px;box-shadow:0 2px 12px rgba(13,51,59,.1);border-top:3px solid #0d333b}
 .kpi-label{font-size:11px;color:#9A7A6A;text-transform:uppercase;letter-spacing:.5px;font-weight:600;margin-bottom:6px}
-.kpi-value{font-size:24px;font-weight:800;color:#7B5531}
-.section{background:#fff;border-radius:12px;padding:22px;margin:22px 0;box-shadow:0 2px 8px rgba(123,85,49,.06)}
+.kpi-value{font-size:24px;font-weight:800;color:#0d333b}
+.section{background:#fff;border-radius:12px;padding:22px;margin:22px 0;box-shadow:0 2px 8px rgba(13,51,59,.06)}
 .section-title{font-size:15px;font-weight:700;color:#7B5531;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid #E8D5C4}
 .chart-wrap{position:relative;height:210px}
 table{width:100%;border-collapse:collapse}
 th{text-align:left;font-size:11px;text-transform:uppercase;color:#9A7A6A;letter-spacing:.5px;padding:8px;border-bottom:2px solid #E8D5C4}
-tr:hover td{background:#FDF7F2}
+tr:hover td{background:#f8f0e8}
 .insight-item{border:1px solid #E8D5C4;border-radius:10px;margin-bottom:10px;overflow:hidden}
 .insight-head{padding:13px 16px;cursor:pointer;display:flex;align-items:center;gap:10px;font-weight:600;font-size:13px;background:#FDF7F2}
 .insight-body{padding:13px 16px;font-size:13px;color:#4A3728;border-top:1px solid #E8D5C4;line-height:1.7;display:none}
 .insight-item.open .insight-body{display:block}
 .badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase}
 .rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.rec-card{background:#FDF7F2;border-radius:10px;padding:16px;border-left:3px solid #7B5531}
-.rec-num{font-size:26px;font-weight:800;color:#B5A591;margin-bottom:6px}
+.rec-card{background:#FDF7F2;border-radius:10px;padding:16px;border-left:3px solid #0d333b}
+.rec-num{font-size:26px;font-weight:800;color:#0d333b;margin-bottom:6px;opacity:.6}
 .rec-title{font-weight:700;font-size:13px;color:#7B5531;margin-bottom:5px}
 .rec-body{font-size:12px;color:#9A7A6A;line-height:1.6}
 .footer{text-align:center;padding:28px 16px;color:#9A7A6A;font-size:12px}
@@ -44,9 +44,9 @@ tr:hover td{background:#FDF7F2}
 <body>
 
 <div class="topbar">
-  <a href="../../">← Todos os clientes</a>
+  <a class="back" href="../../">← Todos os clientes</a>
   <span style="font-size:12px;opacity:.7">@carolcrespotricologista · Fevereiro 2026 2026</span>
-  <div class="nav-months"><a href="../2026-01/" style="color:#FAF3EB;text-decoration:none;font-size:13px;padding:4px 12px;border:1px solid rgba(250,243,235,.5);border-radius:20px;opacity:.85">↗ Janeiro 2026</a> <a href="../2026-03/" style="color:#FAF3EB;text-decoration:none;font-size:13px;padding:4px 12px;border:1px solid rgba(250,243,235,.5);border-radius:20px;opacity:.85">↗ Março 2026</a></div>
+  <div class="nav-months"><a href="../2026-01/" style="color:#FAF3EB;text-decoration:none;font-size:13px;padding:4px 12px;border:1px solid rgba(250,243,235,.4);border-radius:20px;opacity:.85">↗ Janeiro 2026</a> <a href="../2026-03/" style="color:#FAF3EB;text-decoration:none;font-size:13px;padding:4px 12px;border:1px solid rgba(250,243,235,.4);border-radius:20px;opacity:.85">↗ Março 2026</a></div>
 </div>
 
 <div class="header">
@@ -66,8 +66,8 @@ tr:hover td{background:#FDF7F2}
     </div>
     <div class="kpi-card">
       <div class="kpi-label">Pico Diário</div>
-      <div class="kpi-value">[object Object]</div>
-      <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-02-07</div>
+      <div class="kpi-value">2.7K</div>
+      <div style="font-size:11px;color:#9A7A6A;margin-top:4px">2026-02-07</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-label">Visualizações</div>
@@ -110,61 +110,61 @@ tr:hover td{background:#FDF7F2}
         <th style="text-align:right">Saves</th>
         <th style="text-align:right">Shares</th>
       </tr></thead>
-      <tbody><tr style="border-bottom:1px solid #E8D5C4">
-      <td style="padding:10px 8px;font-weight:700;color:#7B5531;width:28px">1</td>
+      <tbody><tr>
+      <td style="padding:10px 8px;font-weight:700;color:#0d333b;width:28px">1</td>
       <td style="padding:10px 8px">
         <a href="https://www.instagram.com/p/DUq8nqGElYl/" target="_blank" style="color:#2C1810;font-weight:600;text-decoration:none;font-size:13px">Estar em tratamento não significa parar de viver — significa…</a>
         <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-02-12 · <span style="background:#7B5531;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Feed</span></div>
-        <div style="font-size:11px;color:#404730;margin-top:4px">↳ taxa de engajamento acima da média (6.9%); legenda elaborada com contexto e narrativa</div>
+        <div style="font-size:11px;color:#0d333b;margin-top:4px">↳ taxa de engajamento acima da média (6.9%); legenda elaborada com contexto e narrativa</div>
       </td>
       <td style="padding:10px 8px;text-align:right;font-weight:700;color:#7B5531;white-space:nowrap">1.9K</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">❤ 122</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">🔖 2</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">↗ 0</td>
-    </tr><tr style="border-bottom:1px solid #E8D5C4">
-      <td style="padding:10px 8px;font-weight:700;color:#7B5531;width:28px">2</td>
+    </tr><tr>
+      <td style="padding:10px 8px;font-weight:700;color:#0d333b;width:28px">2</td>
       <td style="padding:10px 8px">
         <a href="https://www.instagram.com/p/DUYzPH_EvBt/" target="_blank" style="color:#2C1810;font-weight:600;text-decoration:none;font-size:13px">Quando o cabelo começa a cair, o problema quase nunca é exte…</a>
         <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-02-05 · <span style="background:#7B5531;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Feed</span></div>
-        <div style="font-size:11px;color:#404730;margin-top:4px">↳ legenda elaborada com contexto e narrativa</div>
+        <div style="font-size:11px;color:#0d333b;margin-top:4px">↳ legenda elaborada com contexto e narrativa</div>
       </td>
       <td style="padding:10px 8px;text-align:right;font-weight:700;color:#7B5531;white-space:nowrap">1.5K</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">❤ 16</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">🔖 2</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">↗ 3</td>
-    </tr><tr style="border-bottom:1px solid #E8D5C4">
-      <td style="padding:10px 8px;font-weight:700;color:#7B5531;width:28px">3</td>
+    </tr><tr>
+      <td style="padding:10px 8px;font-weight:700;color:#0d333b;width:28px">3</td>
       <td style="padding:10px 8px">
         <a href="https://www.instagram.com/p/DUikhpqgAYe/" target="_blank" style="color:#2C1810;font-weight:600;text-decoration:none;font-size:13px">Cuidar dos cabelos vai muito além da estética pra mim… 🌿 
 É…</a>
         <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-02-09 · <span style="background:#7B5531;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Feed</span></div>
-        <div style="font-size:11px;color:#404730;margin-top:4px">↳ legenda elaborada com contexto e narrativa</div>
+        <div style="font-size:11px;color:#0d333b;margin-top:4px">↳ legenda elaborada com contexto e narrativa</div>
       </td>
       <td style="padding:10px 8px;text-align:right;font-weight:700;color:#7B5531;white-space:nowrap">1.1K</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">❤ 47</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">🔖 2</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">↗ 3</td>
-    </tr><tr style="border-bottom:1px solid #E8D5C4">
-      <td style="padding:10px 8px;font-weight:700;color:#7B5531;width:28px">4</td>
+    </tr><tr>
+      <td style="padding:10px 8px;font-weight:700;color:#0d333b;width:28px">4</td>
       <td style="padding:10px 8px">
         <a href="https://www.instagram.com/p/DUOp5gWEspA/" target="_blank" style="color:#2C1810;font-weight:600;text-decoration:none;font-size:13px">Cabelo novo, energia nova!
 
 A Mi iniciou esse ano honrando s…</a>
         <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-02-01 · <span style="background:#7B5531;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Feed</span></div>
-        <div style="font-size:11px;color:#404730;margin-top:4px">↳ legenda elaborada com contexto e narrativa</div>
+        <div style="font-size:11px;color:#0d333b;margin-top:4px">↳ legenda elaborada com contexto e narrativa</div>
       </td>
       <td style="padding:10px 8px;text-align:right;font-weight:700;color:#7B5531;white-space:nowrap">1.1K</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">❤ 32</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">🔖 0</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">↗ 2</td>
-    </tr><tr style="border-bottom:1px solid #E8D5C4">
-      <td style="padding:10px 8px;font-weight:700;color:#7B5531;width:28px">5</td>
+    </tr><tr>
+      <td style="padding:10px 8px;font-weight:700;color:#0d333b;width:28px">5</td>
       <td style="padding:10px 8px">
         <a href="https://www.instagram.com/p/DU5R0N2gKy2/" target="_blank" style="color:#2C1810;font-weight:600;text-decoration:none;font-size:13px">Fortalecimento real, natural e consciente🌿 
 
 Uma fórmula ex…</a>
         <div style="font-size:11px;color:#9A7A6A;margin-top:3px">2026-02-18 · <span style="background:#7B5531;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px">Feed</span></div>
-        <div style="font-size:11px;color:#404730;margin-top:4px">↳ legenda elaborada com contexto e narrativa</div>
+        <div style="font-size:11px;color:#0d333b;margin-top:4px">↳ legenda elaborada com contexto e narrativa</div>
       </td>
       <td style="padding:10px 8px;text-align:right;font-weight:700;color:#7B5531;white-space:nowrap">841</td>
       <td style="padding:10px 8px;text-align:right;font-size:12px;color:#9A7A6A;white-space:nowrap">❤ 23</td>
@@ -186,7 +186,7 @@ Uma fórmula ex…</a>
         <span class="badge" style="background:#D4EDDA;color:#2D6A4F">positivo</span> Alcance do mês
       </div>
       <div class="insight-body">
-        O perfil @carolcrespotricologista alcançou <strong>52.4K contas únicas</strong> em Fev, com pico de <strong>[object Object] contas no dia 2026-02-07</strong>. Com 9 posts, a média foi de <strong>5.8K alcance por post</strong>.
+        O perfil @carolcrespotricologista alcançou <strong>52.4K contas únicas</strong> em Fev, com pico de <strong>2.7K contas no dia 2026-02-07</strong>. Com 9 posts, a média foi de <strong>5.8K alcance por post</strong>.
       </div>
     </div>
     <div class="insight-item">
@@ -202,7 +202,7 @@ Uma fórmula ex…</a>
         <span class="badge" style="background:#D4EDDA;color:#2D6A4F">oportunidade</span> Conversão para o site
       </div>
       <div class="insight-body">
-        <strong>86 cliques no link da bio</strong> a partir de <strong>2.1K visitas ao perfil</strong> — taxa de conversão: <strong>4.2%</strong>. Há espaço para melhorar o CTA na bio.
+        <strong>86 cliques no link da bio</strong> a partir de <strong>2.1K visitas ao perfil</strong> — taxa: <strong>4.2%</strong>. Há espaço para melhorar o CTA na bio.
       </div>
     </div>
     <div class="insight-item">
@@ -219,15 +219,14 @@ Uma fórmula ex…</a>
     <div class="section-title">🎯 Recomendações</div>
     <div class="rec-grid">
       <div class="rec-card"><div class="rec-num">01</div><div class="rec-title">Experimente o formato Reel</div><div class="rec-body">O algoritmo prioriza vídeos curtos. Testar Reels pode ampliar significativamente o alcance orgânico.</div></div>
-      <div class="rec-card"><div class="rec-num">02</div><div class="rec-title">Replique os padrões vencedores</div><div class="rec-body">Analise tema, formato e horário dos 3 posts com maior alcance e crie variações. O que funcionou tende a funcionar de novo com o mesmo público.</div></div>
-      <div class="rec-card"><div class="rec-num">03</div><div class="rec-title">Fortaleça CTAs de salvamento</div><div class="rec-body">Inclua pedidos explícitos de save ("guarda esse post") para sinalizar qualidade ao algoritmo e aumentar o alcance futuro.</div></div>
-      <div class="rec-card"><div class="rec-num">04</div><div class="rec-title">Publique nos dias de pico</div><div class="rec-body">O pico de [object Object] contas em 2026-02-07 indica os melhores dias do mês. Alinhe lançamentos importantes com esses períodos.</div></div>
-      <div class="rec-card"><div class="rec-num">05</div><div class="rec-title">Otimize a bio para conversão</div><div class="rec-body">Com 2.1K visitas ao perfil e 86 cliques, uma bio mais clara e CTA direto podem melhorar a taxa.</div></div>
+      <div class="rec-card"><div class="rec-num">02</div><div class="rec-title">Replique os padrões vencedores</div><div class="rec-body">Analise tema, formato e horário dos 3 posts com maior alcance e crie variações do que funcionou.</div></div>
+      <div class="rec-card"><div class="rec-num">03</div><div class="rec-title">Fortaleça CTAs de salvamento</div><div class="rec-body">Inclua pedidos explícitos de save para sinalizar qualidade ao algoritmo e aumentar o alcance futuro.</div></div>
+      <div class="rec-card"><div class="rec-num">04</div><div class="rec-title">Publique nos dias de pico</div><div class="rec-body">O pico de 2.7K contas em 2026-02-07 indica os melhores dias. Alinhe lançamentos importantes com esses períodos.</div></div>
+      <div class="rec-card"><div class="rec-num">05</div><div class="rec-title">Otimize a bio para conversão</div><div class="rec-body">Com 2.1K visitas ao perfil e 86 cliques, uma bio mais clara pode melhorar a taxa de conversão.</div></div>
     </div>
   </div>
 
 </div>
-
 <div class="footer">Relatório gerado por <strong>Pulse Social Media</strong> · @carolcrespotricologista · Fevereiro 2026 2026</div>
 
 <script>
@@ -246,15 +245,15 @@ animateCounter('kpi-web',86);
 
 new Chart(document.getElementById('chartReach'),{
   type:'line',
-  data:{labels:["02-01","02-02","02-03","02-04","02-05","02-06","02-07","02-08","02-09","02-10","02-11","02-12","02-13","02-14","02-15","02-16","02-17","02-18","02-19","02-20","02-21","02-22","02-23","02-24","02-25","02-26","02-27"],datasets:[{label:'Alcance',data:[2584,2231,2147,2079,2504,1641,2700,2210,2088,2584,2528,2071,1343,1606,1818,1510,1518,1569,1440,1483,1852,2155,2099,1840,1668,1526,1630],borderColor:'#7B5531',backgroundColor:'rgba(181,165,145,0.2)',fill:true,tension:0.4,pointRadius:2,pointHoverRadius:5}]},
+  data:{labels:["02-01","02-02","02-03","02-04","02-05","02-06","02-07","02-08","02-09","02-10","02-11","02-12","02-13","02-14","02-15","02-16","02-17","02-18","02-19","02-20","02-21","02-22","02-23","02-24","02-25","02-26","02-27"],datasets:[{label:'Alcance',data:[2584,2231,2147,2079,2504,1641,2700,2210,2088,2584,2528,2071,1343,1606,1818,1510,1518,1569,1440,1483,1852,2155,2099,1840,1668,1526,1630],borderColor:'#0d333b',backgroundColor:'rgba(13,51,59,0.1)',fill:true,tension:0.4,pointRadius:2,pointHoverRadius:5}]},
   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#E8D5C4'},ticks:{color:'#9A7A6A',font:{size:10},maxTicksLimit:10}},y:{grid:{color:'#E8D5C4'},ticks:{color:'#9A7A6A',font:{size:11}}}}}
 });
 
 new Chart(document.getElementById('chartEng'),{
   type:'bar',
-  data:{labels:["#1 Estar em tratamento ","#2 Quando o cabelo come","#3 Cuidar dos cabelos v","#4 Cabelo novo, energia","#5 Fortalecimento real,"],datasets:[
+  data:{labels:["#1 Estar em tratament","#2 Quando o cabelo co","#3 Cuidar dos cabelos","#4 Cabelo novo, energ","#5 Fortalecimento rea"],datasets:[
     {label:'Curtidas',data:[122,16,47,32,23],backgroundColor:'#7B5531'},
-    {label:'Saves',data:[2,2,2,0,0],backgroundColor:'#B5A591'},
+    {label:'Saves',data:[2,2,2,0,0],backgroundColor:'#0d333b'},
     {label:'Shares',data:[0,3,3,2,2],backgroundColor:'#404730'}
   ]},
   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}},scales:{x:{grid:{display:false},ticks:{color:'#9A7A6A',font:{size:10}}},y:{grid:{color:'#E8D5C4'},ticks:{color:'#9A7A6A',font:{size:11}}}}}
