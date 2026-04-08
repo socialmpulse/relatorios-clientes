@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jézer Lopes - Fotógrafo de Casamentos — Janeiro 2026 | Pulse Social Media</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#FAF3EB;color:#2C1810;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.topbar{background:#7B5531;color:#FAF3EB;padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.05em;position:sticky;top:0;z-index:100}
+.topbar strong{font-weight:600}
+.topbar span{opacity:.75}
+.header{background:#7B5531;padding:40px 24px 32px;color:#FAF3EB}
+.header-inner{max-width:960px;margin:0 auto}
+.header h1{font-size:28px;font-weight:700;margin-bottom:4px}
+.header .handle{font-size:15px;opacity:.8;margin-bottom:20px}
+.month-nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.nav-btn{background:rgba(255,255,255,.15);color:#FAF3EB;border:1px solid rgba(255,255,255,.3);padding:7px 16px;border-radius:20px;font-size:13px;font-weight:500;transition:.2s}
+.nav-btn:hover{background:rgba(255,255,255,.25)}
+.nav-btn.disabled{opacity:.35;pointer-events:none}
+.current-month{background:#B5A591;color:#2C1810;padding:7px 18px;border-radius:20px;font-size:13px;font-weight:600}
+.content{max-width:960px;margin:0 auto;padding:32px 24px}
+section{margin-bottom:40px}
+h2{font-size:18px;font-weight:600;color:#404730;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #E0CFC0}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px}
+.kpi-card{background:#fff;border-radius:12px;padding:20px 16px;border:1px solid #E8D5C4;text-align:center}
+.kpi-card .kv{font-size:26px;font-weight:700;color:#7B5531;display:block;margin-bottom:4px}
+.kpi-card .kl{font-size:12px;color:#9A7A6A;text-transform:uppercase;letter-spacing:.06em}
+.chart-wrap{background:#fff;border-radius:12px;padding:24px;border:1px solid #E8D5C4}
+.chart-wrap canvas{max-height:260px}
+.peak-label{font-size:12px;color:#9A7A6A;margin-top:8px;text-align:right}
+.post-card{background:#fff;border-radius:12px;border:1px solid #E8D5C4;display:flex;gap:0;overflow:hidden;margin-bottom:16px}
+.post-thumb{width:140px;min-width:140px;background:#F5EDE3;position:relative}
+.post-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.no-thumb{width:100%;height:100%;min-height:120px;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700;color:#B5A591}
+.post-rank{position:absolute;top:8px;left:8px;background:#7B5531;color:#FAF3EB;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px}
+.post-type-badge{position:absolute;bottom:8px;left:8px;background:#404730;color:#FAF3EB;font-size:10px;padding:2px 7px;border-radius:10px}
+.post-info{padding:16px;flex:1;min-width:0}
+.post-date{font-size:11px;color:#9A7A6A;margin-bottom:4px}
+.post-caption{font-size:13px;color:#4A3020;margin-bottom:12px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.post-metrics{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.pm{display:flex;flex-direction:column;align-items:center;background:#FAF3EB;border-radius:8px;padding:6px 10px;min-width:60px}
+.pm strong{font-size:15px;font-weight:700;color:#7B5531}
+.pm small{font-size:10px;color:#9A7A6A;margin-top:2px}
+.pm.er strong{color:#404730}
+.post-analysis{background:#F5EDE3;border-left:3px solid #B5A591;padding:10px 12px;border-radius:0 8px 8px 0;font-size:12px;color:#4A3020;line-height:1.5;margin-bottom:10px}
+.analysis-icon{margin-right:6px}
+.post-link{font-size:12px;color:#7B5531;font-weight:600;border-bottom:1px solid #B5A591}
+.insight-item{background:#fff;border-radius:10px;border:1px solid #E8D5C4;margin-bottom:10px;overflow:hidden}
+.insight-header{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;user-select:none}
+.insight-title{flex:1;font-weight:500;font-size:14px}
+.chevron{font-size:11px;color:#9A7A6A;transition:.2s}
+.insight-item.open .chevron{transform:rotate(180deg)}
+.insight-body{display:none;padding:0 16px 14px;font-size:13px;color:#4A3020;line-height:1.6}
+.insight-item.open .insight-body{display:block}
+.badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.05em}
+.badge-positivo{background:#D4EDDA;color:#2D6A3F}
+.badge-atenção,.badge-atencao{background:#FFE5E5;color:#C0392B}
+.badge-oportunidade{background:#FFF3CD;color:#856404}
+.badge-padrão,.badge-padrao{background:#D5E8FF;color:#1A4D8F}
+.rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.rec-card{background:#fff;border-radius:10px;border:1px solid #E8D5C4;padding:18px;display:flex;gap:12px;align-items:flex-start}
+.rec-num{font-size:22px;font-weight:800;color:#E0CFC0;min-width:32px}
+.rec-card p{font-size:13px;color:#4A3020;line-height:1.6}
+footer{text-align:center;padding:32px 24px;font-size:12px;color:#9A7A6A;background:#F0E4D4;border-top:1px solid #E0CFC0}
+@media(max-width:600px){.post-card{flex-direction:column}.post-thumb{width:100%;height:180px}}
+</style>
+</head>
+<body>
+<div class="topbar"><strong>Instagram Analytics — @jezerlopesfotografia</strong><span>Gerado por Pulse Social Media</span></div>
+<div class="header"><div class="header-inner">
+  <div class="handle">@jezerlopesfotografia</div>
+  <h1>Jézer Lopes - Fotógrafo de Casamentos</h1>
+  <div class="month-nav"><span class="nav-btn disabled">← </span><span class="current-month">Janeiro 2026</span><a href="../2026-02/" class="nav-btn">Fev →</a><span style="margin-left:8px;font-size:13px;opacity:.7">10.466 seguidores</span></div>
+</div></div>
+<div class="content">
+  <section>
+    <h2>Visão Geral do Período</h2>
+    <div class="kpi-grid">
+      <div class="kpi-card"><span class="kv">17.4K</span><span class="kl">Alcance</span></div>
+      <div class="kpi-card"><span class="kv">52.7K</span><span class="kl">Visualizações</span></div>
+      <div class="kpi-card"><span class="kv">828</span><span class="kl">Visitas ao Perfil</span></div>
+      <div class="kpi-card"><span class="kv">475</span><span class="kl">Interações</span></div>
+      <div class="kpi-card"><span class="kv">292</span><span class="kl">Contas Engajadas</span></div>
+      <div class="kpi-card"><span class="kv">4</span><span class="kl">Posts Publicados</span></div>
+    </div>
+  </section>
+  <section>
+    <h2>Alcance Diário</h2>
+    <div class="chart-wrap">
+      <canvas id="reachChart"></canvas>
+      <div class="peak-label">Pico: 2.074 em 2026-01-20</div>
+    </div>
+  </section>
+  <section>
+    <h2>Top 5 Posts do Mês</h2>
+    <div class="post-card">
+      <div class="post-thumb"><a href="https://www.instagram.com/p/DTs77pEj3JY/" target="_blank"><div class="no-thumb">#1</div><div class="post-rank">#1</div><div class="post-type-badge">Feed</div></a></div>
+      <div class="post-info">
+        <div class="post-date">2026-01-19</div>
+        <div class="post-caption">“Capturar a essência de um dia tão especial começa nos detalhes. Cada olhar, cada ajuste, a expectativa palpável de um novo capítulo. No casamento de </div>
+        <div class="post-metrics">
+          <span class="pm"><strong>0</strong><small>Alcance</small></span>
+          <span class="pm"><strong>0</strong><small>Views</small></span>
+          <span class="pm"><strong>35</strong><small>Curtidas</small></span>
+          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
+          <span class="pm"><strong>3</strong><small>Comentários</small></span>
+          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
+          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
+        </div>
+        <div class="post-analysis"><span class="analysis-icon">💡</span>Melhor post do mês — Feed com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
+        <a href="https://www.instagram.com/p/DTs77pEj3JY/" target="_blank" class="post-link">Ver post no Instagram →</a>
+      </div>
+    </div><div class="post-card">
+      <div class="post-thumb"><a href="https://www.instagram.com/p/DTdqk2gjz4I/" target="_blank"><div class="no-thumb">#2</div><div class="post-rank">#2</div><div class="post-type-badge">Feed</div></a></div>
+      <div class="post-info">
+        <div class="post-date">2026-01-13</div>
+        <div class="post-caption">“Atenção aos detalhes não é obsessão, é amor pelo que se faz.”
+
+“Qual desses detalhes mais chamou a sua atenção?
+
+@grproducao 
+@ateliedaniguilhermino </div>
+        <div class="post-metrics">
+          <span class="pm"><strong>0</strong><small>Alcance</small></span>
+          <span class="pm"><strong>0</strong><small>Views</small></span>
+          <span class="pm"><strong>39</strong><small>Curtidas</small></span>
+          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
+          <span class="pm"><strong>3</strong><small>Comentários</small></span>
+          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
+          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
+        </div>
+        <div class="post-analysis"><span class="analysis-icon">💡</span>Feed com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
+        <a href="https://www.instagram.com/p/DTdqk2gjz4I/" target="_blank" class="post-link">Ver post no Instagram →</a>
+      </div>
+    </div><div class="post-card">
+      <div class="post-thumb"><a href="https://www.instagram.com/p/DTV2QD_D0Cc/" target="_blank"><div class="no-thumb">#3</div><div class="post-rank">#3</div><div class="post-type-badge">Feed</div></a></div>
+      <div class="post-info">
+        <div class="post-date">2026-01-10</div>
+        <div class="post-caption">Enquanto seleciono cada Frame para o álbum físico, percebo como a beleza desse dia reside nos contrastes: entre movimento e a pausa, entre o clássico </div>
+        <div class="post-metrics">
+          <span class="pm"><strong>0</strong><small>Alcance</small></span>
+          <span class="pm"><strong>0</strong><small>Views</small></span>
+          <span class="pm"><strong>82</strong><small>Curtidas</small></span>
+          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
+          <span class="pm"><strong>5</strong><small>Comentários</small></span>
+          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
+          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
+        </div>
+        <div class="post-analysis"><span class="analysis-icon">💡</span>Feed com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
+        <a href="https://www.instagram.com/p/DTV2QD_D0Cc/" target="_blank" class="post-link">Ver post no Instagram →</a>
+      </div>
+    </div><div class="post-card">
+      <div class="post-thumb"><a href="https://www.instagram.com/reel/DTQ8h2vj4MV/" target="_blank"><img src="https://scontent.cdninstagram.com/v/t51.82787-15/650757353_18576941698026016_5972413851925225192_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeEd_c8QmUBB9REKjf02ESUVq10pL6N0R66rXSkvo3RHri6Kb6pddf2atkO6_TkwozoRRV9DcTPaLapWBq3sBhgJ&_nc_ohc=BChM-iui1MQQ7kNvwE2CV4B&_nc_oc=AdpYEdsbncuczv-1LA6_ANPgOKfWtgsiOyggkbFwdqzVYh99f6kOHjeij7e3DdozEVQ&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=AFKvZUFcIwtbhTZ66l6jLA&_nc_tpa=Q5bMBQEBM1t2vCjc9IgFKYFYMeduINhXmbU03yLJBRyJUT2M8GUK5t2ugOlPooPqHiI27reHQ43Mv0XUYQ&oh=00_Af2xQisd0SNLfYDOQMBkqdCDujpZVo5L1A_19pFHIOlw6A&oe=69DB6039" alt="post" onerror="this.style.display='none'"><div class="post-rank">#4</div><div class="post-type-badge">REELS</div></a></div>
+      <div class="post-info">
+        <div class="post-date">2026-01-08</div>
+        <div class="post-caption">Se vocês já foram nossos noivos, comenta aqui embaixo a data do seu casamento!
+
+E para quem ainda vai viver esse momento…
+Estamos prontos para registr</div>
+        <div class="post-metrics">
+          <span class="pm"><strong>0</strong><small>Alcance</small></span>
+          <span class="pm"><strong>0</strong><small>Views</small></span>
+          <span class="pm"><strong>80</strong><small>Curtidas</small></span>
+          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
+          <span class="pm"><strong>12</strong><small>Comentários</small></span>
+          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
+          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
+        </div>
+        <div class="post-analysis"><span class="analysis-icon">💡</span>REELS com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
+        <a href="https://www.instagram.com/reel/DTQ8h2vj4MV/" target="_blank" class="post-link">Ver post no Instagram →</a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Insights Estratégicos</h2>
+    <div class="insight-item">
+    <div class="insight-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="badge badge-positivo">positivo</span>
+      <span class="insight-title">Alcance Total</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="insight-body">O perfil alcançou 17.417 contas únicas em Janeiro 2026, com pico de 2.074 em 2026-01-20. Há oportunidade de ampliar o alcance com maior frequência de Reels.</div>
+  </div><div class="insight-item">
+    <div class="insight-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="badge badge-padrão">padrão</span>
+      <span class="insight-title">Visualizações vs Alcance</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="insight-body">Com 52.690 visualizações para 17.417 contas alcançadas, o índice de visualizações por pessoa foi de 3.0x — acima de 3x indica que o público consumiu múltiplos conteúdos do perfil.</div>
+  </div><div class="insight-item">
+    <div class="insight-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="badge badge-oportunidade">oportunidade</span>
+      <span class="insight-title">Visitas ao Perfil</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="insight-body">828 visitas ao perfil com taxa de conversão de visita para seguidor estimada. Abaixo de 5% do alcance — CTAs mais diretos nos conteúdos podem aumentar essa conversão.</div>
+  </div><div class="insight-item">
+    <div class="insight-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="badge badge-positivo">positivo</span>
+      <span class="insight-title">Engajamento</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="insight-body">475 interações totais e 292 contas engajadas. Taxa de engajamento por alcance: 2.7%. O post com melhor desempenho foi do tipo Feed com alcance de 0.</div>
+  </div>
+  </section>
+  <section>
+    <h2>Recomendações</h2>
+    <div class="rec-grid"><div class="rec-card"><span class="rec-num">01</span><p>Manter frequência mínima de 4 posts/mês — consistência é fator-chave no algoritmo do Instagram.</p></div><div class="rec-card"><span class="rec-num">02</span><p>Priorizar o formato Feed — apresentou melhor alcance no período com 0 pessoas alcançadas.</p></div><div class="rec-card"><span class="rec-num">03</span><p>Publicar nos horários de pico identificados pelo Instagram Insights — verificar na seção de público do app.</p></div><div class="rec-card"><span class="rec-num">04</span><p>Adicionar CTAs explícitos de "salve este post" — aumenta o sinal de valor para o algoritmo.</p></div><div class="rec-card"><span class="rec-num">05</span><p>Explorar temas de maior engajamento identificados nos Top 5 para criar séries de conteúdo.</p></div><div class="rec-card"><span class="rec-num">06</span><p>Monitorar a taxa de visitas ao perfil — meta: superar 994 visitas no próximo mês.</p></div></div>
+  </section>
+</div>
+<footer>Relatório gerado por <strong>Pulse Social Media</strong> via Meta Graph API v25.0</footer>
+<script>
+new Chart(document.getElementById('reachChart'),{
+  type:'line',
+  data:{labels:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],datasets:[{label:'Alcance diário',data:[333,102,94,107,1184,497,244,763,287,1121,702,324,481,369,284,733,403,163,469,2074,1416,356,1410,709,117,560,188,676,513,738],borderColor:'#7B5531',backgroundColor:'rgba(123,85,49,.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#7B5531',borderWidth:2}]},
+  options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>'Alcance: '+ctx.raw.toLocaleString('pt-BR')}}},scales:{y:{beginAtZero:true,grid:{color:'#F0E4D4'},ticks:{color:'#9A7A6A'}},x:{grid:{color:'#F0E4D4'},ticks:{color:'#9A7A6A'}}}}
+});
+document.querySelectorAll('.insight-header').forEach(h=>h.addEventListener('click',()=>{}));
+</script>
+</body></html>
