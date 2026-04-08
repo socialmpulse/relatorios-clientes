@@ -1,320 +1,118 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Relatório Instagram — @drastephanielolo</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<style>
-  :root{
-    --primary:#34D399; --secondary:#059669;
-    --bg:#0F1117; --surface:#1A1D27; --surface2:#242836;
-    --border:#2E3345; --text:#E5E7EB; --text2:#9CA3AF; --text3:#6B7280;
-    --green:#22C55E; --red:#EF4444;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
-  .topbar{position:sticky;top:0;z-index:100;background:rgba(15,17,23,.92);backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--border);padding:12px 32px;display:flex;justify-content:space-between;align-items:center}
-  .topbar-title{font-size:13px;font-weight:600;color:var(--text2);letter-spacing:.5px;text-transform:uppercase}
-  .topbar-badge{font-size:11px;padding:4px 10px;border-radius:20px;background:var(--surface2);color:var(--text3)}
-  .header{padding:64px 32px 40px;max-width:1100px;margin:0 auto}
-  .header-meta{font-size:13px;color:var(--text3);margin-bottom:8px;letter-spacing:.5px;text-transform:uppercase}
-  .header-name{font-size:40px;font-weight:800;line-height:1.1;margin-bottom:8px;
-    background:linear-gradient(135deg,#34D399,#059669);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  .header-handle{font-size:16px;color:var(--text2);margin-bottom:4px}
-  .header-period{font-size:14px;color:var(--text3)}
-  .section{max-width:1100px;margin:0 auto 48px;padding:0 32px}
-  .section-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
-    color:var(--text3);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)}
-  .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-  .kpi-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;position:relative;overflow:hidden}
-  .kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#34D399,#059669)}
-  .kpi-label{font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--text3);margin-bottom:12px}
-  .kpi-value{font-size:32px;font-weight:800;line-height:1;color:var(--text);margin-bottom:6px}
-  .kpi-sub{font-size:12px;color:var(--text3)}
-  .chart-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px}
-  .chart-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px}
-  .chart-title{font-size:14px;font-weight:600;color:var(--text)}
-  .chart-sub{font-size:12px;color:var(--text3);margin-top:4px}
-  .chart-stat{text-align:right}
-  .chart-stat-val{font-size:20px;font-weight:700;color:#34D399}
-  .chart-stat-label{font-size:11px;color:var(--text3)}
-  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .insight-list{display:flex;flex-direction:column;gap:12px}
-  .insight{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;
-    border-left:4px solid #34D399}
-  .insight-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
-    padding:3px 8px;border-radius:4px;margin-bottom:10px}
-  .badge-positivo{background:rgba(34,197,94,.15);color:#22C55E}
-  .badge-atencao{background:rgba(239,68,68,.15);color:#EF4444}
-  .badge-oportunidade{background:rgba(234,179,8,.15);color:#EAB308}
-  .badge-padrao{background:rgba(59,130,246,.15);color:#3B82F6}
-  .insight-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px}
-  .insight-text{font-size:13px;color:var(--text2);line-height:1.6}
-  .insight-text strong{color:#34D399}
-  .rec-grif{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .rec-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px}
-  .rec-num{font-size:28px;font-weight:800;color:#34D399;opacity:.3;margin-bottom:8px}
-  .rec-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px}
-  .rec-text{font-size:13px;color:var(--text2);line-height:1.6}
-  footer{text-align:center;padding:40px 32px;color:var(--text3);font-size:12px;border-top:1px solid var(--border)}
-  footer a{color:var(--text3);text-decoration:none}
-  @media(max-width:768px){
-    .two-col,.rec-grid{grid-template-columns:1fr}
-    .header{padding:40px 20px 24px}
-    .section{padding:0 20px}
-    .kpi-value{font-size:24px}
-  }
-</style>
-</head>
-<body>
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dra. Stephanie Lolo — Março 2026 | Pulse Social Media</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script><style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',sans-serif;background:#FAF3EB;color:#2C1810;min-height:100vh}a{color:inherit;text-decoration:none}.topbar{background:#7B5531;color:#FAF3EB;padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.05em;position:sticky;top:0;z-index:100}.topbar strong{font-weight:600}.topbar span{opacity:.75}.header{background:#7B5531;padding:40px 24px 32px;color:#FAF3EB}.header-inner{max-width:960px;margin:0 auto}.header h1{font-size:28px;font-weight:700;margin-bottom:4px}.header .handle{font-size:15px;opacity:.8;margin-bottom:20px}.month-nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.nav-btn{background:rgba(255,255,255,.15);color:#FAF3EB;border:1px solid rgba(255,255,255,.3);padding:7px 16px;border-radius:20px;font-size:13px;font-weight:500;transition:.2s}.nav-btn:hover{background:rgba(255,255,255,.25)}.nav-btn.disabled{opacity:.35;pointer-events:none}.current-month{background:#B5A591;color:#2C1810;padding:7px 18px;border-radius:20px;font-size:13px;font-weight:600}.content{max-width:960px;margin:0 auto;padding:32px 24px}section{margin-bottom:40px}h2{font-size:18px;font-weight:600;color:#404730;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #E0CFC0}.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px}.kpi-card{background:#fff;border-radius:12px;padding:20px 16px;border:1px solid #E8D5C4;text-align:center}.kpi-card .kv{font-size:26px;font-weight:700;color:#7B5531;display:block;margin-bottom:4px}.kpi-card .kl{font-size:12px;color:#9A7A6A;text-transform:uppercase;letter-spacing:.06em}.chart-wrap{background:#fff;border-radius:12px;padding:24px;border:1px solid #E8D5C4}.chart-wrap canvas{max-height:260px}.peak-label{font-size:12px;color:#9A7A6A;margin-top:8px;text-align:right}.post-card{background:#fff;border-radius:12px;border:1px solid #E8D5C4;display:flex;gap:0;overflow:hidden;margin-bottom:16px}.post-thumb{width:140px;min-width:140px;background:#F5EDE3;position:relative}.post-thumb img{width:100%;height:100%;object-fit:cover;display:block}.no-thumb{width:100%;height:100%;min-height:120px;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700;color:#B5A591}.post-rank{position:absolute;top:8px;left:8px;background:#7B5531;color:#FAF3EB;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px}.post-type-badge{position:absolute;bottom:8px;left:8px;background:#404730;color:#FAF3EB;font-size:10px;padding:2px 7px;border-radius:10px}.post-info{padding:16px;flex:1;min-width:0}.post-date{font-size:11px;color:#9A7A6A;margin-bottom:4px}.post-caption{font-size:13px;color:#4A3020;margin-bottom:12px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.post-metrics{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}.pm{display:flex;flex-direction:column;align-items:center;background:#FAF3EB;border-radius:8px;padding:6px 10px;min-width:60px}.pm strong{font-size:15px;font-weight:700;color:#7B5531}.pm small{font-size:10px;color:#9A7A6A;margin-top:2px}.pm.er strong{color:#404730}.post-analysis{background:#F5EDE3;border-left:3px solid #B5A591;padding:10px 12px;border-radius:0 8px 8px 0;font-size:12px;color:#4A3020;line-height:1.5;margin-bottom:10px}.analysis-icon{margin-right:6px}.post-link{font-size:12px;color:#7B5531;font-weight:600;border-bottom:1px solid #B5A591}.insight-item{background:#fff;border-radius:10px;border:1px solid #E8D5C4;margin-bottom:10px;overflow:hidden}.insight-header{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;user-select:none}.insight-title{flex:1;font-weight:500;font-size:14px}.chevron{font-size:11px;color:#9A7A6A;transition:.2s}.insight-item.open .chevron{transform:rotate(180deg)}.insight-body{display:none;padding:0 16px 14px;font-size:13px;color:#4A3020;line-height:1.6}.insight-item.open .insight-body{display:block}.badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.05em}.badge-positivo{background:#D4EDDA;color:#2D6A3F}.badge-atencao{background:#FFE5E5;color:#C0392B}.badge-oportunidade{background:#FFF3CD;color:#856404}.badge-padrao,.badge-padrão{background:#D5E8FF;color:#1A4D8F}.rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.rec-card{background:#fff;border-radius:10px;border:1px solid #E8D5C4;padding:18px;display:flex;gap:12px;align-items:flex-start}.rec-num{font-size:22px;font-weight:800;color:#E0CFC0;min-width:32px}.rec-card p{font-size:13px;color:#4A3020;line-height:1.6}footer{text-align:center;padding:32px 24px;font-size:12px;color:#9A7A6A;background:#F0E4D4;border-top:1px solid #E0CFC0}@media(max-width:600px){.post-card{flex-direction:column}.post-thumb{width:100%;height:180px}}</style></head><body>
+<div class="topbar"><strong>Instagram Analytics — @drastephanielolo</strong><span>Gerado por Pulse Social Media</span></div>
+<div class="header"><div class="header-inner"><div class="handle">@drastephanielolo</div><h1>Dra. Stephanie Lolo</h1>
+<div class="month-nav"><a href="./2026-01/" class="nav-btn">Jan</a><a href="./2026-02/" class="nav-btn">← Fev</a><span class="current-month">Março 2026</span><span class="nav-btn disabled"> →</span><span style="margin-left:8px;font-size:13px;opacity:.7">9.611 seguidores</span></div></div></div>
+<div class="content">
+<section><h2>Visão Geral do Período</h2><div class="kpi-grid">
+<div class="kpi-card"><span class="kv">34.7K</span><span class="kl">Alcance</span></div>
+<div class="kpi-card"><span class="kv">168.7K</span><span class="kl">Visualizações</span></div>
+<div class="kpi-card"><span class="kv">1.5K</span><span class="kl">Visitas ao Perfil</span></div>
+<div class="kpi-card"><span class="kv">1.7K</span><span class="kl">Interações</span></div>
+<div class="kpi-card"><span class="kv">969</span><span class="kl">Contas Engajadas</span></div>
+<div class="kpi-card"><span class="kv">20</span><span class="kl">Posts Publicados</span></div>
+</div></section>
+<section><h2>Alcance Diário</h2><div class="chart-wrap"><canvas id="reachChart"></canvas><div class="peak-label">Pico: 6.104 em 2026-03-17</div></div></section>
+<section><h2>Top 5 Posts do Mês</h2><div class="post-card">
+      <div class="post-thumb"><a href="https://www.instagram.com/p/DWWsPSFABLQ/" target="_blank"><div class="no-thumb">#1</div><div class="post-rank">#1</div><div class="post-type-badge">Feed</div></a></div>
+      <div class="post-info">
+        <div class="post-date">2026-03-26</div>
+        <div class="post-caption">Você já saiu de um lugar pensando “quero viver isso de novo”?
 
-<div class="topbar">
-  <span class="topbar-title">Instagram Analytics — @drastephanielolo</span>
-  <span class="topbar-badge">Gerado por Pulse Social Media</span>
-</div>
+É exatamente isso que eu quero que você sinta aqui.
 
-<div class="header">
-  <div class="header-meta">Relatório de Performance · Instagram</div>
-  <h1 class="header-name">Dra. Stephanie Lolo</h1>
-  <div class="header-handle">@drastephanielolo</div>
-  <div class="header-period">Período: 09/03/2026 – 07/04/2026 · 30 dias</div>
-</div>
-
-<!-- KPIs -->
-<div class="section">
-  <div class="section-title">Visão Geral do Período</div>
-  <div class="kpi-grid">
-    <div class="kpi-card">
-      <div class="kpi-label">Alcance Total</div>
-      <div class="kpi-value" id="kpi-reach">0</div>
-      <div class="kpi-sub">contas únicas alcançadas</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Views</div>
-      <div class="kpi-value" id="kpi-views">0</div>
-      <div class="kpi-sub">visualizações no período</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Visitas ao Perfil</div>
-      <div class="kpi-value" id="kpi-profile">0</div>
-      <div class="kpi-sub">visitas nos últimos 30 dias</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Contas Engajadas</div>
-      <div class="kpi-value" id="kpi-engaged">0</div>
-      <div class="kpi-sub">contas com interação</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Interações Totais</div>
-      <div class="kpi-value" id="kpi-interactions">0</div>
-      <div class="kpi-sub">curtidas · comentários · saves</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Média Diária de Alcance</div>
-      <div class="kpi-value" id="kpi-media">0</div>
-      <div class="kpi-sub">contas/dia</div>
-    </div>
-  </div>
-</div>
-
-<!-- Gráfico de Alcance -->
-<div class="section">
-  <div class="section-title">Alcance Diário</div>
-  <div class="chart-card">
-    <div class="chart-header">
-      <div>
-        <div class="chart-title">Evolução do Alcance — 30 dias</div>
-        <div class="chart-sub">Contas únicas alcançadas por dia</div>
-      </div>
-      <div class="chart-stat">
-        <div class="chart-stat-val">6,104</div>
-        <div class="chart-stat-label">pico em 03-17</div>
-      </div>
-    </div>
-    <canvas id="chartReach" height="90"></canvas>
-  </div>
-</div>
-
-<!-- Gráficos de métricas -->
-<div class="section">
-  <div class="section-title">Distribuição de Métricas</div>
-  <div class="two-col">
-    <div class="chart-card">
-      <div class="chart-header">
-        <div>
-          <div class="chart-title">Funil de Engajamento</div>
-          <div class="chart-sub">Da visualização à interação</div>
+Queremos que sua experiência vá al</div>
+        <div class="post-metrics">
+          <span class="pm"><strong>0</strong><small>Alcance</small></span>
+          <span class="pm"><strong>0</strong><small>Views</small></span>
+          <span class="pm"><strong>26</strong><small>Curtidas</small></span>
+          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
+          <span class="pm"><strong>6</strong><small>Comentários</small></span>
+          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
+          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
         </div>
+        <div class="post-analysis"><span class="analysis-icon">💡</span>Melhor post do mês — Feed com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
+        <a href="https://www.instagram.com/p/DWWsPSFABLQ/" target="_blank" class="post-link">Ver post no Instagram →</a>
       </div>
-      <canvas id="chartFunil" height="180"></canvas>
-    </div>
-    <div class="chart-card">
-      <div class="chart-header">
-        <div>
-          <div class="chart-title">Alcance por Semana</div>
-          <div class="chart-sub">Distribuição semanal do período</div>
+    </div><div class="post-card">
+      <div class="post-thumb"><a href="https://www.instagram.com/reel/DWU-0lQAM_Q/" target="_blank"><img src="https://scontent.cdninstagram.com/v/t51.82787-15/654597433_18587529514032695_3895215888976470900_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHtkn7DC8PqLblAqCDb6-2JORUc5q73oyU5FRzmrvejJdYUQiE8T8pO5tvAIHqFG3VbdJhAfKOycm2sb6JHYH6P&_nc_ohc=noYpteV518QQ7kNvwFv85Yt&_nc_oc=AdrAT8pZxBHLTOoSm1kxUfYrtpxQX-l191Y5P8XwcKAvhjDBHjxOKjrgNNulcs7Twic&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=ji-Sn93A_8SR3Cr8ML4XXA&_nc_tpa=Q5bMBQEjf-S3TdoGOjTxzXEFwhc9gg6EE5JVO4gmDeoRYvCydQxYckbs8GFp9afNSoyask5uJTOEtlTOvg&oh=00_Af35TrDM7B8p03VheurLN1SHfHvtFUTLotWvmMpjEGQkKA&oe=69DB5A03" alt="post" onerror="this.style.display='none'"><div class="post-rank">#2</div><div class="post-type-badge">REELS</div></a></div>
+      <div class="post-info">
+        <div class="post-date">2026-03-26</div>
+        <div class="post-caption">O ator Humberto Martins é um exemplo de como a harmonização facial, quando realizada com técnica adequada, realça os traços sem perder a essência de q</div>
+        <div class="post-metrics">
+          <span class="pm"><strong>0</strong><small>Alcance</small></span>
+          <span class="pm"><strong>0</strong><small>Views</small></span>
+          <span class="pm"><strong>41</strong><small>Curtidas</small></span>
+          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
+          <span class="pm"><strong>2</strong><small>Comentários</small></span>
+          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
+          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
         </div>
+        <div class="post-analysis"><span class="analysis-icon">💡</span>REELS com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
+        <a href="https://www.instagram.com/reel/DWU-0lQAM_Q/" target="_blank" class="post-link">Ver post no Instagram →</a>
       </div>
-      <canvas id="chartSemanal" height="180"></canvas>
-    </div>
-  </div>
+    </div><div class="post-card">
+      <div class="post-thumb"><a href="https://www.instagram.com/p/DWT61hKkUk7/" target="_blank"><div class="no-thumb">#3</div><div class="post-rank">#3</div><div class="post-type-badge">Feed</div></a></div>
+      <div class="post-info">
+        <div class="post-date">2026-03-25</div>
+        <div class="post-caption">Cansaço no rosto, flacidez, manchas de acne ou incômodo com o perfil não aparecem por acaso.
+
+Cada uma dessas queixas tem causa, planejamento e tratam</div>
+        <div class="post-metrics">
+          <span class="pm"><strong>0</strong><small>Alcance</small></span>
+          <span class="pm"><strong>0</strong><small>Views</small></span>
+          <span class="pm"><strong>17</strong><small>Curtidas</small></span>
+          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
+          <span class="pm"><strong>0</strong><small>Comentários</small></span>
+          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
+          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
+        </div>
+        <div class="post-analysis"><span class="analysis-icon">💡</span>Feed com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
+        <a href="https://www.instagram.com/p/DWT61hKkUk7/" target="_blank" class="post-link">Ver post no Instagram →</a>
+      </div>
+    </div><div class="post-card">
+      <div class="post-thumb"><a href="https://www.instagram.com/reel/DWOxR8fhbEn/" target="_blank"><img src="https://scontent.cdninstagram.com/v/t51.82787-15/655213031_18586731754032695_1192331275471098535_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeEF8znyJsx3hITSmf959PwYxVWkPBtjG3fFVaQ8G2Mbd6LIm9fuViO7PffEaoM0VfTgGZl47kyTAAKZ9DU1GX3_&_nc_ohc=3GVA6gKx-0QQ7kNvwHCdqsJ&_nc_oc=Adp8D3Pg8etaJnxy0tN91YgONpPIpDGEbGRkvn-4cc3SI_JF9-i_e-uh3tJrldzjz_Q&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=ji-Sn93A_8SR3Cr8ML4XXA&_nc_tpa=Q5bMBQHUJv1QYehXg2nRxr0wohaO8rJA1Is6Pwbcd8oguxIVicDGRvhpC33NeFLJxN9SVX-i3U7U38r9TQ&oh=00_Af2e0kXOFZ3Csb22-gNqGW3rA2dwt-7UehvoN04_B3NFkw&oe=69DB7E0D" alt="post" onerror="this.style.display='none'"><div class="post-rank">#4</div><div class="post-type-badge">REELS</div></a></div>
+      <div class="post-info">
+        <div class="post-date">2026-03-23</div>
+        <div class="post-caption">Naturalidade é resultado de planejamento bem feito, não de ausência de intervenção ✨
+
+Dra. Stephanie A. de Lolo - CRBM 29165/SP
+⚠️O uso de imagem do p</div>
+        <div class="post-metrics">
+          <span class="pm"><strong>0</strong><small>Alcance</small></span>
+          <span class="pm"><strong>0</strong><small>Views</small></span>
+          <span class="pm"><strong>14</strong><small>Curtidas</small></span>
+          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
+          <span class="pm"><strong>0</strong><small>Comentários</small></span>
+          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
+          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
+        </div>
+        <div class="post-analysis"><span class="analysis-icon">💡</span>REELS com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
+        <a href="https://www.instagram.com/reel/DWOxR8fhbEn/" target="_blank" class="post-link">Ver post no Instagram →</a>
+      </div>
+    </div><div class="post-card">
+      <div class="post-thumb"><a href="https://www.instagram.com/p/DWG9tXvgPJx/" target="_blank"><div class="no-thumb">#5</div><div class="post-rank">#5</div><div class="post-type-badge">Feed</div></a></div>
+      <div class="post-info">
+        <div class="post-date">2026-03-20</div>
+        <div class="post-caption">Isso é o que virou comum: excesso.
+
+Isso é o que eu escolho fazer: equilíbrio, leveza e naturalidade ✨</div>
+        <div class="post-metrics">
+          <span class="pm"><strong>0</strong><small>Alcance</small></span>
+          <span class="pm"><strong>0</strong><small>Views</small></span>
+          <span class="pm"><strong>83</strong><small>Curtidas</small></span>
+          <span class="pm"><strong>0</strong><small>Salvamentos</small></span>
+          <span class="pm"><strong>2</strong><small>Comentários</small></span>
+          <span class="pm"><strong>0</strong><small>Compartilhamentos</small></span>
+          <span class="pm er"><strong>0.0%</strong><small>Engajamento</small></span>
+        </div>
+        <div class="post-analysis"><span class="analysis-icon">💡</span>Feed com alcance de 0 pessoas. conteúdo bem alinhado ao interesse do público neste perfil.</div>
+        <a href="https://www.instagram.com/p/DWG9tXvgPJx/" target="_blank" class="post-link">Ver post no Instagram →</a>
+      </div>
+    </div></section>
+<section><h2>Insights Estratégicos</h2><div class="insight-item"><div class="insight-header" onclick="this.parentElement.classList.toggle('open')"><span class="badge badge-positivo">positivo</span><span class="insight-title">Alcance Total</span><span class="chevron">▼</span></div><div class="insight-body">O perfil alcançou 34.669 contas únicas em Março 2026, com pico de 6.104 em 2026-03-17. Há oportunidade de ampliar o alcance com maior frequência de Reels.</div></div><div class="insight-item"><div class="insight-header" onclick="this.parentElement.classList.toggle('open')"><span class="badge badge-padrão">padrão</span><span class="insight-title">Visualizações vs Alcance</span><span class="chevron">▼</span></div><div class="insight-body">Com 168.736 visualizações para 34.669 contas alcançadas, o índice de visualizações por pessoa foi de 4.9x.</div></div><div class="insight-item"><div class="insight-header" onclick="this.parentElement.classList.toggle('open')"><span class="badge badge-oportunidade">oportunidade</span><span class="insight-title">Visitas ao Perfil</span><span class="chevron">▼</span></div><div class="insight-body">1.462 visitas ao perfil. CTAs mais diretos nos conteúdos podem aumentar essa conversão.</div></div><div class="insight-item"><div class="insight-header" onclick="this.parentElement.classList.toggle('open')"><span class="badge badge-positivo">positivo</span><span class="insight-title">Engajamento</span><span class="chevron">▼</span></div><div class="insight-body">1.733 interações totais e 969 contas engajadas. Taxa: 5.0% por alcance.</div></div></section>
+<section><h2>Recomendações</h2><div class="rec-grid"><div class="rec-card"><span class="rec-num">01</span><p>Manter frequência mínima de 20 posts/mês — consistência é fator-chave no algoritmo.</p></div><div class="rec-card"><span class="rec-num">02</span><p>Priorizar o formato Feed — melhor alcance do mês (0).</p></div><div class="rec-card"><span class="rec-num">03</span><p>Publicar nos horários de pico — verificar na seção de público do Instagram.</p></div><div class="rec-card"><span class="rec-num">04</span><p>Adicionar CTAs de "salve este post" para aumentar sinal de valor ao algoritmo.</p></div><div class="rec-card"><span class="rec-num">05</span><p>Explorar temas dos Top 5 para criar séries de conteúdo.</p></div><div class="rec-card"><span class="rec-num">06</span><p>Meta para o próximo mês: superar 1.754 visitas ao perfil.</p></div></div></section>
 </div>
-
-<!-- Insights -->
-<div class="section">
-  <div class="section-title">Insights Estratégicos</div>
-  <div class="insight-list">
-    <div class="insight">
-      <span class="insight-badge badge-positivo">positivo</span>
-      <div class="insight-title">Alcance consistente ao longo do período</div>
-      <div class="insight-text">A conta gerou <strong>34,008 impressões únicas</strong> em 30 dias, com média de <strong>1,133 contas/dia</strong>. O pico foi em 03-17 com <strong>6,104 contas alcançadas</strong>, indicando que o conteúdo publicado nesse dia teve forte distribuição orgânica.</div>
-    </div>
-    <div class="insight">
-      <span class="insight-badge badge-padrao">padrão</span>
-      <div class="insight-title">Relação entre alcance e engajamento</div>
-      <div class="insight-text">Com <strong>910 contas engajadas</strong> sobre um alcance de <strong>34,008</strong>, a taxa de engajamento por alcance fica em <strong>2.7%</strong>. Cada visualização gera em média <strong>0.01 interações</strong> — referência saudável é entre 2% e 5%.</div>
-    </div>
-    <div class="insight">
-      <span class="insight-badge badge-oportunidade">oportunidade</span>
-      <div class="insight-title">Conversão de visitas ao perfil</div>
-      <div class="insight-text">O perfil recebeu <strong>1,326 visitas</strong> no período. Com <strong>34,008 de alcance</strong>, a taxa de conversão alcance→perfil é de <strong>3.9%</strong>. Otimizar a bio e o CTA dos posts pode aumentar essa conversão.</div>
-    </div>
-  </div>
-</div>
-
-<!-- Recomendações -->
-<div class="section">
-  <div class="section-title">Recomendações para o Próximo Mês</div>
-  <div class="rec-grid">
-    <div class="rec-card">
-      <div class="rec-num">01</div>
-      <div class="rec-title">Replique o padrão dos picos</div>
-      <div class="rec-text">Analise o conteúdo publicado em 03-17, quando o alcance atingiu 6,104. Identifique formato, tema e horário — e replique as mesmas condições em publicações futuras.</div>
-    </div>
-    <div class="rec-card">
-      <div class="rec-num">02</div>
-      <div class="rec-title">Aumente a frequência nos dias de alto alcance</div>
-      <div class="rec-text">Identifique os dias da semana com maior alcance histórico e concentre as publicações de maior impacto nesses dias para maximizar a distribuição orgânica.</div>
-    </div>
-    <div class="rec-card">
-      <div class="rec-num">03</div>
-      <div class="rec-title">Fortaleça o CTA para visitas ao perfil</div>
-      <div class="rec-text">Com 1,326 visitas ao perfil, cada post deve incluir um chamado explícito para visitar o perfil — especialmente Reels, que têm maior alcance para não-seguidores.</div>
-    </div>
-    <div class="rec-card">
-      <div class="rec-num">04</div>
-      <div class="rec-title">Monitore a relação saves/interações</div>
-      <div class="rec-text">Posts com alto número de saves indicam conteúdo de valor que o algoritmo distribui mais. Crie pelo menos 2 conteúdos educativos ou de referência por semana para aumentar os salvamentos.</div>
-    </div>
-  </div>
-</div>
-
-<footer>
-  Relatório gerado por <a href="https://www.instagram.com/laira.lus" target="_blank">Pulse Social Media</a> ·
-  Dados via Meta Graph API v25.0 · Período: março–abril 2026
-</footer>
-
+<footer>Relatório gerado por <strong>Pulse Social Media</strong> via Meta Graph API v25.0</footer>
 <script>
-// Counters animados
-function animateCounter(id, target) {
-  const el = document.getElementById(id);
-  const duration = 1200;
-  const steps = 60;
-  const increment = target / steps;
-  let current = 0;
-  const timer = setInterval(() => {
-    current += increment;
-    if (current >= target) { current = target; clearInterval(timer); }
-    el.textContent = Math.floor(current).toLocaleString('pt-BR');
-  }, duration / steps);
-}
-animateCounter('kpi-reach',        34008);
-animateCounter('kpi-views',        158466);
-animateCounter('kpi-profile',      1326);
-animateCounter('kpi-engaged',      910);
-animateCounter('kpi-interactions', 1450);
-animateCounter('kpi-media',        1133);
-
-// Gráfico alcance diário
-new Chart(document.getElementById('chartReach'), {
-  type: 'line',
-  data: {
-    labels: ["03-09", "03-10", "03-11", "03-12", "03-13", "03-14", "03-15", "03-16", "03-17", "03-18", "03-19", "03-20", "03-21", "03-22", "03-23", "03-24", "03-25", "03-26", "03-27", "03-28", "03-29", "03-30", "03-31", "04-01", "04-02", "04-03", "04-04", "04-05", "04-06", "04-07"],
-    datasets: [{
-      label: 'Alcance',
-      data: [384, 411, 520, 412, 656, 635, 754, 3618, 6104, 1749, 687, 1770, 1303, 917, 704, 425, 709, 1718, 1424, 988, 692, 1143, 619, 1615, 612, 435, 449, 435, 1214, 906],
-      borderColor: '#34D399',
-      backgroundColor: '#34D39922',
-      borderWidth: 2,
-      fill: true,
-      tension: 0.4,
-      pointRadius: 3,
-      pointHoverRadius: 6,
-      pointBackgroundColor: '#34D399'
-    }]
-  },
-  options: {
-    responsive: true,
-    plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.y.toLocaleString('pt-BR') + ' contas' } } },
-    scales: {
-      x: { grid: { color: '#2E334522' }, ticks: { color: '#6B7280', maxTicksLimit: 10 } },
-      y: { grid: { color: '#2E334522' }, ticks: { color: '#6B7280', callback: v => v.toLocaleString('pt-BR') } }
-    }
-  }
-});
-
-// Gráfico funil
-new Chart(document.getElementById('chartFunil'), {
-  type: 'bar',
-  data: {
-    labels: ['Views', 'Alcance', 'Visitas Perfil', 'Engajadas', 'Interações'],
-    datasets: [{
-      data: [158466, 34008, 1326, 910, 1450],
-      backgroundColor: ['#34D399CC','#34D399AA','#34D39988','#34D39966','#34D39944'],
-      borderRadius: 6
-    }]
-  },
-  options: {
-    indexAxis: 'y',
-    responsive: true,
-    plugins: { legend: { display: false } },
-    scales: {
-      x: { grid: { color: '#2E334522' }, ticks: { color: '#6B7280', callback: v => v.toLocaleString('pt-BR') } },
-      y: { grid: { display: false }, ticks: { color: '#9CA3AF' } }
-    }
-  }
-});
-
-// Gráfico semanal
-const semanas = ['Semana 1\n(09–15/03)', 'Semana 2\n(16–22/03)', 'Semana 3\n(23–29/03)', 'Semana 4\n(30/03–07/04)'];
-const allReach = [384, 411, 520, 412, 656, 635, 754, 3618, 6104, 1749, 687, 1770, 1303, 917, 704, 425, 709, 1718, 1424, 988, 692, 1143, 619, 1615, 612, 435, 449, 435, 1214, 906];
-const s1 = allReach.slice(0,7).reduce((a,b)=>a+b,0);
-const s2 = allReach.slice(7,14).reduce((a,b)=>a+b,0);
-const s3 = allReach.slice(14,21).reduce((a,b)=>a+b,0);
-const s4 = allReach.slice(21).reduce((a,b)=>a+b,0);
-new Chart(document.getElementById('chartSemanal'), {
-  type: 'bar',
-  data: {
-    labels: semanas,
-    datasets: [{
-      label: 'Alcance',
-      data: [s1, s2, s3, s4],
-      backgroundColor: ['#34D399','#059669','#34D399CC','#059669CC'],
-      borderRadius: 8
-    }]
-  },
-  options: {
-    responsive: true,
-    plugins: { legend: { display: false } },
-    scales: {
-      x: { grid: { display: false }, ticks: { color: '#9CA3AF' } },
-      y: { grid: { color: '#2E334522' }, ticks: { color: '#6B7280', callback: v => v.toLocaleString('pt-BR') } }
-    }
-  }
-});
-</script>
-</body>
-</html>
+new Chart(document.getElementById('reachChart'),{type:'line',data:{labels:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],datasets:[{label:'Alcance diário',data:[1446,1011,804,727,613,982,803,560,384,411,520,412,656,635,754,3618,6104,1749,687,1770,1303,917,704,425,709,1718,1424,988,692,1143],borderColor:'#7B5531',backgroundColor:'rgba(123,85,49,.1)',fill:true,tension:.4,pointRadius:3,pointBackgroundColor:'#7B5531',borderWidth:2}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>'Alcance: '+ctx.raw.toLocaleString('pt-BR')}}},scales:{y:{beginAtZero:true,grid:{color:'#F0E4D4'},ticks:{color:'#9A7A6A'}},x:{grid:{color:'#F0E4D4'},ticks:{color:'#9A7A6A'}}}}});
+</script></body></html>
