@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Relatório Instagram — @carolcrespotricologista</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    --primary:#A3E635; --secondary:#65A30D;
+    --bg:#0F1117; --surface:#1A1D27; --surface2:#242836;
+    --border:#2E3345; --text:#E5E7EB; --text2:#9CA3AF; --text3:#6B7280;
+    --green:#22C55E; --red:#EF4444;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+  .topbar{position:sticky;top:0;z-index:100;background:rgba(15,17,23,.92);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);padding:12px 32px;display:flex;justify-content:space-between;align-items:center}
+  .topbar-title{font-size:13px;font-weight:600;color:var(--text2);letter-spacing:.5px;text-transform:uppercase}
+  .topbar-badge{font-size:11px;padding:4px 10px;border-radius:20px;background:var(--surface2);color:var(--text3)}
+  .header{padding:64px 32px 40px;max-width:1100px;margin:0 auto}
+  .header-meta{font-size:13px;color:var(--text3);margin-bottom:8px;letter-spacing:.5px;text-transform:uppercase}
+  .header-name{font-size:40px;font-weight:800;line-height:1.1;margin-bottom:8px;
+    background:linear-gradient(135deg,#A3E635,#65A30D);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .header-handle{font-size:16px;color:var(--text2);margin-bottom:4px}
+  .header-period{font-size:14px;color:var(--text3)}
+  .section{max-width:1100px;margin:0 auto 48px;padding:0 32px}
+  .section-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--text3);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+  .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .kpi-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;position:relative;overflow:hidden}
+  .kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#A3E635,#65A30D)}
+  .kpi-label{font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--text3);margin-bottom:12px}
+  .kpi-value{font-size:32px;font-weight:800;line-height:1;color:var(--text);margin-bottom:6px}
+  .kpi-sub{font-size:12px;color:var(--text3)}
+  .chart-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px}
+  .chart-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px}
+  .chart-title{font-size:14px;font-weight:600;color:var(--text)}
+  .chart-sub{font-size:12px;color:var(--text3);margin-top:4px}
+  .chart-stat{text-align:right}
+  .chart-stat-val{font-size:20px;font-weight:700;color:#A3E635}
+  .chart-stat-label{font-size:11px;color:var(--text3)}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .insight-list{display:flex;flex-direction:column;gap:12px}
+  .insight{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;
+    border-left:4px solid #A3E635}
+  .insight-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+    padding:3px 8px;border-radius:4px;margin-bottom:10px}
+  .badge-positivo{background:rgba(34,197,94,.15);color:#22C55E}
+  .badge-atencao{background:rgba(239,68,68,.15);color:#EF4444}
+  .badge-oportunidade{background:rgba(234,179,8,.15);color:#EAB308}
+  .badge-padrao{background:rgba(59,130,246,.15);color:#3B82F6}
+  .insight-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px}
+  .insight-text{font-size:13px;color:var(--text2);line-height:1.6}
+  .insight-text strong{color:#A3E635}
+  .rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .rec-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px}
+  .rec-num{font-size:28px;font-weight:800;color:#A3E635;opacity:.3;margin-bottom:8px}
+  .rec-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px}
+  .rec-text{font-size:13px;color:var(--text2);line-height:1.6}
+  footer{text-align:center;padding:40px 32px;color:var(--text3);font-size:12px;border-top:1px solid var(--border)}
+  footer a{color:var(--text3);text-decoration:none}
+  @media(max-width:768px){
+    .two-col,.rec-grid{grid-template-columns:1fr}
+    .header{padding:40px 20px 24px}
+    .section{padding:0 20px}
+    .kpi-value{font-size:24px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-title">Instagram Analytics — @carolcrespotricologista</span>
+  <span class="topbar-badge">Gerado por Pulse Social Media</span>
+</div>
+
+<div class="header">
+  <div class="header-meta">Relatório de Performance · Instagram</div>
+  <h1 class="header-name">Carol Crespo | Saúde Capilar</h1>
+  <div class="header-handle">@carolcrespotricologista</div>
+  <div class="header-period">Período: 09/03/2026 – 07/04/2026 · 30 dias</div>
+</div>
+
+<!-- KPIs -->
+<div class="section">
+  <div class="section-title">Visão Geral do Período</div>
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Alcance Total</div>
+      <div class="kpi-value" id="kpi-reach">0</div>
+      <div class="kpi-sub">contas únicas alcançadas</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Views</div>
+      <div class="kpi-value" id="kpi-views">0</div>
+      <div class="kpi-sub">visualizações no período</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Visitas ao Perfil</div>
+      <div class="kpi-value" id="kpi-profile">0</div>
+      <div class="kpi-sub">visitas nos últimos 30 dias</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Contas Engajadas</div>
+      <div class="kpi-value" id="kpi-engaged">0</div>
+      <div class="kpi-sub">contas com interação</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Interações Totais</div>
+      <div class="kpi-value" id="kpi-interactions">0</div>
+      <div class="kpi-sub">curtidas · comentários · saves</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Média Diária de Alcance</div>
+      <div class="kpi-value" id="kpi-media">0</div>
+      <div class="kpi-sub">contas/dia</div>
+    </div>
+  </div>
+</div>
+
+<!-- Gráfico de Alcance -->
+<div class="section">
+  <div class="section-title">Alcance Diário</div>
+  <div class="chart-card">
+    <div class="chart-header">
+      <div>
+        <div class="chart-title">Evolução do Alcance — 30 dias</div>
+        <div class="chart-sub">Contas únicas alcançadas por dia</div>
+      </div>
+      <div class="chart-stat">
+        <div class="chart-stat-val">4,684</div>
+        <div class="chart-stat-label">pico em 03-10</div>
+      </div>
+    </div>
+    <canvas id="chartReach" height="90"></canvas>
+  </div>
+</div>
+
+<!-- Gráficos de métricas -->
+<div class="section">
+  <div class="section-title">Distribuição de Métricas</div>
+  <div class="two-col">
+    <div class="chart-card">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title">Funil de Engajamento</div>
+          <div class="chart-sub">Da visualização à interação</div>
+        </div>
+      </div>
+      <canvas id="chartFunil" height="180"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title">Alcance por Semana</div>
+          <div class="chart-sub">Distribuição semanal do período</div>
+        </div>
+      </div>
+      <canvas id="chartSemanal" height="180"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- Insights -->
+<div class="section">
+  <div class="section-title">Insights Estratégicos</div>
+  <div class="insight-list">
+    <div class="insight">
+      <span class="insight-badge badge-positivo">positivo</span>
+      <div class="insight-title">Alcance consistente ao longo do período</div>
+      <div class="insight-text">A conta gerou <strong>78,458 impressões únicas</strong> em 30 dias, com média de <strong>2,615 contas/dia</strong>. O pico foi em 03-10 com <strong>4,684 contas alcançadas</strong>, indicando que o conteúdo publicado nesse dia teve forte distribuição orgânica.</div>
+    </div>
+    <div class="insight">
+      <span class="insight-badge badge-padrao">padrão</span>
+      <div class="insight-title">Relação entre alcance e engajamento</div>
+      <div class="insight-text">Com <strong>679 contas engajadas</strong> sobre um alcance de <strong>78,458</strong>, a taxa de engajamento por alcance fica em <strong>0.9%</strong>. Cada visualização gera em média <strong>0.01 interações</strong> — referência saudável é entre 2% e 5%.</div>
+    </div>
+    <div class="insight">
+      <span class="insight-badge badge-oportunidade">oportunidade</span>
+      <div class="insight-title">Conversão de visitas ao perfil</div>
+      <div class="insight-text">O perfil recebeu <strong>1,882 visitas</strong> no período. Com <strong>78,458 de alcance</strong>, a taxa de conversão alcance→perfil é de <strong>2.4%</strong>. Otimizar a bio e o CTA dos posts pode aumentar essa conversão.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Recomendações -->
+<div class="section">
+  <div class="section-title">Recomendações para o Próximo Mês</div>
+  <div class="rec-grid">
+    <div class="rec-card">
+      <div class="rec-num">01</div>
+      <div class="rec-title">Replique o padrão dos picos</div>
+      <div class="rec-text">Analise o conteúdo publicado em 03-10, quando o alcance atingiu 4,684. Identifique formato, tema e horário — e replique as mesmas condições em publicações futuras.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-num">02</div>
+      <div class="rec-title">Aumente a frequência nos dias de alto alcance</div>
+      <div class="rec-text">Identifique os dias da semana com maior alcance histórico e concentre as publicações de maior impacto nesses dias para maximizar a distribuição orgânica.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-num">03</div>
+      <div class="rec-title">Fortaleça o CTA para visitas ao perfil</div>
+      <div class="rec-text">Com 1,882 visitas ao perfil, cada post deve incluir um chamado explícito para visitar o perfil — especialmente Reels, que têm maior alcance para não-seguidores.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-num">04</div>
+      <div class="rec-title">Monitore a relação saves/interações</div>
+      <div class="rec-text">Posts com alto número de saves indicam conteúdo de valor que o algoritmo distribui mais. Crie pelo menos 2 conteúdos educativos ou de referência por semana para aumentar os salvamentos.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Relatório gerado por <a href="https://www.instagram.com/laira.lus" target="_blank">Pulse Social Media</a> ·
+  Dados via Meta Graph API v25.0 · Período: março–abril 2026
+</footer>
+
+<script>
+// Counters animados
+function animateCounter(id, target) {
+  const el = document.getElementById(id);
+  const duration = 1200;
+  const steps = 60;
+  const increment = target / steps;
+  let current = 0;
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) { current = target; clearInterval(timer); }
+    el.textContent = Math.floor(current).toLocaleString('pt-BR');
+  }, duration / steps);
+}
+animateCounter('kpi-reach',        78458);
+animateCounter('kpi-views',        211794);
+animateCounter('kpi-profile',      1882);
+animateCounter('kpi-engaged',      679);
+animateCounter('kpi-interactions', 1267);
+animateCounter('kpi-media',        2615);
+
+// Gráfico alcance diário
+new Chart(document.getElementById('chartReach'), {
+  type: 'line',
+  data: {
+    labels: ["03-09", "03-10", "03-11", "03-12", "03-13", "03-14", "03-15", "03-16", "03-17", "03-18", "03-19", "03-20", "03-21", "03-22", "03-23", "03-24", "03-25", "03-26", "03-27", "03-28", "03-29", "03-30", "03-31", "04-01", "04-02", "04-03", "04-04", "04-05", "04-06", "04-07"],
+    datasets: [{
+      label: 'Alcance',
+      data: [3235, 4684, 2730, 2464, 3648, 3455, 3860, 3206, 2811, 1634, 1428, 1923, 2033, 2167, 2009, 2172, 1632, 1398, 1930, 1735, 2204, 1967, 3376, 2711, 2678, 2497, 3739, 3941, 3230, 1961],
+      borderColor: '#A3E635',
+      backgroundColor: '#A3E63522',
+      borderWidth: 2,
+      fill: true,
+      tension: 0.4,
+      pointRadius: 3,
+      pointHoverRadius: 6,
+      pointBackgroundColor: '#A3E635'
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.y.toLocaleString('pt-BR') + ' contas' } } },
+    scales: {
+      x: { grid: { color: '#2E334522' }, ticks: { color: '#6B7280', maxTicksLimit: 10 } },
+      y: { grid: { color: '#2E334522' }, ticks: { color: '#6B7280', callback: v => v.toLocaleString('pt-BR') } }
+    }
+  }
+});
+
+// Gráfico funil
+new Chart(document.getElementById('chartFunil'), {
+  type: 'bar',
+  data: {
+    labels: ['Views', 'Alcance', 'Visitas Perfil', 'Engajadas', 'Interações'],
+    datasets: [{
+      data: [211794, 78458, 1882, 679, 1267],
+      backgroundColor: ['#A3E635CC','#A3E635AA','#A3E63588','#A3E63566','#A3E63544'],
+      borderRadius: 6
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { color: '#2E334522' }, ticks: { color: '#6B7280', callback: v => v.toLocaleString('pt-BR') } },
+      y: { grid: { display: false }, ticks: { color: '#9CA3AF' } }
+    }
+  }
+});
+
+// Gráfico semanal
+const semanas = ['Semana 1\n(09–15/03)', 'Semana 2\n(16–22/03)', 'Semana 3\n(23–29/03)', 'Semana 4\n(30/03–07/04)'];
+const allReach = [3235, 4684, 2730, 2464, 3648, 3455, 3860, 3206, 2811, 1634, 1428, 1923, 2033, 2167, 2009, 2172, 1632, 1398, 1930, 1735, 2204, 1967, 3376, 2711, 2678, 2497, 3739, 3941, 3230, 1961];
+const s1 = allReach.slice(0,7).reduce((a,b)=>a+b,0);
+const s2 = allReach.slice(7,14).reduce((a,b)=>a+b,0);
+const s3 = allReach.slice(14,21).reduce((a,b)=>a+b,0);
+const s4 = allReach.slice(21).reduce((a,b)=>a+b,0);
+new Chart(document.getElementById('chartSemanal'), {
+  type: 'bar',
+  data: {
+    labels: semanas,
+    datasets: [{
+      label: 'Alcance',
+      data: [s1, s2, s3, s4],
+      backgroundColor: ['#A3E635','#65A30D','#A3E635CC','#65A30DCC'],
+      borderRadius: 8
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { display: false }, ticks: { color: '#9CA3AF' } },
+      y: { grid: { color: '#2E334522' }, ticks: { color: '#6B7280', callback: v => v.toLocaleString('pt-BR') } }
+    }
+  }
+});
+</script>
+</body>
+</html>
