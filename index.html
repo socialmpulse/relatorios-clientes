@@ -5,53 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relatórios de Clientes — Pulse Social Media</title>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Segoe UI',sans-serif; background:#FAF3EB; color:#0d333b; min-height:100vh; }
-    header { background:#0d333b; color:#fff; padding:2.5rem 2rem; text-align:center; }
-    header h1 { font-size:1.8rem; margin-bottom:.5rem; }
-    header p { opacity:.7; font-size:1rem; }
-    .container { max-width:800px; margin:2.5rem auto; padding:0 1rem; }
-    h2 { font-size:1rem; text-transform:uppercase; letter-spacing:.1em; color:#7B5531; margin-bottom:1rem; margin-top:2rem; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:1rem; }
-    .card { background:#fff; border-radius:14px; padding:1.5rem 1.8rem; display:flex; align-items:center; justify-content:space-between; box-shadow:0 2px 10px rgba(0,0,0,.07); text-decoration:none; color:#0d333b; transition:transform .2s,box-shadow .2s; }
-    .card:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.12); }
-    .card .avatar { width:44px; height:44px; border-radius:50%; background:#0d333b; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem; font-weight:700; margin-right:1rem; flex-shrink:0; }
-    .card .info { flex:1; }
-    .card .handle { font-size:1.05rem; font-weight:600; }
-    .card .name { font-size:.82rem; color:#7B5531; margin-top:.1rem; }
-    .card .months { font-size:.78rem; color:#999; margin-top:.25rem; }
-    .card .arrow { font-size:1.4rem; color:#ccc; }
-    footer { text-align:center; padding:2.5rem; color:#bbb; font-size:.8rem; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Segoe UI',sans-serif;background:#FAF3EB;color:#0d333b;min-height:100vh}
+    header{background:#0d333b;color:#fff;padding:2.5rem 2rem;text-align:center}
+    header h1{font-size:1.9rem;font-weight:700;margin-bottom:.4rem}
+    header p{opacity:.65;font-size:.95rem}
+    .container{max-width:780px;margin:0 auto;padding:1.5rem 1rem 3rem}
+    .section-label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#7B5531;margin:1.8rem 0 .9rem}
+    .card{background:#fff;border-radius:14px;padding:1.2rem 1.5rem;margin-bottom:.75rem;display:flex;align-items:center;gap:1rem;text-decoration:none;color:#0d333b;box-shadow:0 2px 8px rgba(0,0,0,.07);transition:transform .18s,box-shadow .18s}
+    .card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.13)}
+    .avatar{width:42px;height:42px;border-radius:50%;background:#0d333b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;flex-shrink:0}
+    .info{flex:1}
+    .info .name{font-size:1rem;font-weight:600}
+    .info .handle{font-size:.82rem;color:#7B5531;margin-top:.1rem}
+    .meta{text-align:right;flex-shrink:0}
+    .meta .label{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:#aaa}
+    .meta .value{font-size:1.05rem;font-weight:700;color:#0d333b}
+    .arrow{color:#ccc;font-size:1.3rem;margin-left:.5rem}
+    .months{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.5rem 0 .5rem}
+    .month-btn{padding:.55rem 1.2rem;border-radius:20px;border:2px solid #0d333b;background:#fff;color:#0d333b;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .15s}
+    .month-btn.active{background:#0d333b;color:#fff}
+    .month-btn:hover:not(.active){background:#f0e8df}
+    .hint{font-size:.8rem;color:#aaa;margin-top:.4rem}
+    footer{text-align:center;padding:2rem;color:#bbb;font-size:.78rem}
   </style>
 </head>
 <body>
-  <header>
-    <h1>📊 Relatórios de Clientes</h1>
-    <p>Pulse Social Media — Performance mensal no Instagram</p>
-  </header>
-  <div class="container">
-    <h2>Clientes</h2>
-    <div class="grid">
-      <a href="laira.lus/index.html" class="card">
-        <div class="avatar">L</div>
-        <div class="info">
-          <div class="handle">@laira.lus</div>
-          <div class="name">Laira | Social Media</div>
-          <div class="months">Jan · Fev · Mar 2026</div>
-        </div>
-        <div class="arrow">→</div>
-      </a>
-      <a href="socialmedia_pulse/index.html" class="card">
-        <div class="avatar">P</div>
-        <div class="info">
-          <div class="handle">@socialmedia_pulse</div>
-          <div class="name">Social Media | Estratégia e Conteúdo</div>
-          <div class="months">Jan · Fev · Mar 2026</div>
-        </div>
-        <div class="arrow">→</div>
-      </a>
-    </div>
+<header>
+  <h1>Pulse Social Media</h1>
+  <p>Relatórios de Performance — Instagram 2026</p>
+</header>
+<div class="container">
+  <div class="section-label" id="section-label">CLIENTES · VER MARÇO 2026</div>
+  <a class="card" href="laira.lus/2026-03/" id="c-laira-lus">
+    <div class="avatar">L</div>
+    <div class="info"><div class="name">Laira | Social Media</div><div class="handle">@laira.lus</div></div>
+    <div class="meta"><div class="label">SEGUIDORES</div><div class="value">107.406</div></div>
+    <div class="arrow">→</div>
+  </a>
+  <a class="card" href="brunaperissinotto_/2026-03/" id="c-brunaperissinotto_">
+    <div class="avatar">B</div>
+    <div class="info"><div class="name">Bruna Perissinotto</div><div class="handle">@brunaperissinotto_</div></div>
+    <div class="meta"><div class="label">SEGUIDORES</div><div class="value">65.414</div></div>
+    <div class="arrow">→</div>
+  </a>
+  <a class="card" href="fernandoreame/2026-03/" id="c-fernandoreame">
+    <div class="avatar">F</div>
+    <div class="info"><div class="name">Fernando Reame</div><div class="handle">@fernandoreame</div></div>
+    <div class="meta"><div class="label">SEGUIDORES</div><div class="value">25.307</div></div>
+    <div class="arrow">→</div>
+  </a>
+  <a class="card" href="maria_pietroforte_decor/2026-03/" id="c-maria_pietroforte_decor">
+    <div class="avatar">M</div>
+    <div class="info"><div class="name">Maria Pietroforte Decor</div><div class="handle">@maria_pietroforte_decor</div></div>
+    <div class="meta"><div class="label">SEGUIDORES</div><div class="value">12.566</div></div>
+    <div class="arrow">→</div>
+  </a>
+  <a class="card" href="jezerlopesfotografia/2026-03/" id="c-jezerlopesfotografia">
+    <div class="avatar">J</div>
+    <div class="info"><div class="name">Jézer Lopes Fotografia</div><div class="handle">@jezerlopesfotografia</div></div>
+    <div class="meta"><div class="label">SEGUIDORES</div><div class="value">10.466</div></div>
+    <div class="arrow">→</div>
+  </a>
+  <a class="card" href="drastephanielolo/2026-03/" id="c-drastephanielolo">
+    <div class="avatar">D</div>
+    <div class="info"><div class="name">Dra. Stephanie Lolo</div><div class="handle">@drastephanielolo</div></div>
+    <div class="meta"><div class="label">SEGUIDORES</div><div class="value">9.611</div></div>
+    <div class="arrow">→</div>
+  </a>
+  <a class="card" href="flaviachicarelli/2026-03/" id="c-flaviachicarelli">
+    <div class="avatar">F</div>
+    <div class="info"><div class="name">Flávia Chicarelli</div><div class="handle">@flaviachicarelli</div></div>
+    <div class="meta"><div class="label">SEGUIDORES</div><div class="value">7.589</div></div>
+    <div class="arrow">→</div>
+  </a>
+  <a class="card" href="carolcrespotricologista/2026-03/" id="c-carolcrespotricologista">
+    <div class="avatar">C</div>
+    <div class="info"><div class="name">Carol Crespo Tricologista</div><div class="handle">@carolcrespotricologista</div></div>
+    <div class="meta"><div class="label">SEGUIDORES</div><div class="value">6.835</div></div>
+    <div class="arrow">→</div>
+  </a>
+  <a class="card" href="socialmedia_pulse/2026-03/" id="c-socialmedia_pulse">
+    <div class="avatar">P</div>
+    <div class="info"><div class="name">Social Media | Estratégia e Conteúdo</div><div class="handle">@socialmedia_pulse</div></div>
+    <div class="meta"><div class="label">SEGUIDORES</div><div class="value">441</div></div>
+    <div class="arrow">→</div>
+  </a>
+  <div class="section-label" style="margin-top:2.2rem">NAVEGAR POR MÊS</div>
+  <div class="months">
+    <button class="month-btn" onclick="setMonth('2026-01','Janeiro 2026')">Janeiro 2026</button>
+    <button class="month-btn" onclick="setMonth('2026-02','Fevereiro 2026')">Fevereiro 2026</button>
+    <button class="month-btn active" onclick="setMonth('2026-03','Março 2026')">Março 2026</button>
   </div>
-  <footer>Pulse Social Media © 2026</footer>
+  <div class="hint">Selecione um cliente e use a navegação de meses no topo do relatório.</div>
+</div>
+<footer>Pulse Social Media © 2026</footer>
+<script>
+const clientSlugs={
+  'c-laira-lus':'laira.lus',
+  'c-brunaperissinotto_':'brunaperissinotto_',
+  'c-fernandoreame':'fernandoreame',
+  'c-maria_pietroforte_decor':'maria_pietroforte_decor',
+  'c-jezerlopesfotografia':'jezerlopesfotografia',
+  'c-drastephanielolo':'drastephanielolo',
+  'c-flaviachicarelli':'flaviachicarelli',
+  'c-carolcrespotricologista':'carolcrespotricologista',
+  'c-socialmedia_pulse':'socialmedia_pulse'
+};
+function setMonth(slug,label){
+  document.querySelectorAll('.month-btn').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('section-label').textContent='CLIENTES · VER '+label.toUpperCase();
+  Object.entries(clientSlugs).forEach(([id,folder])=>{
+    const a=document.getElementById(id);
+    if(a) a.href=folder+'/'+slug+'/';
+  });
+}
+</script>
 </body>
 </html>
