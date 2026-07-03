@@ -1,0 +1,127 @@
+{
+  "clients": [
+    {
+      "slug": "laira.lus",
+      "ig_id": "17841426889914791",
+      "token": "primary",
+      "name": "Laira Lus"
+    },
+    {
+      "slug": "brunaperissinotto_",
+      "ig_id": "17841408214844694",
+      "token": "secondary",
+      "name": "Bruna Perissinotto"
+    },
+    {
+      "slug": "fernandoreame",
+      "ig_id": "17841400949684518",
+      "token": "secondary",
+      "name": "Fernando Reame"
+    },
+    {
+      "slug": "maria_pietroforte_decor",
+      "ig_id": "17841402074670959",
+      "token": "secondary",
+      "name": "Maria Pietroforte"
+    },
+    {
+      "slug": "jezerlopesfotografia",
+      "ig_id": "17841400780450812",
+      "token": "secondary",
+      "name": "Jezer Lopes"
+    },
+    {
+      "slug": "drastephanielolo",
+      "ig_id": "17841400980824309",
+      "token": "secondary",
+      "name": "Dra. Stephanie Lolo"
+    },
+    {
+      "slug": "flaviachicarelli",
+      "ig_id": "17841401587529815",
+      "token": "secondary",
+      "name": "Flávia Chicarelli"
+    },
+    {
+      "slug": "carolcrespotricologista",
+      "ig_id": "17841401404616163",
+      "token": "secondary",
+      "name": "Carol Crespo"
+    },
+    {
+      "slug": "socialmedia_pulse",
+      "ig_id": "17841460362446164",
+      "token": "secondary",
+      "name": "Social Media Pulse"
+    },
+    {
+      "slug": "peruvianconcierge",
+      "ig_id": "17841457052405298",
+      "token": "secondary",
+      "name": "Peruvian Concierge"
+    },
+    {
+      "slug": "seivafotografia",
+      "ig_id": "17841401321908779",
+      "token": "secondary",
+      "name": "Seiva Fotografia"
+    }
+  ],
+  "index_meta": {
+    "laira.lus": [
+      "Laira | Social Media",
+      "L",
+      107406
+    ],
+    "brunaperissinotto_": [
+      "Bruna Perissinotto",
+      "B",
+      65414
+    ],
+    "fernandoreame": [
+      "Fernando Reame",
+      "F",
+      25307
+    ],
+    "maria_pietroforte_decor": [
+      "Maria Pietroforte Decor",
+      "M",
+      12566
+    ],
+    "jezerlopesfotografia": [
+      "Jézer Lopes Fotografia",
+      "J",
+      10466
+    ],
+    "drastephanielolo": [
+      "Dra. Stephanie Lolo",
+      "D",
+      9611
+    ],
+    "flaviachicarelli": [
+      "Flávia Chicarelli",
+      "F",
+      7589
+    ],
+    "carolcrespotricologista": [
+      "Carol Crespo Tricologista",
+      "C",
+      6835
+    ],
+    "socialmedia_pulse": [
+      "Social Media | Estratégia e Conteúdo",
+      "P",
+      441
+    ],
+    "peruvianconcierge": [
+      "Peruvian Concierge",
+      "P",
+      4209
+    ],
+    "seivafotografia": [
+      "Seiva Fotografia",
+      "S",
+      13336
+    ]
+  }
+}
