@@ -1,0 +1,104 @@
+{
+ "cliente": "Marconzi Eventos",
+ "perfil": "marconzieventos",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 13892,
+    "visualizacoes": 161629,
+    "alcance_nao_seguidores": 10846,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 19409,
+    "visualizacoes": 255659,
+    "alcance_nao_seguidores": 15427,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 15626,
+    "visualizacoes": 189425,
+    "alcance_nao_seguidores": 12103,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 17572,
+    "visualizacoes": 1040990,
+    "alcance_nao_seguidores": 13267,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 20372,
+    "visualizacoes": 293404,
+    "alcance_nao_seguidores": 15126,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 257005,
+    "visualizacoes": 685445,
+    "alcance_nao_seguidores": 251356,
+    "seguidores": 23939,
+    "posts": 13,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "O vídeo dos 5 anos da WePink levou o perfil para <b>257 mil pessoas</b>, 12 vezes mais que em agosto.",
+   "top": [
+    {
+     "titulo": "5 anos da WePink",
+     "formato": "Reels",
+     "numero": 226715,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Um evento de uma marca muito conhecida, mostrado como experiência. O vídeo chegou a um público enorme que ainda não conhecia o seu trabalho.",
+     "data": "11/09",
+     "link": "https://www.instagram.com/reel/DdJ4fdDxg6t/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "Os 15 anos da Gabi no Palácio Tangará",
+     "formato": "Carrossel",
+     "numero": 6914,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "O post mais completo do mês: 127 salvamentos, 120 envios e 26 seguidores novos. Uma festa de 15 anos com muita cor vira sonho de quem está planejando.",
+     "data": "17/09",
+     "link": "https://www.instagram.com/p/DdZq4P7EUIn/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "Talita e Emanuel no Palácio dos Cedros",
+     "formato": "Carrossel",
+     "numero": 3515,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Uma cerimônia clássica, toda em branco, em um lugar icônico. Foi o casamento com mais alcance do mês.",
+     "data": "03/09",
+     "link": "https://www.instagram.com/p/Dc1GhQ-kdGI/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "Beatriz e Ricardo no SP Hall",
+    "porque": "724 pessoas alcançadas. Um projeto bonito, mas com pouca troca: 5 salvamentos e 4 envios, bem abaixo dos outros casamentos do mês.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "Eventos que as pessoas já reconhecem (uma marca famosa, um palácio conhecido) são a porta de entrada para gente nova. Em setembro, quase todo o alcance veio de quem ainda não te seguia.",
+    "Os carrosséis de festas de 15 anos e de casamentos em lugares icônicos são os mais salvos e enviados: é o conteúdo que as famílias guardam como referência."
+   ],
+   "repetir": [
+    "Mostrar em vídeo os eventos corporativos e de marcas conhecidas.",
+    "Festas de 15 anos com muita cor, que são as mais salvas e enviadas.",
+    "Contar o lugar do evento logo no começo do post."
+   ]
+  }
+ }
+}
