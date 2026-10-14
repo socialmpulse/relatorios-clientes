@@ -1,0 +1,84 @@
+{
+ "cliente": "Tatiana Hara",
+ "perfil": "tatianahara",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 375,
+    "visualizacoes": 518,
+    "alcance_nao_seguidores": 0,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 46,
+    "visualizacoes": 995,
+    "alcance_nao_seguidores": 0,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 588,
+    "visualizacoes": 3561,
+    "alcance_nao_seguidores": 0,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 116,
+    "visualizacoes": 1311,
+    "alcance_nao_seguidores": 0,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 4097,
+    "visualizacoes": 24063,
+    "alcance_nao_seguidores": 2904,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 11531,
+    "visualizacoes": 82641,
+    "alcance_nao_seguidores": 10100,
+    "seguidores": 2481,
+    "posts": 2,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "O post da sua nova fase levou o perfil para <b>7,5 mil pessoas</b> e trouxe 78 seguidores novos.",
+   "top": [
+    {
+     "titulo": "Uma nova fase por aqui",
+     "formato": "Foto",
+     "numero": 7509,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Você contou os seus 20 anos dentro dos eventos e convidou as pessoas a perguntar. Foram 378 visitas ao perfil e 78 seguidores novos vindos desse post.",
+     "data": "06/09",
+     "link": "https://www.instagram.com/p/Dc913enJQN0/",
+     "capa": "img/2026-09-1.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "Entre a delicadeza e o peso",
+    "porque": "604 pessoas alcançadas. Uma reflexão bonita, mas sem ligação direta com eventos, chegou a menos gente que o post sobre a sua experiência.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "Setembro foi o mês em que o seu perfil começou a crescer: o alcance quase triplicou em relação a agosto, e quase 9 de cada 10 pessoas que te viram ainda não te seguiam.",
+    "O que funcionou foi você falando em primeira pessoa sobre o que viveu em 20 anos de eventos. É isso que faz as pessoas visitarem o perfil e seguirem."
+   ],
+   "repetir": [
+    "Responder, em posts, as perguntas que as pessoas deixaram no post da nova fase.",
+    "Bastidores e opiniões sobre casamentos e festas, contados por você.",
+    "Mais posts no mês, para manter o crescimento de setembro."
+   ]
+  }
+ }
+}
