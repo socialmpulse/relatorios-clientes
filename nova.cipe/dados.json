@@ -1,0 +1,104 @@
+{
+ "cliente": "Nova CIPE",
+ "perfil": "nova.cipe",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 8,
+    "visualizacoes": 106,
+    "alcance_nao_seguidores": 5,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 12,
+    "visualizacoes": 369,
+    "alcance_nao_seguidores": 7,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 1388,
+    "visualizacoes": 7567,
+    "alcance_nao_seguidores": 961,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 8331,
+    "visualizacoes": 34751,
+    "alcance_nao_seguidores": 7701,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 9507,
+    "visualizacoes": 24982,
+    "alcance_nao_seguidores": 9029,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 2707,
+    "visualizacoes": 14867,
+    "alcance_nao_seguidores": 2104,
+    "seguidores": 1230,
+    "posts": 12,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "No Setembro Dourado, os posts que mostram a equipe e o cuidado com a criança foram os que mais chegaram em gente nova.",
+   "top": [
+    {
+     "titulo": "Se a gente pudesse escolher",
+     "formato": "Reels",
+     "numero": 664,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Um vídeo que fala do propósito da equipe de forma sensível. Foi o post com mais alcance e mais comentários do mês.",
+     "data": "18/09",
+     "link": "https://www.instagram.com/reel/DdbtVv6xUkI/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "O cuidado com a dor desde o primeiro procedimento",
+     "formato": "Foto",
+     "numero": 650,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Apresentar o trabalho da Dra. Ana, a anestesista da equipe, mostra para as famílias quem cuida da criança em cada etapa.",
+     "data": "10/09",
+     "link": "https://www.instagram.com/p/DdHqMkzKwme/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "Falar na linguagem da criança",
+     "formato": "Foto",
+     "numero": 13,
+     "numero_rotulo": "visitas ao perfil",
+     "porque": "O post que mais levou pessoas ao perfil (empatado com o de abertura do Setembro Dourado) e trouxe 2 seguidores novos.",
+     "data": "21/09",
+     "link": "https://www.instagram.com/p/DdjOaTnKocI/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "A família também precisa de atenção",
+    "porque": "184 pessoas alcançadas. Um tema importante, mas o post não teve envios nem visitas ao perfil.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "Os posts que mais funcionaram apresentam a equipe e mostram, na prática, como a criança é cuidada em cada etapa. É isso que gera confiança em famílias e pediatras.",
+    "O alcance caiu em relação a agosto. O perfil ainda é pequeno, e a maior parte dos posts foram fotos: os vídeos chegaram a mais gente que a média das fotos."
+   ],
+   "repetir": [
+    "Apresentar cada profissional da equipe e o papel dela no tratamento.",
+    "Mais vídeos, que foram os posts com mais alcance do mês.",
+    "Conteúdos voltados para pediatras, sobre quando encaminhar."
+   ]
+  }
+ }
+}
