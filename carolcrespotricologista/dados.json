@@ -1,0 +1,104 @@
+{
+ "cliente": "Carol Crespo",
+ "perfil": "carolcrespotricologista",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 35936,
+    "visualizacoes": 194882,
+    "alcance_nao_seguidores": 32677,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 28469,
+    "visualizacoes": 154949,
+    "alcance_nao_seguidores": 25345,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 18837,
+    "visualizacoes": 106135,
+    "alcance_nao_seguidores": 16278,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 13448,
+    "visualizacoes": 112070,
+    "alcance_nao_seguidores": 10183,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 9184,
+    "visualizacoes": 123043,
+    "alcance_nao_seguidores": 6435,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 5940,
+    "visualizacoes": 54816,
+    "alcance_nao_seguidores": 3001,
+    "seguidores": 7172,
+    "posts": 6,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "O post que mais chegou em gente nova pegou um assunto do momento e trouxe para o cabelo: <b>1.105 pessoas</b> alcançadas.",
+   "top": [
+    {
+     "titulo": "O cabelo dos anos 80",
+     "formato": "Foto",
+     "numero": 1105,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Aproveitou a trend dos anos 80 para falar de densidade, sono e estresse. Um assunto em alta abriu a porta para explicar o seu trabalho.",
+     "data": "08/09",
+     "link": "https://www.instagram.com/p/DdCTRIauyf1/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "Vitamina por conta própria",
+     "formato": "Reels",
+     "numero": 807,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Responder um erro comum, com a sua experiência de mais de 20 anos, rendeu 76 interações. Foi o post com mais conversa do mês.",
+     "data": "14/09",
+     "link": "https://www.instagram.com/reel/DdR9C3fxmLC/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "O laser no tratamento capilar",
+     "formato": "Carrossel",
+     "numero": 638,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Explicar como um tratamento funciona, e quando ele é indicado, levou 7 pessoas a visitar o seu perfil.",
+     "data": "03/09",
+     "link": "https://www.instagram.com/p/Dc1kRa_FLOI/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "O que você parou de fazer desde que a queda começou",
+    "porque": "329 pessoas alcançadas e nenhum salvamento. O post começa contando a consulta, e a dúvida que ele responde só aparece no meio do texto.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "Os posts que mais funcionaram pegaram algo que as pessoas já estavam vendo ou fazendo (a trend dos anos 80, tomar vitamina sem orientação) e mostraram o que isso tem a ver com o cabelo.",
+    "O ponto de atenção é o alcance: caiu 35% em relação a agosto, e metade de quem viu seus posts já te seguia. Para chegar em gente nova, o conteúdo precisa ser compartilhado."
+   ],
+   "repetir": [
+    "Assuntos em alta explicados pelo olhar da tricologia.",
+    "Reels respondendo dúvidas e erros comuns, como o da vitamina.",
+    "Começar o post já com a dúvida da pessoa, escrita de forma direta."
+   ]
+  }
+ }
+}
