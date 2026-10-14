@@ -1,0 +1,104 @@
+{
+ "cliente": "Koncept Cenografia",
+ "perfil": "koncept.cenografia",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 992,
+    "visualizacoes": 8260,
+    "alcance_nao_seguidores": 507,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 1711,
+    "visualizacoes": 18744,
+    "alcance_nao_seguidores": 925,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 2360,
+    "visualizacoes": 19697,
+    "alcance_nao_seguidores": 1569,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 1470,
+    "visualizacoes": 19166,
+    "alcance_nao_seguidores": 867,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 1933,
+    "visualizacoes": 10627,
+    "alcance_nao_seguidores": 1380,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 3607,
+    "visualizacoes": 16252,
+    "alcance_nao_seguidores": 2704,
+    "seguidores": 4726,
+    "posts": 5,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "Um único projeto, o do Itaú BUPJ, trouxe <b>101 seguidores novos</b>, e o alcance do perfil quase dobrou.",
+   "top": [
+    {
+     "titulo": "Itaú BUPJ na Casa Giardini",
+     "formato": "Carrossel",
+     "numero": 3136,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "O post mais forte do mês em tudo: 117 salvamentos, 107 envios e 101 seguidores novos. Mostrar como a cenografia muda entre o lounge e a plenária vira referência para quem contrata eventos.",
+     "data": "16/09",
+     "link": "https://www.instagram.com/p/DdXLl-wlBOp/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "Convenção Itaú Seguros no Tauá",
+     "formato": "Reels",
+     "numero": 1054,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "O vídeo da convenção foi enviado 59 vezes. Em evento corporativo, quem vê costuma mandar para o time.",
+     "data": "10/09",
+     "link": "https://www.instagram.com/reel/DdHpTGCB3yv/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "100 anos do Grupo Fleury na Sala São Paulo",
+     "formato": "Carrossel",
+     "numero": 21,
+     "numero_rotulo": "envios",
+     "porque": "O post com a maior taxa de interação do mês (21%). A luz como protagonista em um prédio histórico chamou a atenção de quem viu.",
+     "data": "23/09",
+     "link": "https://www.instagram.com/p/DdpHkiulj5f/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "Lefosse Energy Day",
+    "porque": "322 pessoas alcançadas e 2 salvamentos. O post explica bem o conceito, mas teve menos troca que os projetos de marcas mais conhecidas.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "Projetos para marcas conhecidas, mostrando a transformação do espaço, são o que faz o perfil crescer. O post do Itaú BUPJ sozinho trouxe 101 seguidores, e o alcance do mês subiu 87% em relação a agosto.",
+    "Em cenografia corporativa, o envio é o sinal mais importante: quem vê manda para o time ou para o cliente. Os posts mais enviados foram os que mostraram o evento inteiro, do começo ao fim."
+   ],
+   "repetir": [
+    "Um projeto de marca conhecida por semana, mostrando os diferentes ambientes do evento.",
+    "Mais Reels de convenções e eventos grandes, que são os mais enviados.",
+    "Explicar a solução criativa de cada projeto em poucas linhas, como no post do Fleury."
+   ]
+  }
+ }
+}
