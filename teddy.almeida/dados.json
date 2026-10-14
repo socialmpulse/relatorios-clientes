@@ -1,0 +1,104 @@
+{
+ "cliente": "Teddy Almeida",
+ "perfil": "teddy.almeida",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 120544,
+    "visualizacoes": 605811,
+    "alcance_nao_seguidores": 113068,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 199715,
+    "visualizacoes": 1046646,
+    "alcance_nao_seguidores": 188820,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 96550,
+    "visualizacoes": 466568,
+    "alcance_nao_seguidores": 87676,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 54437,
+    "visualizacoes": 326878,
+    "alcance_nao_seguidores": 47486,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 60489,
+    "visualizacoes": 402507,
+    "alcance_nao_seguidores": 52743,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 86446,
+    "visualizacoes": 443107,
+    "alcance_nao_seguidores": 77348,
+    "seguidores": 20969,
+    "posts": 9,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "Os filmes com roteiro levaram o perfil para <b>86 mil pessoas</b>, 43% a mais que em agosto.",
+   "top": [
+    {
+     "titulo": "Pump it up: Jéssica e Fernando",
+     "formato": "Reels",
+     "numero": 8707,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Um casal que se conheceu na academia, contado com uma ideia criativa do começo ao fim. Foi enviado 226 vezes, o recorde do mês.",
+     "data": "01/09",
+     "link": "https://www.instagram.com/reel/Dcwoh9wy3iN/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "Os 15 anos da Valentina",
+     "formato": "Reels",
+     "numero": 8597,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Um filme de 15 anos que foge da princesa pronta e mostra a personalidade da debutante. Teve 58 comentários e 119 envios.",
+     "data": "22/09",
+     "link": "https://www.instagram.com/reel/Ddmpq2czys_/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "Vitória e Michel em Noronha",
+     "formato": "Reels",
+     "numero": 86,
+     "numero_rotulo": "comentários",
+     "porque": "O post com mais conversa e a maior taxa de interação do mês (16%). Um destination wedding contado como história de amor emociona e faz comentar.",
+     "data": "16/09",
+     "link": "https://www.instagram.com/reel/DdXZkFMth_T/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "Autentic: Marjorie e Fred",
+    "porque": "2.552 pessoas alcançadas, o menor alcance do mês. Ainda é um bom número, mas o post era um teaser curto, e não o filme com a história completa.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "O que faz o seu perfil crescer é o roteiro: filmes que contam quem é o casal (ou a debutante) com uma ideia criativa são os mais enviados e comentados.",
+    "Em setembro, quase 9 de cada 10 pessoas que viram seus filmes ainda não te seguiam. Os envios são o que leva o seu trabalho para gente nova."
+   ],
+   "repetir": [
+    "Filmes com um conceito criativo por trás da história do casal.",
+    "Mais filmes de 15 anos com a personalidade da debutante no centro.",
+    "Destination weddings contados como história de amor."
+   ]
+  }
+ }
+}
