@@ -1,0 +1,104 @@
+{
+ "cliente": "Maria Pietroforte",
+ "perfil": "maria_pietroforte_decor",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 17359,
+    "visualizacoes": 113337,
+    "alcance_nao_seguidores": 15300,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 31077,
+    "visualizacoes": 203908,
+    "alcance_nao_seguidores": 28849,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 23249,
+    "visualizacoes": 119843,
+    "alcance_nao_seguidores": 21156,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 16435,
+    "visualizacoes": 120298,
+    "alcance_nao_seguidores": 14240,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 17247,
+    "visualizacoes": 129531,
+    "alcance_nao_seguidores": 14983,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 20572,
+    "visualizacoes": 116700,
+    "alcance_nao_seguidores": 18325,
+    "seguidores": 14149,
+    "posts": 10,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "Setembro levou o seu trabalho para <b>20 mil pessoas</b>, 19% a mais que em agosto, e quase todas ainda não te seguiam.",
+   "top": [
+    {
+     "titulo": "Bruna e Fernando: o colorido sofisticado",
+     "formato": "Carrossel",
+     "numero": 3072,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Um projeto diferente de tudo, com laranja, fúcsia e veludos. Foi enviado 45 vezes: as pessoas mostraram para alguém.",
+     "data": "23/09",
+     "link": "https://www.instagram.com/p/DdpOewoHyRS/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "O floral escultórico",
+     "formato": "Carrossel",
+     "numero": 119,
+     "numero_rotulo": "salvamentos",
+     "porque": "O post mais salvo e o que mais trouxe seguidores (18). Explicar a técnica por trás de um estilo que parece espontâneo vira referência.",
+     "data": "30/09",
+     "link": "https://www.instagram.com/p/Dd7MjhUH7og/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "Karen e Serge: copos-de-leite e carvalho",
+     "formato": "Carrossel",
+     "numero": 103,
+     "numero_rotulo": "salvamentos",
+     "porque": "Floral contemporâneo com mobiliário atual. Quem está planejando guardou para mostrar como referência.",
+     "data": "18/09",
+     "link": "https://www.instagram.com/p/DdcPmnmn9wx/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "Como eu escolho as flores de um projeto",
+    "porque": "463 pessoas alcançadas. O conteúdo é rico, mas veio em formato de explicação longa, e chegou a menos gente que os posts que mostram um casamento.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "Projetos com uma assinatura forte (um colorido inesperado, um floral escultórico) são o que faz o seu perfil crescer. São os posts mais salvos e enviados, e foi assim que o alcance subiu 19% em setembro.",
+    "Quase 9 de cada 10 pessoas que viram seus posts ainda não te seguiam. O post do floral escultórico, sozinho, trouxe 18 seguidores novos."
+   ],
+   "repetir": [
+    "Um projeto por semana com uma escolha marcante, explicada em poucas linhas.",
+    "Posts que mostram a técnica por trás do estilo, que é o que as pessoas salvam.",
+    "Mais Reels dos casamentos: o noivado de Karen e Serge em vídeo alcançou 1.460 pessoas."
+   ]
+  }
+ }
+}
