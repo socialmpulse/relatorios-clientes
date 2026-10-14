@@ -1,0 +1,104 @@
+{
+ "cliente": "Fernando Reame",
+ "perfil": "fernandoreame",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 32654,
+    "visualizacoes": 279466,
+    "alcance_nao_seguidores": 26198,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 27559,
+    "visualizacoes": 192511,
+    "alcance_nao_seguidores": 20063,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 32643,
+    "visualizacoes": 140306,
+    "alcance_nao_seguidores": 25966,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 24067,
+    "visualizacoes": 221964,
+    "alcance_nao_seguidores": 17843,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 35061,
+    "visualizacoes": 337425,
+    "alcance_nao_seguidores": 26806,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 34384,
+    "visualizacoes": 250555,
+    "alcance_nao_seguidores": 27379,
+    "seguidores": 25926,
+    "posts": 14,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "Os vídeos de festas reais levaram seu trabalho para <b>27 mil pessoas</b> que ainda não te seguiam.",
+   "top": [
+    {
+     "titulo": "Os 15 anos da Duda: túnel de flores",
+     "formato": "Reels",
+     "numero": 8086,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Uma entrada que impressiona logo no primeiro segundo. Foi enviado 101 vezes, e cada envio levou o vídeo para quem ainda não te conhecia.",
+     "data": "02/09",
+     "link": "https://www.instagram.com/reel/DczInR3hIMr/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "O jardim dentro do salão da Victória",
+     "formato": "Reels",
+     "numero": 3808,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Você contando a história do projeto (e da segunda festa da Victória que você decorou) gerou 36 comentários, o post com mais conversa do mês.",
+     "data": "10/09",
+     "link": "https://www.instagram.com/reel/DdHIIaHxvHE/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "Garden chique na Fazenda Marambaia",
+     "formato": "Carrossel",
+     "numero": 71,
+     "numero_rotulo": "salvamentos",
+     "porque": "O post mais salvo do mês. Explicar as camadas do cenário (mesa curva, pendentes de palha, jardim suspenso) vira referência para quem está planejando.",
+     "data": "16/09",
+     "link": "https://www.instagram.com/p/DdWjtWsG9el/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "A listra no casamento",
+    "porque": "546 pessoas alcançadas. Um post sobre um detalhe (a padronagem) chegou a menos gente que os que mostram a festa inteira.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "Vídeo com a festa pronta e você contando o projeto é o que mais funciona no perfil. Os Reels de setembro foram os posts mais enviados e mais comentados.",
+    "O alcance ficou estável em relação a agosto, e 8 de cada 10 pessoas que viram seus posts ainda não te seguiam. É o perfil chegando em gente nova todo mês."
+   ],
+   "repetir": [
+    "Um Reels por semana com uma entrada ou um ambiente que impressiona logo no começo.",
+    "Você explicando o projeto em vídeo, que é o que gera conversa.",
+    "Carrosséis que mostram a festa inteira, em camadas, para as pessoas salvarem."
+   ]
+  }
+ }
+}
