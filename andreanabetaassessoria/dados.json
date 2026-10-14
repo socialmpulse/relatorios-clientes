@@ -1,0 +1,89 @@
+{
+ "cliente": "Andrea Nabeta",
+ "perfil": "andreanabetaassessoria",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 8951,
+    "visualizacoes": 87970,
+    "alcance_nao_seguidores": 7708,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 13025,
+    "visualizacoes": 156535,
+    "alcance_nao_seguidores": 11937,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 19980,
+    "visualizacoes": 212147,
+    "alcance_nao_seguidores": 18381,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 21334,
+    "visualizacoes": 152633,
+    "alcance_nao_seguidores": 18430,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 23877,
+    "visualizacoes": 147834,
+    "alcance_nao_seguidores": 22197,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 14741,
+    "visualizacoes": 90877,
+    "alcance_nao_seguidores": 12931,
+    "seguidores": 15647,
+    "posts": 2,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "Setembro teve só 2 posts no feed, no fim do mês, e mesmo assim o perfil chegou a <b>14,7 mil pessoas</b>.",
+   "top": [
+    {
+     "titulo": "Thais e Rafael no Contemporâneo",
+     "formato": "Carrossel",
+     "numero": 923,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Um casamento clássico contado do making of ao sim, com a equipe cuidando dos bastidores. Teve 13 comentários e 19 visitas ao perfil.",
+     "data": "29/09",
+     "link": "https://www.instagram.com/p/Dd4kWX0FB1N/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "A nossa história com os casamentos orientais",
+     "formato": "Carrossel",
+     "numero": 14,
+     "numero_rotulo": "% de interação",
+     "porque": "O post com mais interação do mês. Contar a origem da empresa e a ligação da Andrea com a cultura japonesa mostra algo que só vocês têm.",
+     "data": "30/09",
+     "link": "https://www.instagram.com/p/Dd7JOLJFnce/",
+     "capa": "img/2026-09-2.jpg"
+    }
+   ],
+   "estrategia": [
+    "Com apenas 2 posts no feed, o alcance de setembro veio principalmente dos stories e dos posts antigos. Por isso caiu 38% em relação a agosto.",
+    "Os dois posts mostram o caminho: casamentos reais contados com o papel da assessoria, e a história da empresa com os eventos orientais, que é um diferencial forte."
+   ],
+   "repetir": [
+    "Postar com frequência toda semana, para o perfil voltar a crescer.",
+    "Mais conteúdo sobre os casamentos orientais e a cultura japonesa, o diferencial da empresa.",
+    "Casamentos reais mostrando os bastidores da assessoria."
+   ]
+  }
+ }
+}
