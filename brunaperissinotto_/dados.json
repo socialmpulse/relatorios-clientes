@@ -1,0 +1,105 @@
+{
+ "cliente": "Bruna Perissinotto",
+ "perfil": "brunaperissinotto_",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 47786,
+    "visualizacoes": 464765,
+    "alcance_nao_seguidores": 34149,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 30992,
+    "visualizacoes": 372897,
+    "alcance_nao_seguidores": 16516,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 34363,
+    "visualizacoes": 526585,
+    "alcance_nao_seguidores": 21197,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 91408,
+    "visualizacoes": 535023,
+    "alcance_nao_seguidores": 79288,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 42438,
+    "visualizacoes": 791429,
+    "alcance_nao_seguidores": 29437,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 4181433,
+    "visualizacoes": 13889921,
+    "alcance_nao_seguidores": 4160451,
+    "seguidores": 66137,
+    "posts": 65,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "Mês de campanha: o perfil chegou a <b>4,1 milhões de pessoas</b>, e os vídeos em que você fala direto com as pessoas foram os que mais geraram conversa.",
+   "top": [
+    {
+     "titulo": "Enquanto uns gastam tempo me atacando",
+     "formato": "Reels",
+     "numero": 10712,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Responder com calma, mostrando o trabalho de rua, gerou 189 comentários e 98 envios. Foi o post com mais conversa do mês.",
+     "data": "18/09",
+     "link": "https://www.instagram.com/reel/DdckSE1B_4z/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "Quem vive Rio Claro sabe o que Rio Claro precisa",
+     "formato": "Carrossel",
+     "numero": 9906,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Falar da cidade e da sua história nela levou 103 pessoas a visitar o seu perfil, o maior número do mês.",
+     "data": "10/09",
+     "link": "https://www.instagram.com/p/DdHG6OZEY1N/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "A tia Bruna vai te explicar",
+     "formato": "Reels",
+     "numero": 8583,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Explicar de um jeito leve e didático rendeu 81 envios e 16 salvamentos. As pessoas guardaram e mandaram para alguém.",
+     "data": "04/09",
+     "link": "https://www.instagram.com/reel/Dc3kxAPxYby/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "O Chico voltou com outro conselho",
+    "porque": "1.688 pessoas alcançadas e só 1 envio. O vídeo de personagem rendeu menos que os vídeos com você falando.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "Setembro foi um mês de campanha, com 65 posts. Do alcance total, 4,15 milhões de pessoas foram alcançadas pelos anúncios, e os posts orgânicos ficaram entre 1,7 mil e 10,7 mil pessoas cada.",
+    "O que mais funcionou foi você falando em primeira pessoa: os vídeos de conversa direta e os posts sobre a região tiveram mais comentários, envios e visitas ao perfil."
+   ],
+   "repetir": [
+    "Vídeos com você falando direto com as pessoas, que é o que gera conversa.",
+    "Conteúdos sobre Rio Claro e a região.",
+    "Explicações leves e didáticas, que as pessoas salvam e enviam."
+   ],
+   "extra": "Inclui anúncios: 4.153.388 pessoas alcançadas pelos anúncios em setembro."
+  }
+ }
+}
