@@ -1,0 +1,104 @@
+{
+ "cliente": "Mirella Park",
+ "perfil": "mirellaparkassessoria",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 8528,
+    "visualizacoes": 112784,
+    "alcance_nao_seguidores": 7277,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 10992,
+    "visualizacoes": 100381,
+    "alcance_nao_seguidores": 9259,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 31615,
+    "visualizacoes": 317249,
+    "alcance_nao_seguidores": 29700,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 11082,
+    "visualizacoes": 82846,
+    "alcance_nao_seguidores": 9818,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 21515,
+    "visualizacoes": 240269,
+    "alcance_nao_seguidores": 20136,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 11167,
+    "visualizacoes": 101059,
+    "alcance_nao_seguidores": 9681,
+    "seguidores": 8886,
+    "posts": 5,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "O vídeo do casamento da Carol e do André foi o destaque do mês: <b>3,7 mil pessoas</b> alcançadas e 54 salvamentos.",
+   "top": [
+    {
+     "titulo": "Carol e André: um casamento do jeito deles",
+     "formato": "Reels",
+     "numero": 3708,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Em vídeo, o casamento emociona e mostra o resultado do seu trabalho sem precisar explicar. Foi salvo 54 vezes e enviado 35 vezes.",
+     "data": "29/09",
+     "link": "https://www.instagram.com/reel/Dd4j6v3o7tv/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "Melissa e Guilherme",
+     "formato": "Carrossel",
+     "numero": 807,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Contar quem são os noivos e a sua relação com eles levou 16 pessoas a visitar o seu perfil, o maior número entre os carrosséis.",
+     "data": "09/09",
+     "link": "https://www.instagram.com/p/DdFA_j3G6N-/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "Assessoria é caminhar junto",
+     "formato": "Carrossel",
+     "numero": 11,
+     "numero_rotulo": "% de interação",
+     "porque": "O carrossel com mais interação do mês. Mostrar como é o processo com você, e não só a festa pronta, aproxima quem está procurando uma assessoria.",
+     "data": "23/09",
+     "link": "https://www.instagram.com/p/DdpHnZfm3l-/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "Louise e Felipe: igreja e festa em dois endereços",
+    "porque": "552 pessoas alcançadas e nenhum salvamento. O texto é rico em bastidor, mas o post saiu no primeiro dia do mês e não ganhou tração.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "O vídeo foi o formato que mais funcionou: o Reels da Carol e do André alcançou mais que todos os carrosséis do mês somados.",
+    "O ponto de atenção é o alcance, que caiu em relação a agosto. Com 5 posts no mês, sendo só um vídeo, o perfil teve menos chances de chegar em gente nova."
+   ],
+   "repetir": [
+    "Mais Reels dos casamentos, que é o formato que mais leva o perfil para gente nova.",
+    "Posts sobre como é o processo de assessoria com você.",
+    "Histórias dos noivos contadas a partir da sua relação com eles."
+   ]
+  }
+ }
+}
