@@ -1,0 +1,102 @@
+{
+ "cliente": "Flávia Chicarelli",
+ "perfil": "flaviachicarelli",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 18617,
+    "visualizacoes": 132905,
+    "alcance_nao_seguidores": 16400,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 12792,
+    "visualizacoes": 102588,
+    "alcance_nao_seguidores": 10954,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 7194,
+    "visualizacoes": 52884,
+    "alcance_nao_seguidores": 5718,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 19340,
+    "visualizacoes": 192211,
+    "alcance_nao_seguidores": 17270,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 16753,
+    "visualizacoes": 149705,
+    "alcance_nao_seguidores": 14760,
+    "seguidores": 8156
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 17406,
+    "visualizacoes": 124151,
+    "alcance_nao_seguidores": 15392,
+    "seguidores": 8290,
+    "posts": 11
+   },
+   "frase": "Seus casamentos contados como história levaram seu trabalho para <b>15 mil pessoas</b> que ainda não te seguiam.",
+   "top": [
+    {
+     "titulo": "Casamento na Casa Mira",
+     "formato": "Carrossel",
+     "numero": 3471,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Brasilidade com cara de casa de praia chique. Foi salvo 98 vezes e enviado 53 vezes: as pessoas guardaram como referência.",
+     "data": "04/09",
+     "link": "https://www.instagram.com/p/Dc4JGEkiX-v/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "Clara e João: a decoração das frutas",
+     "formato": "Carrossel",
+     "numero": 140,
+     "numero_rotulo": "salvamentos",
+     "porque": "O post mais salvo do mês. Uma ideia diferente, com uvas, figos e mexericas no lugar de só flores, vira inspiração que a noiva guarda.",
+     "data": "02/09",
+     "link": "https://www.instagram.com/p/Dcy_iH6DhQe/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "Orquídea e crisântemo no terracota",
+     "formato": "Carrossel",
+     "numero": 2549,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Explicar o porquê das escolhas (a mistura de flores e a cor da festa) rendeu 88 salvamentos e 56 visitas ao perfil.",
+     "data": "10/09",
+     "link": "https://www.instagram.com/p/DdHl5nnjsZH/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "Moodboard: saber ler um espaço",
+    "porque": "425 pessoas alcançadas. Um post mais conceitual, sem um casamento real por trás, chegou a menos gente que os carrosséis de festas.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "Casamento real contado como história é o que mais funciona no seu perfil. Os posts com mais alcance mostram uma festa de verdade, com o pedido dos noivos, o lugar e o porquê de cada escolha.",
+    "Em setembro, quase 9 de cada 10 pessoas que viram seus posts ainda não te seguiam. É gente nova conhecendo seu trabalho, e o perfil ganhou 134 seguidores."
+   ],
+   "repetir": [
+    "Um casamento real por semana, contado do pedido da noiva até a solução.",
+    "Posts sobre uma ideia que vira referência (uma cor, uma flor, um material), que é o que as noivas salvam.",
+    "Mais Reels passeando pelo cenário pronto: o vídeo de setembro alcançou 2.328 pessoas."
+   ]
+  }
+ }
+}
