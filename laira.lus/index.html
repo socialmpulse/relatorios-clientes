@@ -1,7 +1,165 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8">
-<meta http-equiv="refresh" content="0;url=./2026-09/">
-<title>Redirecionando...</title>
-</head>
-<body><p>Redirecionando para o relatório mais recente... <a href="./2026-09/">clique aqui</a></p></body>
-</html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Relatório Laira · Pulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Relatório mensal do cliente: uma coluna, pensado para o celular (link do grupo), com navegação entre meses e histórico no fim */
+:root{
+  --bg:#f4f5f7; --card:#ffffff; --ink:#0b1b33; --muted:#5d6878; --line:#e3e6eb;
+  --brand:#041e42; --hero:#0d333b; --gold:#b88a2e; --gold-soft:#f6eedb; --bar:#c8d3e3; --bar-on:#0d333b;
+  --up:#17804f; --up-soft:#e2f3ea; --down:#b4432f; --down-soft:#f8e4df;
+  --display:"Sora","Avenir Next","Segoe UI",sans-serif; --body:"Manrope","Avenir Next","Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#08111d; --card:#101c2c; --ink:#edf1f6; --muted:#9aa6b6; --line:#1f2e42;
+  --brand:#cfdcf2; --hero:#12303a; --gold:#e2b863; --gold-soft:#2c2414; --bar:#24364d; --bar-on:#7fc4cf;
+  --up:#6fd19c; --up-soft:#15301f; --down:#f08a74; --down-soft:#341a14; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#08111d; --card:#101c2c; --ink:#edf1f6; --muted:#9aa6b6; --line:#1f2e42;
+  --brand:#cfdcf2; --hero:#12303a; --gold:#e2b863; --gold-soft:#2c2414; --bar:#24364d; --bar-on:#7fc4cf;
+  --up:#6fd19c; --up-soft:#15301f; --down:#f08a74; --down-soft:#341a14; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding-inline:18px;padding-block:22px 48px;display:grid;gap:18px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:700;letter-spacing:.22em;font-size:13px;color:var(--brand)}
+.wrap>*{min-width:0}
+.months{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none;flex:1 1 100%;min-width:0;max-width:100%}
+.months button{font:600 13px var(--body);color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.months button[aria-pressed="true"]{background:var(--hero);border-color:var(--hero);color:#fff}
+.months button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.hero{background:var(--hero);color:#fff;border-radius:20px;padding:24px 22px;display:grid;gap:10px}
+.hero .who{font-size:13px;letter-spacing:.06em;opacity:.8}
+.hero h1{font-size:clamp(23px,4.6vw,32px);line-height:1.18;font-weight:600;color:#fff}
+.hero h1 b{color:#f0c86b;font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media(min-width:640px){.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:4px}
+.kpi .label{font-size:12.5px;color:var(--muted);font-weight:600}
+.kpi .value{font-family:var(--display);font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
+.delta{justify-self:start;font-size:12px;font-weight:700;border-radius:999px;padding:2px 8px;font-variant-numeric:tabular-nums}
+.delta.up{color:var(--up);background:var(--up-soft)} .delta.down{color:var(--down);background:var(--down-soft)} .delta.flat{color:var(--muted);background:var(--bg)}
+section{display:grid;gap:12px}
+.sec-title{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.sec-title h2{font-size:19px;font-weight:600}
+.sec-title span{font-size:12.5px;color:var(--muted)}
+.posts{display:grid;gap:12px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:16px;display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;padding:12px;align-items:start}
+.post img{width:96px;height:128px;object-fit:cover;border-radius:10px;display:block;background:var(--bar)}
+.post .rank{font-family:var(--display);font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+.post h3{font-size:16px;font-weight:600;margin-top:2px;overflow-wrap:anywhere}
+.post .stat{font-family:var(--display);font-size:22px;font-weight:700;color:var(--brand);font-variant-numeric:tabular-nums}
+.post .stat small{font-family:var(--body);font-size:13px;font-weight:600;color:var(--muted)}
+.post p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.post .meta{font-size:12px;color:var(--muted);margin-top:6px}
+.post a{color:inherit}
+.miss{grid-template-columns:64px minmax(0,1fr)} .miss img{width:64px;height:86px}
+.note{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;gap:8px}
+.note p{margin:0}
+.next{background:var(--gold-soft);border-radius:16px;padding:16px 18px;display:grid;gap:10px}
+.next ol{margin:0;padding-left:20px;display:grid;gap:6px}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 14px 8px;display:grid;gap:6px}
+.chart h3{font-size:14px;font-weight:600;color:var(--muted)}
+.chart svg{width:100%;height:auto;display:block}
+.chart text{font-family:var(--body);fill:var(--muted);font-size:11px}
+.chart .val{fill:var(--ink);font-weight:700;font-size:11px}
+.charts{display:grid;gap:12px}
+@media(min-width:640px){.charts{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.empty{color:var(--muted);font-size:14px;background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:14px}
+.foot{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="top"><div class="brand">PULSE</div><div class="months" id="months" role="group" aria-label="Escolher o mês"></div></div>
+  <div class="hero"><div class="who" id="who"></div><h1 id="frase"></h1></div>
+  <div class="kpis" id="kpis"></div>
+  <section id="top"></section>
+  <section id="abaixo"></section>
+  <section class="note" id="estrategia"></section>
+  <section class="next" id="repetir"></section>
+  <section>
+    <div class="sec-title"><h2>Como o perfil vem evoluindo</h2><span>últimos meses</span></div>
+    <div class="charts"><div class="chart"><h3>Pessoas alcançadas por mês</h3><div id="g1"></div></div><div class="chart"><h3>Seguidores no fim de cada mês</h3><div id="g2"></div></div></div>
+  </section>
+  <div class="foot"><span id="extra"></span><span>Dados: Instagram e TikTok via Reportei · Pulse Social Media</span></div>
+</div>
+<script>
+const DADOS = {"cliente": "Laira", "perfil": "laira.lus", "meses": {"2026-04": {"numeros": {"alcance": 60656, "visualizacoes": 172731, "alcance_nao_seguidores": 48015, "seguidores": 107260}}, "2026-05": {"numeros": {"alcance": 47555, "visualizacoes": 112367, "alcance_nao_seguidores": 39661, "seguidores": 106766}}, "2026-06": {"numeros": {"alcance": 24196, "visualizacoes": 75282, "alcance_nao_seguidores": 13923, "seguidores": 106504}}, "2026-07": {"numeros": {"alcance": 14723, "visualizacoes": 72959, "alcance_nao_seguidores": 4902, "seguidores": 106155}}, "2026-08": {"numeros": {"alcance": 18178, "visualizacoes": 83956, "alcance_nao_seguidores": 10064, "seguidores": 105881}}, "2026-09": {"numeros": {"alcance": 47583, "visualizacoes": 93759, "alcance_nao_seguidores": 37308, "seguidores": 105647, "posts": 4}, "frase": "Um vídeo de humor levou o seu perfil para <b>37 mil pessoas<\/b> que ainda não te seguiam.", "top": [{"titulo": "🤡🤡🤡 (graças a Deus)", "formato": "Reels", "numero": 41564, "numero_rotulo": "pessoas alcançadas", "porque": "Humor sobre a vida real. Foi compartilhado 267 vezes, e cada compartilhamento levou o vídeo para quem ainda não te conhecia.", "data": "15/09", "link": "https://www.instagram.com/reel/DdTuTP6poAM/", "capa": "img/2026-09-1.jpg"}, {"titulo": "A vida sendo vivida 💛", "formato": "Carrossel", "numero": 2335, "numero_rotulo": "pessoas alcançadas", "porque": "O post que mais levou gente para o seu perfil: 23 visitas e o melhor engajamento do mês (6,9%).", "data": "27/09", "link": "https://www.instagram.com/p/Ddzp348EeAA/", "capa": "img/2026-09-2.jpg"}, {"titulo": "Coalhada com lascas de bacalhau", "formato": "Reels", "numero": 12, "numero_rotulo": "salvamentos", "porque": "Receita continua sendo o conteúdo que as pessoas guardam para depois.", "data": "29/09", "link": "https://www.instagram.com/reel/Dd4DaX2x7Kh/", "capa": "img/2026-09-3.jpg"}], "abaixo": {"titulo": "\"Boa tarde, segunda-feira chuvosa\"", "porque": "548 pessoas alcançadas. Humor solto, sem uma história por trás, não gerou compartilhamento.", "capa": "img/2026-09-abaixo.jpg"}, "estrategia": ["Vida real com humor é o que faz o seu conteúdo viajar: ele é compartilhado e chega em gente nova. Em setembro, quase 8 de cada 10 pessoas que viram seus posts ainda não te seguiam.", "O ponto de atenção é a frequência: foram só 4 posts no mês. É pouco para transformar esse alcance em seguidores novos."], "repetir": ["3 posts por semana, para o alcance virar seguidor.", "Um vídeo de vida real com humor toda semana, o formato que mais compartilha.", "Um carrossel por semana pensado para salvar, publicado ao meio-dia."], "extra": "TikTok: 2 vídeos · 912 visualizações"}}};
+const fmt = n => n == null ? "–" : n.toLocaleString("pt-BR");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NOMES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+const nomeMes = k => { const [a,m] = k.split("-"); return NOMES[+m-1] + " de " + a; };
+const curto = k => NOMES[+k.split("-")[1]-1].slice(0,3);
+const meses = Object.keys(DADOS.meses).sort();
+
+function delta(atual, ant, sufixo){
+  if (atual == null || ant == null || ant === 0) return "";
+  const p = Math.round((atual-ant)/ant*100);
+  const cls = p > 0 ? "up" : p < 0 ? "down" : "flat";
+  return `<span class="delta ${cls}">${p>0?"+":""}${p}% ${sufixo}</span>`;
+}
+function grafico(el, chave, sel, tipo){
+  const pts = meses.map(k => ({k, v: DADOS.meses[k].numeros[chave]})).filter(p => p.v != null);
+  if (!pts.length){ el.innerHTML = '<div class="empty">Sem dados ainda.</div>'; return; }
+  const W = 320, H = 150, pl = 6, pr = 6, pt = 18, pb = 22, n = pts.length;
+  const max = Math.max(...pts.map(p=>p.v)), min = tipo==="linha" ? Math.min(...pts.map(p=>p.v)) : 0;
+  const span = (max-min) || 1, step = (W-pl-pr)/n;
+  const y = v => { const r = 1 - (v-min)/span; return pt + (H-pt-pb) * (tipo==="linha" ? .15 + .7*r : r); };
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(chave)}">`;
+  if (tipo === "barra"){
+    pts.forEach((p,i)=>{ const x = pl+i*step+step*.18, w = step*.64, yy = y(p.v);
+      s += `<rect x="${x}" y="${yy}" width="${w}" height="${H-pb-yy}" rx="4" fill="var(${p.k===sel?"--bar-on":"--bar"})"/>`;
+      if (p.k===sel) s += `<text class="val" x="${x+w/2}" y="${yy-5}" text-anchor="middle">${fmt(p.v)}</text>`;
+      s += `<text x="${x+w/2}" y="${H-6}" text-anchor="middle">${curto(p.k)}</text>`; });
+  } else {
+    const c = pts.map((p,i)=>[pl+i*step+step/2, y(p.v)]);
+    s += `<polyline points="${c.map(a=>a.join(",")).join(" ")}" fill="none" stroke="var(--bar-on)" stroke-width="2.5" stroke-linejoin="round"/>`;
+    pts.forEach((p,i)=>{ const [cx,cy]=c[i];
+      s += `<circle cx="${cx}" cy="${cy}" r="${p.k===sel?5:3}" fill="var(${p.k===sel?"--gold":"--bar-on"})"/>`;
+      if (p.k===sel) s += `<text class="val" x="${cx}" y="${cy-9}" text-anchor="middle">${fmt(p.v)}</text>`;
+      s += `<text x="${cx}" y="${H-6}" text-anchor="middle">${curto(p.k)}</text>`; });
+  }
+  el.innerHTML = s + "</svg>";
+}
+function render(k){
+  const m = DADOS.meses[k], i = meses.indexOf(k), ant = i>0 ? DADOS.meses[meses[i-1]].numeros : null, n = m.numeros, nomeAnt = i>0 ? NOMES[+meses[i-1].split("-")[1]-1] : "";
+  document.title = `${DADOS.cliente} · ${nomeMes(k)}`;
+  document.querySelectorAll("#months button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k===k));
+  document.getElementById("who").textContent = `${DADOS.cliente} · @${DADOS.perfil} · ${nomeMes(k)}`;
+  document.getElementById("frase").innerHTML = m.frase || `Os números de ${nomeMes(k)}.`;
+  const nfPct = n.alcance && n.alcance_nao_seguidores != null ? Math.round(n.alcance_nao_seguidores/n.alcance*100) : null;
+  const nfAnt = ant && ant.alcance && ant.alcance_nao_seguidores != null ? Math.round(ant.alcance_nao_seguidores/ant.alcance*100) : null;
+  const var_seg = ant && n.seguidores != null && ant.seguidores != null ? n.seguidores - ant.seguidores : null;
+  document.getElementById("kpis").innerHTML = [
+    `<div class="kpi"><div class="label">Pessoas alcançadas</div><div class="value">${fmt(n.alcance)}</div>${ant?delta(n.alcance,ant.alcance,"vs "+nomeAnt):""}</div>`,
+    `<div class="kpi"><div class="label">Visualizações</div><div class="value">${fmt(n.visualizacoes)}</div>${ant?delta(n.visualizacoes,ant.visualizacoes,"vs "+nomeAnt):""}</div>`,
+    `<div class="kpi"><div class="label">Alcance de quem não segue</div><div class="value">${nfPct==null?"–":nfPct+"%"}</div>${nfAnt!=null?`<span class="delta ${nfPct>=nfAnt?"up":"down"}">era ${nfAnt}% em ${nomeAnt}</span>`:""}</div>`,
+    `<div class="kpi"><div class="label">Seguidores</div><div class="value">${fmt(n.seguidores)}</div>${var_seg!=null?`<span class="delta ${var_seg>0?"up":var_seg<0?"down":"flat"}">${var_seg>0?"+":""}${fmt(var_seg)} no mês</span>`:""}</div>`
+  ].join("");
+  const post = (p, rank) => `<article class="post"><img src="${esc(p.capa)}" alt="Capa: ${esc(p.titulo)}" loading="lazy"><div>
+    <div class="rank">${rank}º · ${esc(p.formato).toUpperCase()}</div><h3>${esc(p.titulo)}</h3>
+    <div class="stat">${fmt(p.numero)} <small>${esc(p.numero_rotulo)}</small></div><p>${esc(p.porque)}</p>
+    <div class="meta">${esc(p.data)}${p.link?` · <a href="${esc(p.link)}" target="_blank" rel="noopener">ver post</a>`:""}</div></div></article>`;
+  document.getElementById("top").innerHTML = m.top && m.top.length
+    ? `<div class="sec-title"><h2>Os posts que mais funcionaram</h2><span>${n.posts!=null?n.posts+" posts no mês":""}</span></div><div class="posts">${m.top.map((p,j)=>post(p,j+1)).join("")}</div>`
+    : `<div class="sec-title"><h2>Os posts que mais funcionaram</h2></div><div class="empty">A análise detalhada dos posts começa a partir de outubro de 2026.</div>`;
+  document.getElementById("abaixo").innerHTML = m.abaixo
+    ? `<div class="sec-title"><h2>O que ficou abaixo</h2></div><article class="post miss"><img src="${esc(m.abaixo.capa)}" alt="Capa: ${esc(m.abaixo.titulo)}" loading="lazy"><div><h3>${esc(m.abaixo.titulo)}</h3><p>${esc(m.abaixo.porque)}</p></div></article>` : "";
+  const est = document.getElementById("estrategia"), rep = document.getElementById("repetir");
+  est.hidden = !m.estrategia; rep.hidden = !(m.repetir && m.repetir.length);
+  if (m.estrategia) est.innerHTML = `<h2 style="font-size:19px;font-weight:600">A estratégia que funcionou</h2>${m.estrategia.map(t=>`<p>${esc(t)}</p>`).join("")}`;
+  if (m.repetir) rep.innerHTML = `<h2 style="font-size:19px;font-weight:600">O que vamos repetir no próximo mês</h2><ol>${m.repetir.map(t=>`<li>${esc(t)}</li>`).join("")}</ol>`;
+  document.getElementById("extra").textContent = m.extra || "";
+  grafico(document.getElementById("g1"), "alcance", k, "barra");
+  grafico(document.getElementById("g2"), "seguidores", k, "linha");
+}
+document.getElementById("months").innerHTML = meses.map(k=>`<button type="button" data-k="${k}">${curto(k)[0].toUpperCase()+curto(k).slice(1)} ${k.slice(2,4)}</button>`).join("");
+document.getElementById("months").addEventListener("click", e => { const b = e.target.closest("button"); if (b){ history.replaceState(null,"","#"+b.dataset.k); render(b.dataset.k); } });
+const inicial = (location.hash.slice(1) in DADOS.meses) ? location.hash.slice(1) : meses[meses.length-1];
+render(inicial);
+const ativo = document.querySelector(`#months button[data-k="${inicial}"]`); if (ativo) ativo.scrollIntoView({inline:"end",block:"nearest"});
+</script>
+</body></html>
