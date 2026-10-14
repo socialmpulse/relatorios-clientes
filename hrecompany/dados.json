@@ -1,0 +1,104 @@
+{
+ "cliente": "HR&Co",
+ "perfil": "hrecompany",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 31574,
+    "visualizacoes": 373815,
+    "alcance_nao_seguidores": 26753,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 27789,
+    "visualizacoes": 327434,
+    "alcance_nao_seguidores": 23949,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 34231,
+    "visualizacoes": 208786,
+    "alcance_nao_seguidores": 30411,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 453406,
+    "visualizacoes": 876944,
+    "alcance_nao_seguidores": 446959,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 40335,
+    "visualizacoes": 432490,
+    "alcance_nao_seguidores": 37126,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 22882,
+    "visualizacoes": 162241,
+    "alcance_nao_seguidores": 18736,
+    "seguidores": 17313,
+    "posts": 16,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "Mostrar quem faz a HR&Co acontecer foi o post que mais chegou em gente nova em setembro: <b>2,5 mil pessoas</b>.",
+   "top": [
+    {
+     "titulo": "As pessoas por trás da HR&Co",
+     "formato": "Foto",
+     "numero": 2528,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Apresentar a equipe (Hellen, Matheus e João) e o cuidado de perto levou 23 pessoas a visitar o perfil. Mostrar quem faz o trabalho gera confiança.",
+     "data": "16/09",
+     "link": "https://www.instagram.com/p/DdWlF-sxQxD/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "Destination wedding na Toscana",
+     "formato": "Reels",
+     "numero": 2518,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "O vídeo foi o post mais enviado do mês (17 envios). Casamento fora do país é um sonho que as pessoas mostram para quem vai junto.",
+     "data": "25/09",
+     "link": "https://www.instagram.com/reel/DduVwZrB_ZH/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "Um dia bem conduzido cuida de todos",
+     "formato": "Carrossel",
+     "numero": 28,
+     "numero_rotulo": "visitas ao perfil",
+     "porque": "O post que mais levou gente ao perfil. Falar do cronograma e do cuidado com as madrinhas mostra o valor da assessoria na prática.",
+     "data": "05/09",
+     "link": "https://www.instagram.com/p/Dc56Yc9ESZh/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "Noiva calma, em paz, com tempo",
+    "porque": "428 pessoas alcançadas. Uma foto com legenda curta, sem uma história por trás, chegou a menos gente que os outros posts do mês.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "Os posts que mais funcionaram mostram como a assessoria trabalha: a equipe, o cronograma, o cuidado com os convidados. É isso que leva as pessoas a visitarem o perfil.",
+    "O alcance caiu em relação a agosto, que ainda vinha embalado pelo vídeo que viralizou em julho (453 mil pessoas). Mesmo assim, 8 de cada 10 pessoas que viram os posts em setembro ainda não seguiam o perfil."
+   ],
+   "repetir": [
+    "Bastidores da assessoria: equipe, cronograma e decisões do dia.",
+    "Mais Reels dos destination weddings, que são os mais enviados.",
+    "Toda foto com uma história por trás, mesmo quando a legenda for curta."
+   ]
+  }
+ }
+}
