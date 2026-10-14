@@ -1,0 +1,104 @@
+{
+ "cliente": "Villa Maanaim",
+ "perfil": "villa.maanaim",
+ "redes": "Instagram",
+ "meses": {
+  "2026-04": {
+   "numeros": {
+    "alcance": 142509,
+    "visualizacoes": 542388,
+    "alcance_nao_seguidores": 133418,
+    "seguidores": null
+   }
+  },
+  "2026-05": {
+   "numeros": {
+    "alcance": 94745,
+    "visualizacoes": 408699,
+    "alcance_nao_seguidores": 87526,
+    "seguidores": null
+   }
+  },
+  "2026-06": {
+   "numeros": {
+    "alcance": 134158,
+    "visualizacoes": 580405,
+    "alcance_nao_seguidores": 125918,
+    "seguidores": null
+   }
+  },
+  "2026-07": {
+   "numeros": {
+    "alcance": 160539,
+    "visualizacoes": 536476,
+    "alcance_nao_seguidores": 152466,
+    "seguidores": null
+   }
+  },
+  "2026-08": {
+   "numeros": {
+    "alcance": 123911,
+    "visualizacoes": 559718,
+    "alcance_nao_seguidores": 112331,
+    "seguidores": null
+   }
+  },
+  "2026-09": {
+   "numeros": {
+    "alcance": 103888,
+    "visualizacoes": 535992,
+    "alcance_nao_seguidores": 90337,
+    "seguidores": 46386,
+    "posts": 13,
+    "seguidores_nota": "contagem de 14/10"
+   },
+   "frase": "O post da nova cobertura levou <b>738 pessoas</b> a visitar o perfil da Villa, o melhor resultado do mês.",
+   "top": [
+    {
+     "titulo": "A cobertura que se adapta a tudo",
+     "formato": "Carrossel",
+     "numero": 15855,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Mostrar a versatilidade da estrutura, do clássico ao contemporâneo, de dia e à noite. Foram 357 salvamentos, 293 envios e 52 seguidores novos.",
+     "data": "25/09",
+     "link": "https://www.instagram.com/p/DduUq0MEZ8E/",
+     "capa": "img/2026-09-1.jpg"
+    },
+    {
+     "titulo": "Mini wedding com tudo que um grande dia merece",
+     "formato": "Carrossel",
+     "numero": 5650,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Falar com quem quer um casamento menor, sem abrir mão de nada, levou 126 pessoas a visitar o perfil.",
+     "data": "29/09",
+     "link": "https://www.instagram.com/p/Dd4nw7yDhOt/",
+     "capa": "img/2026-09-2.jpg"
+    },
+    {
+     "titulo": "Um casamento europeu perto de casa",
+     "formato": "Carrossel",
+     "numero": 5453,
+     "numero_rotulo": "pessoas alcançadas",
+     "porque": "Comparar a Villa a um destination wedding na Europa, a poucos quilômetros, também gerou 124 visitas ao perfil.",
+     "data": "04/09",
+     "link": "https://www.instagram.com/p/Dc4P97pjjA-/",
+     "capa": "img/2026-09-3.jpg"
+    }
+   ],
+   "abaixo": {
+    "titulo": "Quando se está aqui, o mundo lá fora silencia",
+    "porque": "1.753 pessoas alcançadas e 4 salvamentos. Um post de clima, bonito, mas sem uma informação prática para quem está escolhendo o lugar do casamento.",
+    "capa": "img/2026-09-abaixo.jpg"
+   },
+   "estrategia": [
+    "Os posts que mais funcionaram respondem a uma dúvida de quem está escolhendo o espaço: a cobertura serve para quê, dá para fazer um mini wedding, como é a experiência. Foram eles que levaram mais gente a visitar o perfil.",
+    "O alcance foi um pouco menor que em agosto, mas quase 9 de cada 10 pessoas que viram os posts ainda não seguiam a Villa."
+   ],
+   "repetir": [
+    "Posts que mostram os ambientes e para que cada um serve.",
+    "Conteúdos para públicos específicos, como mini wedding e eventos de família.",
+    "Comparações que ajudam a entender o valor da Villa, como a do casamento europeu."
+   ]
+  }
+ }
+}
